@@ -7,6 +7,7 @@ function DetailsProject() {
     return (
         <div>
             <Navbar/>
+            <h1>Projet</h1>
             <SubscribeFooter/>
         </div>
     )
