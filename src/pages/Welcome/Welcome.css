@@ -1,0 +1,23 @@
+@media screen and (max-width: 767px) {
+    .welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pepidea {
+        margin-bottom: 5vh;
+        color: var(--second-color);
+    }
+    
+    .quote {
+        margin-bottom: 5vh;
+        color: var(--second-color);
+    }
+
+    .presentation {
+        margin-bottom: 10vh;
+        color: var(--second-color);
+        text-align: center;
+    }
+}

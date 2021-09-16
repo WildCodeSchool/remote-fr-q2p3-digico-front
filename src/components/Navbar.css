@@ -1,0 +1,14 @@
+@media screen and (max-width: 767px) {
+    
+    .link {
+        color: var(--main-color);
+        background-color: var(--second-color);
+        padding: 2vh;
+        border: var(--main-color) 2px solid;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+}
