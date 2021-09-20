@@ -1,3 +1,11 @@
 @media screen and (max-width: 767px) {
 
 }
+
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    margin-top: 15px;;
+    width: 100%;
+}
