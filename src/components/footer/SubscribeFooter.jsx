@@ -1,26 +1,32 @@
 import React from 'react'
 import "./SubscribeFooter"
 import {Link} from 'react-router-dom'
+import './SubscribeFooter.css'
+
 function SubscribeFooter() {
     return (
         <div className="subscribeFooter">
-            <Link to='/inscription' className="link"><a>INSCRIPTION</a></Link>
-            <form>
+            <Link to='/Welcome'  className="button_welcome">ACCUEIL</Link>
+            <Link to='/inscription'  className="button_inscription">INSCRIPTION</Link>
+               
+            <form className="connection">
+            <label name="pseudo" >
             <input 
                 type="text" 
                 placeholder="pseudo"
                 className="pseudo"
                 /> 
-                <label name="password">Mot de passe</label>
+                </label>
+                <label name="password" >
                 <input
                 placeholder="mot de passe"
                 type="password"
                 className="password"
                 />
-            </form>
-            <button>CONNECTION</button>
-
-            
+                 <Link to='/connection'  className="button_connection">CONNECTION</Link>
+                </label>
+                </form>
+                           
         </div>
     )
 }

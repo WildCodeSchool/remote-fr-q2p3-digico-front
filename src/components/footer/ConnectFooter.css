@@ -1,0 +1,79 @@
+@media screen and (max-width : 767px) { 
+
+    .connectFooter{
+    margin-top: auto;  
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    height: 10vh;
+    }
+
+    .button_welcome{
+    
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: rgb(255, 255, 255); 
+    font-size: 12px; 
+    line-height: 11px; 
+    padding: 8px; 
+    border-radius: 50px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal;
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
+    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
+    border: 2px solid rgb(209, 207, 207); 
+    display: inline-block;}
+        
+    .myButton:hover {
+    background: #000000; 
+        }
+        
+    .myButton:active {
+    background: #070707;   
+        }
+    
+        
+       
+    .button_user{
+           
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: rgb(255, 255, 255); 
+    font-size: 12px; 
+    line-height: 11px; 
+    padding: 8px; 
+    border-radius: 50px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal;
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
+    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
+    border: 2px solid rgb(209, 207, 207); 
+    display: inline-block;}
+               
+    .myButton:hover {
+    background: #000000; 
+               }
+               
+    .myButton:active {
+    background: #070707;   
+               }
+           
+    
+    
+    
+    
+    
+    
+    
+    
+    }

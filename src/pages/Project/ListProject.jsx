@@ -12,6 +12,7 @@ function ListProject() {
             <Navbar/>
             <Link to='/details-projet' className="project-card"><p>Lorem ipsum dolor sit amet consectetur adip?</p>
             </Link>
+            
             <SubscribeFooter/>
         </div>
     )
