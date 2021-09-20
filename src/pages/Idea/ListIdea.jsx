@@ -10,7 +10,7 @@ function ListIdea() {
     const [ideas, setIdeas] = useState([]);
     useEffect(() => {
         axios
-        .get("http://localhost:8000/api/ideas")
+        .get("http://localhost:8000/api/ideas/owner")
         .then((res) => res.data)
         .then((data) => setIdeas(data))        
     }, [])
@@ -23,7 +23,7 @@ function ListIdea() {
                 <div key={idea.id} className="idea_container">
                     <div className="idea_header">
                         <span className="idea_title">{idea.title}</span>
-                        <span className="owner_name">Gerard</span>
+                        <span className="owner_name">{idea.pseudonym}</span>
                     </div>
                     <div className="idea_content">
                         <p className="idea_desc">{idea.description}</p>
