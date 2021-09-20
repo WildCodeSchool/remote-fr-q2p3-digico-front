@@ -43,7 +43,7 @@ background: #070707;
 .button_inscription{
 margin-top: auto;
 margin-bottom: auto;
-margin-left: 14px;
+margin-left: 20px;
 text-align: center;
 color: rgb(255, 255, 255); 
 font-size: 12px; 
@@ -79,7 +79,7 @@ background-color : rgb(4, 178, 246);
         color: rgb(255, 255, 255);
         font-size: 12px; 
         line-height: 11px; 
-        padding: 8px; 
+        padding: 4px; 
         /* border-radius: 11px;  */
         font-family: Georgia, serif; 
         font-weight: normal; 
@@ -108,7 +108,7 @@ background-color : rgb(4, 178, 246);
     flex-direction: column;
     justify-content: flex-end;
     text-align: center;
-    margin-right: 20px;
+    /* margin-right: 5px; */
     
 }
 .pseudo{

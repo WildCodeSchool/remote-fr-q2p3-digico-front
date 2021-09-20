@@ -7,7 +7,7 @@ function ConnectFooter() {
              <Link to='/Welcome'  className="button_welcome">ACCUEIL</Link>
              <Link to='/user'  className="button_user">PROFIL</Link>
 
-
+ 
             
         </div>
     )
