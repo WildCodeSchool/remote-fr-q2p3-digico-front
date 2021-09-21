@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaRegHandPaper, FaHeart } from 'react-icons/fa';
+import { FaRegHandPaper, FaHeart, FaArrowRight } from 'react-icons/fa';
 import { HiUserGroup } from 'react-icons/hi';
 
 import './ProjectsCard.css'
@@ -11,6 +11,9 @@ function ProjectsCard( {project} ) {
             <div className="img_container">
                 <Link to='/details-projet' className="project-card">
                     <img className="project_img" src={project.img} alt={project.title}/>
+                    <div className="arrow_to_details">
+                        <FaArrowRight />
+                    </div>
                 </Link>
             </div>
             <div className="project_info">
