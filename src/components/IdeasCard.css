@@ -1,0 +1,42 @@
+.idea_card_container {
+    /* border: solid black 1px; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    background-color: rgb(34,127,186,.2);
+}  
+.idea_header {
+    color: #227FBA;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.idea_content {
+    display: flex;
+    justify-content: center;
+    padding-left: 2%;
+    height: 100%;
+}
+
+.idea_icons {
+    color: #227FBA;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    
+}
+.left_icons {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: space-between;
+}
