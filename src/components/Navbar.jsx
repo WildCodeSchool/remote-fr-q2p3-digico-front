@@ -7,9 +7,24 @@ function Navbar() {
     return (
     <div>  
         <div className="navbar">
-            <Link to="/creer-projet" className="link">CRÉER UN PROJET</Link>
-            <Link to="/" className="link">ACCUEIL</Link>
-            <Link to="/creer-idee" className="link">J'AI UNE IDÉE</Link>
+            <Link to="/creer-projet" className="linkNav">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            UN PROJET ?
+            </Link>
+
+            <Link to="/" className="logoLink">
+            </Link>
+
+            <Link to="/creer-idee" className="linkNav">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            UNE IDÉE ?
+            </Link>
         </div>
     </div> 
     )
