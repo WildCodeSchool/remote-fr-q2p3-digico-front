@@ -26,7 +26,6 @@ function ListProject() {
                     </div>
                     )}
                 </div>
-            {/* </Link> */}
             <SubscribeFooter/>
         </div>
     )
