@@ -12,8 +12,9 @@ function ListIdea() {
         axios
         .get("http://localhost:8000/api/ideas/owner")
         .then((res) => res.data)
-        .then((data) => setIdeas(data))        
+        .then((data) => setIdeas(data))                
     }, [])
+
     return (
         <div>
             <Navbar/>
@@ -21,8 +22,7 @@ function ListIdea() {
                 {ideas
                 .map((idea)=> 
                 <div key={idea.id} className="idea_container">
-                    <IdeasCard idea={idea}/>
-
+                    <IdeasCard idea={idea} />
                 </div>
                 )}
             </div>
