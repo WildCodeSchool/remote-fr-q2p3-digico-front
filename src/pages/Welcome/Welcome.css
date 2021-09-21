@@ -1,4 +1,7 @@
 @media screen and (max-width: 767px) {
+    /* .buttoms_home{
+        padding-bottom: 10vh;
+    } a revoir selon remplissage*/
     .welcome {
         display: flex;
         flex-direction: column;
