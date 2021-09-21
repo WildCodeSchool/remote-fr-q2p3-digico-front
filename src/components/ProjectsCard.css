@@ -3,7 +3,7 @@
     text-decoration: none;
     flex-direction: column;
     height : 35vh;
-    margin: 5px;
+    margin: 8px;
     border: 1px solid #394955;
     border-radius: 10px ;
     
@@ -27,7 +27,7 @@
     position : absolute;
     font-size: 1.5em;
     color: white;
-    margin-left : 83%;
+    margin-left : 85%;
     margin-top: -12%;
 }
 
@@ -45,9 +45,9 @@
     flex-direction: column;
     width: 25%;
     margin: auto;
-    font-size :0.9em;
-    border-right: 1px solid #227FBA;
+    font-size :0.8em;
     list-style: none;
+    border-right: 1px solid #227FBA;
 }
 
 .project_titles li{
@@ -56,7 +56,8 @@
     margin-right: 0;
 }
 
-.short_desc_project p {
+.short_desc_project {
+    margin: auto;
     font-size: 0.8em;
     line-height: 20px;
     max-height: 60px;
