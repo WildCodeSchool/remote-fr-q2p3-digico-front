@@ -16,8 +16,9 @@ function ListProject() {
         .then((data) => setProjects(data))        
     }, [])
     return (
-        <div>
-            <Navbar/>
+        <div> 
+            <SubscribeFooter/>
+            
                 <div className="projects-container">
                     {projects
                     .map ((project) =>
@@ -26,7 +27,7 @@ function ListProject() {
                     </div>
                     )}
                 </div>
-            <SubscribeFooter/>
+                <Navbar/>
         </div>
     )
 }
