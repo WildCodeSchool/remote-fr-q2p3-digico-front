@@ -9,17 +9,18 @@
     }
 
     .pepidea {
-        margin-bottom: 5vh;
+        margin: 5vh;
         color: var(--second-color);
     }
     
     .quote {
         margin-bottom: 5vh;
         color: var(--second-color);
+        text-align: center;
     }
 
     .presentation {
-        margin-bottom: 7vh;
+        margin: 2vh;
         color: var(--second-color);
         text-align: center;
     }
@@ -28,7 +29,7 @@
 .buttonWelcome {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2vh;
+    margin-top: 11vh;
 }
 
 .linkWelcome {
