@@ -6,7 +6,7 @@ import './SubscribeFooter.css'
 function SubscribeFooter() {
     return (
         <div className="subscribeFooter">
-            <Link to='/'  className="button_welcome">ACCUEIL</Link>
+            <Link to='/'  className="button_welcome_subscribe">ACCUEIL</Link>
             <Link to='/inscription'  className="button_inscription">INSCRIPTION</Link>
                
             <form className="connection">
