@@ -8,7 +8,6 @@ import "./CreateProject.css"
 function CreateProject() {
     return (
         <div>
-            Ceci est la création de projet
             <ConnectFooter/> 
         </div>
 
