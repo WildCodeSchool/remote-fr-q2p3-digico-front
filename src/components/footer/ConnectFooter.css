@@ -5,13 +5,13 @@
     margin-top: auto;  
     display: flex;
     position: fixed;
-    bottom: 0;
+    top: 0;
     background-color: gray;
     height: 10vh;	
     padding-right: 100%;
     }
 
-    .button_welcome{
+    .button_welcome_subscribe{
     margin-left: 20px;
     text-align: center;
     margin-top: auto;
