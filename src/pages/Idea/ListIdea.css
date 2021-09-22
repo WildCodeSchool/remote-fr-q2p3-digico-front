@@ -1,37 +1,6 @@
-@media screen and (max-width: 767px) {
-    .idea_container {
-        border: solid black 2px;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-    }
-    .idea_header {
-        border: solid black 1px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 15%;
-        padding-left: 1%;
-        padding-right: 1%;
-    }
-    .idea_content {
-        border: solid black 1px;
-        display: flex;
-        justify-content: center;
-        height: 75%;
-    }
-    .idea_icons {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 1%;
-        padding-right: 1%;
-        height: 10%;
-    }
-    .left_icons {
-        display: flex;
-        align-items: center;
-        width: 15%;
-        justify-content: space-between;
-    }
-    
+.ideas {
+    margin-top: 12%;
+    margin-bottom: 29%;
+    /* padding-bottom: 10%; */
+
 }
