@@ -1,7 +1,8 @@
 import React from 'react';
-import "./CreateIdea.css";
 import ConnectFooter from '../../components/footer/ConnectFooter'
 import Navbar from '../../components/Navbar';
+import "./CreateIdea.css";
+
 
 function CreateIdea() {
     return (
@@ -9,7 +10,7 @@ function CreateIdea() {
             Ceci est la page de création de l'idée
             <ConnectFooter/> 
             <Navbar/>
-        </div>
+          </div>
     )
 }
 

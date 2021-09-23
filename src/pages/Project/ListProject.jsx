@@ -14,10 +14,10 @@ function ListProject() {
         .then((data) => setProjects(data))        
     }, [])
     return (
+
         <div>
             <SubscribeFooter/>
-            
-                <div className="projects-container">
+                 <div className="projects-container">
                     {projects
                     .map ((project) =>
                     <div key={project.id}>
