@@ -17,7 +17,8 @@ function ListProject() {
     }, [])
     return (
         <div>
-            <Navbar/>
+            <SubscribeFooter/>
+            
                 <div className="projects-container">
                     {projects
                     .map ((project) =>
@@ -26,7 +27,7 @@ function ListProject() {
                     </div>
                     )}
                 </div>
-            <SubscribeFooter/>
+                <Navbar/>
         </div>
     )
 }

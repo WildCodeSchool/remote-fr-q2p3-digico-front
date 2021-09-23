@@ -29,7 +29,9 @@ function Welcome() {
                 ACCÉDER AUX IDÉES
             </Link>
         </div>
+       
         <SubscribeFooter/>
+        
     </div>
     )
 }
