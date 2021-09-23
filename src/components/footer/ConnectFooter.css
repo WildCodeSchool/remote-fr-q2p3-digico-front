@@ -5,7 +5,7 @@
     margin-top: auto;  
     display: flex;
     position: fixed;
-    bottom: 0;
+    top: 0;
     background-color: gray;
     height: 10vh;	
     padding-right: 100%;

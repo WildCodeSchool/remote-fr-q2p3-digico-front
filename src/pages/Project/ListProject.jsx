@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-
 import Navbar from '../../components/Navbar.jsx'
 import SubscribeFooter from "../../components/footer/SubscribeFooter.jsx"
 import ProjectsCard from '../../components/ProjectsCard.jsx'
-
 import './ListProject.css'
 
 function ListProject() {
