@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import {FaRegHandPaper, FaRegCommentDots, FaHeart} from 'react-icons/fa';
 import './IdeasCard.css'
 
-function IdeasCard({idea}) {
+function IdeasCard({idea, comment}) {
 
-    const [showComments, setShowComment] = useState(false);
+    const [showComments, setShowComments] = useState(false);
     return (
         <div className="idea_card_container">
             <div className="idea_header">
@@ -17,15 +17,24 @@ function IdeasCard({idea}) {
             <div className="idea_icons">
                 <div className="left_icons">
                     <FaRegHandPaper/>
-                    <FaRegCommentDots onClick={() => setShowComment(!showComments)}/>
+                    <FaRegCommentDots onClick={() => setShowComments(!showComments)}/>
                 </div>
                 <div className="right_icons">
                     <FaHeart/>
                 </div>
             </div>
+            {/* <div className="idea_comments">
             {showComments &&
-            <div className="idea_comments">Com 1 : Blablabla</div>}
-        </div>
+            <div className="comments">
+                <div>
+                <input className="comment_form" type="text" placeholder="Com" />
+                </div>
+                <div className="coms">
+                <span>{comment.comment_content}</span>
+                </div>
+            </div>}
+            </div> */}
+            </div>
     )}
 
 export default IdeasCard
