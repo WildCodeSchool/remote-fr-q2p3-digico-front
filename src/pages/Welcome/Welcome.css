@@ -2,51 +2,66 @@
     /* .buttoms_home{
         padding-bottom: 10vh;
     } a revoir selon remplissage*/
+
     .welcome {
+      margin-top: 40%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .pepidea {
-        margin-bottom: 5vh;
+        margin: 5vh;
         color: var(--second-color);
     }
     
     .quote {
         margin-bottom: 5vh;
         color: var(--second-color);
+        text-align: center;
     }
 
     .presentation {
-        margin-bottom: 7vh;
+        margin: 6vh;
         color: var(--second-color);
         text-align: center;
+       
     }
 }
 
 .buttonWelcome {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2vh;
+ 
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  
+     
 }
 
 .linkWelcome {
+    
+
     background: linear-gradient(-30deg, var(--second-color) 50%, var(--third-color) 50%);
     margin-bottom: 1vh;
-    padding: 21px 25px;
+    padding: 25px 30px;
+    
     display: inline-block;
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
     overflow: hidden;
     color: var(--main-color);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bolder;
-    letter-spacing: 1.2px;
+    letter-spacing: 2px;
+    
     text-align: center;
     text-decoration: none;
     -webkit-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+       margin-right:4vh;
+       margin-left: 4vh;
+           
 }
 
 .linkWelcome::before {
@@ -58,8 +73,9 @@
     height: 100%;
     background-color: #ad8585;
     opacity: 0;
-    -webkit-transition: .2s opacity ease-in-out;
-    transition: .2s opacity ease-in-out;
+    /* -webkit-transition: .2s opacity ease-in-out;
+    transition: .2s opacity ease-in-out; */
+    
 }
 
 .linkWelcome span {
@@ -73,8 +89,9 @@
     height: 2px;
     background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
     background: linear-gradient(to left, rgba(43, 8, 8, 0), #ffffff);
-    -webkit-animation: 2s animateTop linear infinite;
-            animation: 2s animateTop linear infinite; 
+    /* -webkit-animation: 2s animateTop linear infinite;
+            animation: 2s animateTop linear infinite;  */
+            
 }
 
 @keyframes animateTop {
@@ -96,8 +113,9 @@
     width: 2px;
     background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
     background: linear-gradient(to top, rgba(43, 8, 8, 0), #ffffff);
-    -webkit-animation: 2s animateRight linear -1s infinite;
-            animation: 2s animateRight linear -1s infinite;
+    /* -webkit-animation: 2s animateRight linear -1s infinite;
+            animation: 2s animateRight linear -1s infinite; */
+            
   }
 
   @keyframes animateRight {
@@ -118,8 +136,8 @@
     height: 2px;
     background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#d92626));
     background: linear-gradient(to right, rgba(43, 8, 8, 0), #ffffff);
-    -webkit-animation: 2s animateBottom linear infinite;
-            animation: 2s animateBottom linear infinite;
+    /* -webkit-animation: 2s animateBottom linear infinite;
+            animation: 2s animateBottom linear infinite; */
   }
 
   @keyframes animateBottom {
@@ -140,8 +158,8 @@
     width: 2px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#d92626));
     background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #ffffff);
-    -webkit-animation: 2s animateLeft linear -1s infinite;
-            animation: 2s animateLeft linear -1s infinite;
+    /* -webkit-animation: 2s animateLeft linear -1s infinite;
+            animation: 2s animateLeft linear -1s infinite; */
   }
 
   @keyframes animateLeft {
@@ -153,4 +171,13 @@
       -webkit-transform: translateY(100%);
               transform: translateY(100%);
     }
+
+
+    
+
+  }
+
+  .subscribefooter{
+     bottom: 0; 
+     position: fixed;
   }

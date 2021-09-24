@@ -1,17 +1,18 @@
 @media screen and (max-width : 767px) { 
-
-.subscribeFooter{
-
-margin-top: auto;  
-display: flex;
+.footer{
 position: fixed;
-bottom: 0;
-background-color: gray;
-height: 10vh;	
-
+bottom: 0;     
 }
 
-.button_welcome{
+.subscribeFooter{
+display: flex;
+position: fixed;
+top: 0;
+background-color: gray;
+height: 11vh;
+}
+
+.button_welcome_subscribe{
 margin-left: 20px;
 text-align: center;
 margin-top: auto;
@@ -20,7 +21,7 @@ color: rgb(255, 255, 255);
 font-size: 12px; 
 line-height: 11px; 
 padding: 8px; 
-border-radius: 50px; 
+border-radius: 11px; 
 font-family: Georgia, serif; 
 font-weight: normal; 
 text-decoration: none; 
@@ -76,51 +77,48 @@ background-color : rgb(4, 178, 246);
 }
 
 .button_connection{
-        color: rgb(255, 255, 255);
-        font-size: 12px; 
-        line-height: 11px; 
-        padding: 4px; 
-        /* border-radius: 11px;  */
-        font-family: Georgia, serif; 
-        font-weight: normal; 
-        text-decoration: none; 
-        font-style: normal; 
-        font-variant: normal; 
-        text-transform: none; 
-        background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%); 
-        box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
-        border: 2px solid rgb(209, 207, 207); 
-        display: inline-block;
-        }
+color: rgb(255, 255, 255);
+font-size: 12px; 
+line-height: 11px; 
+padding: 4px; 
+font-family: Georgia, serif; 
+font-weight: normal; 
+text-decoration: none; 
+font-style: normal; 
+font-variant: normal; 
+text-transform: none; 
+background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%); 
+box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
+border: 2px solid rgb(209, 207, 207); 
+display: inline-block;
+}
         
 .myButton:hover {
-        background: #000000; 
-        }
+background: #000000; 
+}
 
 .myButton:active {
-        background: #070707; 
-        }
+background: #070707; 
+}
        
 .connection{
-    margin-top: auto;
-    margin-bottom: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    /* margin-right: 5px; */
-    
+margin-top: auto;
+margin-bottom: auto;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+text-align: center;      
 }
+
 .pseudo{
-    background-color: rgb(199, 199, 199);
-    font-size: 10.5px;
-   
-   
+background-color: rgb(199, 199, 199);
+font-size: 10.5px;     
 }
+
 .password{
-    background-color: rgb(199, 199, 199);
-    font-size: 10.5px;
-   margin-bottom: 5px;
+background-color: rgb(199, 199, 199);
+font-size: 10.5px;
+margin-bottom: 5px;
 }
 
 }

@@ -25,7 +25,8 @@ function ListIdea() {
 
     return (
         <div>
-            <Navbar/>
+             <SubscribeFooter />
+            
             <div className="ideas">
                 {ideas
                 .map((idea)=> 
@@ -40,7 +41,7 @@ function ListIdea() {
                 </div>
                 )}
             </div>
-            <SubscribeFooter/>
+            <Navbar/>
         </div>
     )
 }
