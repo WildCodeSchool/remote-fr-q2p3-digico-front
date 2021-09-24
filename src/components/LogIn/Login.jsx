@@ -1,23 +1,27 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import {Link} from 'react-router-dom';
-
+import './login.css'
 function Login() {
-    const { register, handleSubmit, errors } = useForm();
+    const {  handleSubmit, errors } = useForm();
     const onSubmit = (data) => {
         console.log(data);
       };
 
     return (
-        <div>
-             <form onSubmit={handleSubmit(onSubmit)}>
-                <input name="pseudonyme" ref={register} placeholder="username"/>
-                <input name="password" ref={register} placeholder="password"/>
-                <input type="submit"/>
+        <div className="login">
+            <h1 className="pepidea_login">PEP'IDEA</h1>
+             <form className="form_login" onSubmit={handleSubmit(onSubmit)}>
+                <input className="pseudo_login"  placeholder="username"/>
+                <input className="password_login"  placeholder="password"/>
+                <input className="button_login" type="submit"/>
              </form>
-             <span>
-                 No account yet ? Click <Link>here</Link>. 
-             </span>
+             <p className="no_account">
+                 Pas encore de compte ? Clique&nbsp;<Link to="/signup" >ici</Link>. 
+                 </p> 
+
+                 <Link to='/'  className="button_welcome_login">ACCUEIL</Link>
+             
         </div>
     )
 }

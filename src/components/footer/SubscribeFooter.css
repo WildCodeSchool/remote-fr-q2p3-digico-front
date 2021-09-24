@@ -6,7 +6,7 @@ bottom: 0;
 
 .subscribeFooter{
 display: flex;
-position: sticky;
+position: fixed;
 top: 0;
 background-color: gray;
 height: 11vh;

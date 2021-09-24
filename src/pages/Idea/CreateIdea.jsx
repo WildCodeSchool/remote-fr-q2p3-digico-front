@@ -1,15 +1,16 @@
 import React from 'react';
 import ConnectFooter from '../../components/footer/ConnectFooter'
+import Navbar from '../../components/Navbar';
 import "./CreateIdea.css";
 
 
 function CreateIdea() {
     return (
         <div>
-             <ConnectFooter/> 
             Ceci est la page de création de l'idée
-            
-        </div>
+            <ConnectFooter/> 
+            <Navbar/>
+          </div>
     )
 }
 

@@ -32,10 +32,10 @@ function Welcome() {
             <span></span>
                 ACCÉDER AUX IDÉES
             </Link>
-        </div >
-        <div className="footer">
-        <SubscribeFooter/>
         </div>
+      
+           <SubscribeFooter/>
+        
     </div>
     )
 }
