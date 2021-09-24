@@ -18,7 +18,7 @@ function ListIdea() {
     return (
         <div>
              
-            
+             <SubscribeFooter/>
             <div className="ideas">
                 {ideas
                 .map((idea)=> 
