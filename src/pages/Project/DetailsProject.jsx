@@ -5,10 +5,10 @@ import "./DetailsProject.css"
 
 function DetailsProject() {
     return (
-        <div>
-            <Navbar/>
+        <div><SubscribeFooter/>
+            
             <h1>Projet</h1>
-            <SubscribeFooter/>
+            <Navbar/>
         </div>
     )
 }

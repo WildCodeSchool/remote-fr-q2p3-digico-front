@@ -5,7 +5,11 @@
         flex-direction: row;
         justify-content: space-around;
         margin-top: 1%;
-    }
+        position: fixed;
+        bottom: 0;
+        margin-left:1.5vh;
+        margin-bottom: 1vh;
+        }
 
     .logoLink {
         background-color:var(--second-color);
@@ -45,8 +49,8 @@
         height: 100%;
         background-color: #ad8585;
         opacity: 0;
-        -webkit-transition: .2s opacity ease-in-out;
-        transition: .2s opacity ease-in-out;
+        -webkit-transition: .4s opacity ease-in-out;
+        transition: .4s opacity ease-in-out;
     }
 
     .linkNav span {
@@ -60,8 +64,8 @@
         height: 2px;
         background: -webkit-gradient(linear, right top, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
         background: linear-gradient(to left, rgba(43, 8, 8, 0), #ffffff);
-        -webkit-animation: 2s animateTop linear infinite;
-                animation: 2s animateTop linear infinite; 
+        -webkit-animation: 4s animateTop linear infinite;
+                animation: 4s animateTop linear infinite; 
     }
 
     @keyframes animateTop {
@@ -83,8 +87,8 @@
         width: 2px;
         background: -webkit-gradient(linear, left bottom, left top, from(rgba(43, 8, 8, 0)), to(#d92626));
         background: linear-gradient(to top, rgba(43, 8, 8, 0), #ffffff);
-        -webkit-animation: 2s animateRight linear -1s infinite;
-                animation: 2s animateRight linear -1s infinite;
+        -webkit-animation: 4s animateRight linear -1s infinite;
+                animation: 4s animateRight linear -1s infinite;
       }
     
       @keyframes animateRight {
@@ -105,8 +109,8 @@
         height: 2px;
         background: -webkit-gradient(linear, left top, right top, from(rgba(43, 8, 8, 0)), to(#d92626));
         background: linear-gradient(to right, rgba(43, 8, 8, 0), #ffffff);
-        -webkit-animation: 2s animateBottom linear infinite;
-                animation: 2s animateBottom linear infinite;
+        -webkit-animation: 4s animateBottom linear infinite;
+                animation: 4s animateBottom linear infinite;
       }
     
       @keyframes animateBottom {
@@ -127,8 +131,8 @@
         width: 2px;
         background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 8, 8, 0)), to(#d92626));
         background: linear-gradient(to bottom, rgba(43, 8, 8, 0), #ffffff);
-        -webkit-animation: 2s animateLeft linear -1s infinite;
-                animation: 2s animateLeft linear -1s infinite;
+        -webkit-animation: 4s animateLeft linear -1s infinite;
+                animation: 4s animateLeft linear -1s infinite;
       }
     
       @keyframes animateLeft {
