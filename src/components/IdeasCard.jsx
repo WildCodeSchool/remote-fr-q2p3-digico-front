@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {FaRegHandPaper, FaRegCommentDots, FaHeart} from 'react-icons/fa';
 import './IdeasCard.css'
 
-function IdeasCard({idea, comment}) {
+function IdeasCard({idea}) {
 
     const [showComments, setShowComments] = useState(false);
     return (
@@ -23,17 +23,17 @@ function IdeasCard({idea, comment}) {
                     <FaHeart/>
                 </div>
             </div>
-            {/* <div className="idea_comments">
+            <div className="idea_comments">
             {showComments &&
             <div className="comments">
                 <div>
                 <input className="comment_form" type="text" placeholder="Com" />
                 </div>
                 <div className="coms">
-                <span>{comment.comment_content}</span>
+                <span>Com1 : Blablabla</span>
                 </div>
             </div>}
-            </div> */}
+            </div>
             </div>
     )}
 
