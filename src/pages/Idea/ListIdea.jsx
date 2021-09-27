@@ -11,7 +11,7 @@ function ListIdea() {
     const [ideas, setIdeas] = useState([]);
     useEffect(() => {
         axios
-        .get("http://localhost:8000/api/ideas")
+        .get("http://localhost:8000/api/ideas/ideaowner")
         .then((res) => res.data)
         .then((data) => setIdeas(data))                
     }, [])
