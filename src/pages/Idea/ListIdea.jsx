@@ -24,9 +24,8 @@ function ListIdea() {
     }, [])
 
     return (
-        <div>
-             <SubscribeFooter />
-            
+        <div>             
+             <SubscribeFooter/>
             <div className="ideas">
                 {ideas
                 .map((idea)=> 
@@ -45,5 +44,4 @@ function ListIdea() {
         </div>
     )
 }
-
 export default ListIdea
