@@ -1,0 +1,57 @@
+.form_contrib{
+    display: flex;
+    flex-direction: column;
+    margin-top: 170px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+.dispo_contrib{
+  margin-top: 3px;
+  font-size: 30px;
+  margin-bottom: 2vh;
+  text-align: left;
+ 
+}
+
+.title_desc_contrib{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: left;
+    font-size: 30px;
+}
+
+.description_contribution{
+    margin-top: 2px;
+    padding-bottom: 90%;
+    text-align: justify;
+   
+}
+
+.button_submit_contrib{
+    margin-top:50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-size: 12px; 
+    line-height: 11px; 
+    padding: 20px; 
+    border-radius: 50px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal;
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
+    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
+    border: 2px solid rgb(209, 207, 207); 
+    display: inline-block;}
+            
+    .myButton:hover {
+    background: #000000; 
+    }
+            
+    .myButton:active {
+    background: #070707;   
+}
