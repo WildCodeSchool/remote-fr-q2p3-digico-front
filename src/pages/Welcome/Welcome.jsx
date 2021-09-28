@@ -18,18 +18,18 @@ function Welcome() {
 
         <div className="buttonWelcome">
             <Link to="/liste-projet" className="linkWelcome">
+            {/* <span></span>
             <span></span>
             <span></span>
-            <span></span>
-            <span></span>
+            <span></span> */}
                 ACCÉDER AUX PROJETS
             </Link>
 
             <Link to="/liste-idee" className="linkWelcome">
+            {/* <span></span>
             <span></span>
             <span></span>
-            <span></span>
-            <span></span>
+            <span></span> */}
                 ACCÉDER AUX IDÉES
             </Link>
         </div>

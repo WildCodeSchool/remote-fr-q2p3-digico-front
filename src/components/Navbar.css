@@ -7,8 +7,9 @@
         margin-top: 1%;
         position: fixed;
         bottom: 0;
-        margin-left:1.5vh;
         margin-bottom: 1vh;
+        width: 100%;
+        
         }
 
     .logoLink {
@@ -18,15 +19,17 @@
         text-decoration : none;
         width:52px;
         height:52px;
-        margin-left: 5vw;
-        margin-right: 5vw;
         }
 
         
     .linkNav {
         background: linear-gradient(-30deg, var(--second-color) 50%, var(--third-color) 50%);
-        padding: 21px 25px;
+        padding-top: 2.3vh;
+        padding-bottom: 1vh;
         display: inline-block;
+        width: 35vw;
+        height: 3vh;
+        border-radius: 11px;
         -webkit-transform: translate(0%, 0%);
                 transform: translate(0%, 0%);
         overflow: hidden;
