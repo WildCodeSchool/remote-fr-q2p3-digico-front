@@ -11,7 +11,7 @@ function ListProject() {
     const [projects, setProjects] = useState([]);
     useEffect(() => {
         axios
-        .get("http://localhost:8000/api/projects/owner")
+        .get("http://localhost:8000/api/projects/projectowner")
         .then((res) => res.data)
         .then((data) => setProjects(data))        
     }, [])
