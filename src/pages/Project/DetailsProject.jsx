@@ -9,13 +9,14 @@ function DetailsProject() {
     return (
         <div>
             <SubscribeFooter/>
-            
-            <h1>Projet</h1>
-            <Navbar/>
+
             <div className="contrib">
-            <Link to="/Contribution" className="page_contrib">
-           <p>CONTRIBUER?</p>
-            </Link>
+                
+            <Link to='/Contribution' className="button_contribution">CONTRIBUER</Link>
+          
+            <Navbar/>
+            
+            
             </div>
             </div>
     )
