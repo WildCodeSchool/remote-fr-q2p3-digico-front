@@ -10,6 +10,7 @@ position: fixed;
 top: 0;
 background-color: gray;
 height: 11vh;
+z-index: 1000;
 }
 
 .button_welcome_subscribe{
@@ -50,7 +51,7 @@ color: rgb(255, 255, 255);
 font-size: 12px; 
 line-height: 11px; 
 padding: 8px; 
-border-radius: 50px; 
+border-radius: 11px; 
 font-family: Georgia, serif; 
 font-weight: normal; 
 text-decoration: none; 
@@ -79,8 +80,9 @@ background-color : rgb(4, 178, 246);
 .button_connection{
 color: rgb(255, 255, 255);
 font-size: 12px; 
-line-height: 11px; 
-padding: 4px; 
+line-height:13px; 
+padding: 5px; 
+border-radius: 11px;
 font-family: Georgia, serif; 
 font-weight: normal; 
 text-decoration: none; 
