@@ -1,6 +1,6 @@
 import React from 'react'
 import ConnectFooter from '../components/footer/ConnectFooter'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import "./Contribution.css"
 
 

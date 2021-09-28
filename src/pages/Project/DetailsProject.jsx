@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar.jsx'
 import SubscribeFooter from "../../components/footer/SubscribeFooter.jsx"
-import Contribution from '../Contribution.jsx'
+// import Contribution from '../Contribution.jsx'
 import {Link} from 'react-router-dom'
 import "./DetailsProject.css"
 
