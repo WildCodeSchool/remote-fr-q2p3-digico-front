@@ -1,3 +1,135 @@
-@media screen and (max-width: 767px) {
+.CreateProject {
+    display: flex;
+    flex-direction: column;
+    margin-top : 25%;
+    width: 100vw;
+}
 
+.project_form {
+    width: 100vw;
+}
+
+.head_Pform {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgInput {
+    display: flex;
+    color: transparent;
+    text-align: center;
+    align-items: center;
+    margin: 7%;
+    width: 40vw;
+    height: 30.5vw;
+}
+
+.imgInput::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.imgInput::before{
+    content : "* Choisir une image";
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #ecf8ff);
+    border: 1px solid #999;
+    border-radius: 3px;
+    text-align: center;
+    padding: 6vh 2vw;
+}
+
+.imgInput:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #c1e7fd); 
+}
+
+.head_right_Pform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title_input{
+    border: hidden;
+    border-bottom: 1px solid #227FBA;
+    padding-bottom: 2px;
+}
+
+.localisation_input {
+    border: hidden;
+    border-bottom: 1px solid #227FBA;
+    padding-bottom: 2px;
+}
+
+.date_selector{
+    color: #227FBA;
+}
+
+.body_Pform{
+    display: flex;
+    flex-direction: column;
+    justify-content: so;
+    width: 100vw;
+    height: 50vh;
+}
+
+.desc_text {
+    height: 50%;
+    width: 85%;
+    margin : 7% auto;
+    border-color: #227FBA;
+    border-radius: 5px;
+}
+
+.socials_input{
+    width : 75%;
+    margin: 0% auto;
+    border: hidden;
+    border-bottom: 1px solid #227FBA;
+    padding-bottom: 3px;
+}
+
+.categorie-list-project{
+    width: 75%;
+    margin-top: 7%;
+    margin: auto;
+    color: #227FBA;
+    padding : 5px;
+}
+
+.contributors {
+    margin: 0 auto 7% auto;
+}
+
+.contributors_input{
+    width: 7vw;
+    height: 2.2vh;
+    margin-left: 2vw;
+    border: 1px solid #227FBA;
+    border-radius: 5px;
+}
+
+.create-project_submit-btn {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-size: 20px; 
+    line-height: 11px; 
+    padding: 20px; 
+    border-radius: 50px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal;
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
+    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
+    border: 2px solid rgb(209, 207, 207); 
 }
