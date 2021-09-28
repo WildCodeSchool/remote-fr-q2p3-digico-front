@@ -10,14 +10,14 @@ function ListIdea() {
     const [ideas, setIdeas] = useState([]);
     useEffect(() => {
         axios
-        .get("http://localhost:8000/api/ideas/owner")
+        .get("http://localhost:8000/api/ideas")
         .then((res) => res.data)
         .then((data) => setIdeas(data))                
     }, [])
 
     return (
         <div>
-             
+             <SubscribeFooter/>
             
             <div className="ideas">
                 {ideas

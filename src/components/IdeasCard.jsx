@@ -23,8 +23,19 @@ function IdeasCard({idea}) {
                     <FaHeart/>
                 </div>
             </div>
-            {showComments &&
-            <div className="idea_comments">Com 1 : Blablabla</div>}
+
+            <div className="idea_comments">
+                {showComments &&
+                <div className="comments">
+                    <div>
+                        <input className="comment_form" type="text" placeholder="Com" />
+                    </div>
+                <div className="coms">
+                    <span>Com1 : Blablabla</span>
+                </div>
+            </div>}
+        </div>
+
         </div>
     )}
 
