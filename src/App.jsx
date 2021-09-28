@@ -3,8 +3,12 @@ import CreateProject from "./pages/Project/CreateProject.jsx";
 import CreateIdea from "./pages/Idea/CreateIdea.jsx";
 import ListIdea from "./pages/Idea/ListIdea.jsx";
 import ListProject from "./pages/Project/ListProject.jsx";
-import Inscription from "./pages/Inscription/Inscription.jsx";
 import DetailsProject from "./pages/Project/DetailsProject.jsx";
+import Signup from "./components/Login/Signup.jsx"
+import Login from "./components/Login/Login.jsx"
+import Contribution from "./pages/Contribution.jsx";
+
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
@@ -18,8 +22,11 @@ function App() {
           <Route path="/creer-idee" component={CreateIdea}/>
           <Route path="/liste-idee" component={ListIdea}/>
           <Route path="/liste-projet" component={ListProject}/>
-          <Route path="/inscription" component={Inscription}/>
+          <Route path="/signup" component={Signup}/>
+          <Route path="/login" component={Login}/>
+          <Route path="/inscription" component={Login}/>
           <Route path="/details-projet" component={DetailsProject}/>
+          <Route path="/contribution" component={Contribution}/>
         </Switch>
       </Router>
     </div>

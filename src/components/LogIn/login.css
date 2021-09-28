@@ -1,0 +1,97 @@
+.login{
+    display: flex;
+    flex-direction: column;
+}
+
+.pepidea_login{
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.form_login{
+    flex-direction: column;
+    width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40%;
+}
+
+.pseudo_login{
+    background-color: rgb(211, 212, 212);
+    padding: 1vh;
+    margin-bottom: 1vh;
+}
+
+.password_login{
+    background-color: rgb(211, 212, 212);
+    padding: 1vh;
+    margin-bottom: 4vh;
+}
+
+.button_login{
+    margin-left: 20px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: rgb(255, 255, 255); 
+    font-size: 20px; 
+    line-height: 11px; 
+    padding: 20px; 
+    border-radius: 50px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal;
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
+    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
+    border: 2px solid rgb(209, 207, 207); 
+    display: inline-block;
+    margin-bottom: 5vh;}
+            
+.myButton:hover {
+    background: #000000; 
+    }
+            
+.myButton:active {
+    background: #070707;   
+    }
+
+.no_account{
+    text-align: center;  
+   
+    }
+.button_welcome_login{
+    position: fixed;
+    bottom: 0;
+    margin-left: 15vh;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: rgb(255, 255, 255); 
+    font-size: 20px; 
+    line-height: 11px; 
+    padding: 20px; 
+    border-radius: 50px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal;
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
+    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
+    border: 2px solid rgb(209, 207, 207); 
+    display: inline-block;
+    margin-bottom: 5vh;}
+            
+    .myButton:hover {
+    background: #000000; 
+    }
+            
+    .myButton:active {
+    background: #070707;   
+    }
+
+  
