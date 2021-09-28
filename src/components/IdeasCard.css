@@ -40,3 +40,21 @@
     width: 15%;
     justify-content: space-between;
 }
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.comment_form {
+    margin-top: 1%;
+    border-radius: 10px;
+}
+.coms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    color: hotpink;
+}

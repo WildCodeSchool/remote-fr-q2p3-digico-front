@@ -9,7 +9,11 @@
     "axios": "^0.21.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
     "react-hook-form": "^7.16.1",
+=======
+    "react-hook-form": "^7.15.4",
+>>>>>>> dev
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
 import ConnectFooter from '../../components/footer/ConnectFooter'
+import Navbar from '../../components/Navbar.jsx'
 
 import "./CreateProject.css"
 
@@ -87,6 +88,8 @@ function CreateProject() {
                 
             </form>
             <ConnectFooter/> 
+            Ceci est la création de projet
+            <Navbar/>
         </div>
 
             

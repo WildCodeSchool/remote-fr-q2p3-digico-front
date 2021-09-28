@@ -7,7 +7,7 @@ function SubscribeFooter() {
     return (
         <div className="subscribeFooter">
             <Link to='/'  className="button_welcome_subscribe">ACCUEIL</Link>
-            <Link to='/inscription'  className="button_inscription">INSCRIPTION</Link>
+            <Link to='/signup'  className="button_inscription">INSCRIPTION</Link>
                
             <form className="connection">
             <label name="pseudo" >
@@ -23,7 +23,7 @@ function SubscribeFooter() {
                 type="password"
                 className="password"
                 />
-                 <Link to='/connection'  className="button_connection">CONNECTION</Link>
+                 <Link to='/login'  className="button_connection">CONNECTION</Link>
                 </label>
                 </form>
                            
