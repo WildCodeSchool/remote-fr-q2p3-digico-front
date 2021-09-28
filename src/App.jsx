@@ -25,7 +25,7 @@ function App() {
           <Route path="/signup" component={Signup}/>
           <Route path="/login" component={Login}/>
           <Route path="/inscription" component={Login}/>
-          <Route path="/details-projet" component={DetailsProject}/>
+          <Route path="/details-project" component={DetailsProject}/>
           <Route path="/contribution" component={Contribution}/>
         </Switch>
       </Router>
