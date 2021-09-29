@@ -1,5 +1,5 @@
 import React from 'react';
-import ConnectFooter from '../../components/footer/ConnectFooter'
+import ConnectFooter_ideas from '../../components/footer/ConnectFooter_ideas.jsx';
 import Navbar from '../../components/Navbar';
 import "./CreateIdea.css";
 
@@ -7,12 +7,12 @@ import "./CreateIdea.css";
 function CreateIdea() {
     return (
         <div>
-            <ConnectFooter/> 
+            <ConnectFooter_ideas/> 
             <form className="create-idea" >
                 <label>Titre de votre idée : </label>
                 <input className="idea-form-title" name="title" type="textarea"/>
                 <label className="categorie-label">Catégorie : </label>
-                <select className="categorie-list" name="categorieList" id="selectList">
+                <select className="categorie-list-idea" name="categorieList" id="selectList">
                 <option value=""> -- Choisir une catégorie -- </option>
                     <option value="option 1">Ecologie</option>
                     <option value="option 2">Social</option>

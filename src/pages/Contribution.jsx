@@ -1,5 +1,5 @@
 import React from 'react'
-import ConnectFooter from '../components/footer/ConnectFooter'
+import ConnectFooter_ideas from '../components/footer/ConnectFooter_ideas'
 // import {Link} from 'react-router-dom'
 import "./Contribution.css"
 
@@ -8,7 +8,7 @@ import "./Contribution.css"
 function Contribution() {
     return (
         <div>
-            <ConnectFooter/>
+            <ConnectFooter_ideas/>
             <div className="form_contrib">
             <label className="dispo_contrib"> Mes disponibilités</label>
             <label className="dispo_contrib_start"> A partir du :</label>

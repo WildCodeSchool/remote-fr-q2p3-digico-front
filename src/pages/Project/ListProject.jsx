@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Navbar from '../../components/Navbar.jsx'
-import SubscribeFooter from "../../components/footer/SubscribeFooter.jsx"
+import Ideas_footer from "../../components/footer/Ideas_footer.jsx"
 import ProjectsCard from '../../components/ProjectsCard.jsx'
 import './ListProject.css'
 
@@ -16,7 +16,7 @@ function ListProject() {
     return (
 
         <div>
-            <SubscribeFooter/>
+            <Ideas_footer/>
                  <div className="projects-container">
                     {projects
                     .map ((project) =>

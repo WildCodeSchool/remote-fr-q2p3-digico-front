@@ -3,7 +3,7 @@ import axios from 'axios';
 import Navbar from '../../components/Navbar.jsx'
 import IdeasCard from '../../components/IdeasCard.jsx';
 import CommentCard from '../../components/comments/CommentCard'
-import SubscribeFooter from "../../components/footer/SubscribeFooter.jsx"
+import Project_footer from "../../components/footer/Project_footer.jsx"
 import "./ListIdea.css"
 
 function ListIdea() {
@@ -25,7 +25,7 @@ function ListIdea() {
 
     return (
         <div>             
-             <SubscribeFooter/>
+             <Project_footer/>
             <div className="ideas">
                 {ideas
                 .map((idea)=> 
