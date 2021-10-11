@@ -16,7 +16,8 @@ function CreateProject() {
         socials : "",
         img : "",
         localisation : "",
-        project_date : ""
+        project_date : "",
+        user_id: ""
     })
 
     const createProject = e => {
@@ -26,7 +27,8 @@ function CreateProject() {
             socials : project.socials,
             img : project.img,
             localisation : project.localisation,
-            project_date : project.project_date
+            project_date : project.project_date,
+            user_id: project.user_id
         })
         alert("Votre projet à été créé 🚀")
     }
@@ -44,11 +46,12 @@ function CreateProject() {
                 <div className="head_Pform">
                     <div className = "head_left_Pform">
                         <input 
-                            type="file" {...register("img")}
+                            type="file"
                             className = "imgInput"
                             id="img" 
                             onChange ={(e) => handleInputChange(e)} 
-                            value={project.img} 
+                            value={project.img}
+                            required
                             placeholder="Image"/>
                     </div>
                     <div className="head_right_Pform">
@@ -57,14 +60,15 @@ function CreateProject() {
                             className = "title_input"
                             id="title" 
                             onChange ={(e) => handleInputChange(e)} 
-                            value={project.title} 
+                            value={project.title}
+                            required
                             placeholder="* Titre du projet :"/>
                         <input 
                             type="text" {...register("localisation")}
                             className="localisation_input"
                             id="localisation" 
                             onChange ={(e) => handleInputChange(e)} 
-                            value={project.localisation} 
+                            value={project.localisation}
                             placeholder="Localisation :"/>
                         <input 
                             type="date" {...register("project_date")} 
@@ -82,6 +86,7 @@ function CreateProject() {
                         className="desc_text"
                         onChange ={(e) => handleInputChange(e)} 
                         value={project.description} 
+                        required
                         placeholder="* Description :"></textarea>
                     <input 
                         type="text" {...register("socials")} 
@@ -101,6 +106,14 @@ function CreateProject() {
                         <input
                             type="number"
                             id="contributors"
+                            className="contributors_input"
+                        />
+                        <label for="user"> <br/>User ID :</label>
+                        <input
+                            type="number" {...register("user_id")}
+                            id="user"
+                            onChange ={(e) => handleInputChange(e)}
+                            value={project.img}
                             className="contributors_input"
                         />
                     </div>
