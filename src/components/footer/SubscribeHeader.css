@@ -1,0 +1,55 @@
+@media screen and (max-width : 767px) { 
+
+
+.subscribeHeader_accueil{
+    display: flex;
+    display: inline;
+    position: fixed;
+    top: 0;
+    margin-top:30px ;
+    
+    /* height: 11px;
+    z-index: 1000; */
+    }
+
+
+
+
+.button_connection_subscribe{
+    margin-top: 20px;
+    margin-bottom: auto;
+    margin-left: 20px;
+    text-align: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    /* display: inline-block; */
+    color: #FFFFFF;
+    text-decoration: none;
+    }
+  
+    .button_inscription_subscribe{
+        margin-top: 20px;
+        margin-bottom: auto;
+        margin-left: -170px;
+        margin-right:10px;
+        text-align: center;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        /* display: inline-block; */
+        color: #FFFFFF;
+        text-decoration: none;
+        }
+        
+
+
+
+
+
+
+}

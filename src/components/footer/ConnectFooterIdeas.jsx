@@ -1,9 +1,9 @@
 import React from 'react'
-import "./ConnectFooter_ideas"
+import "./ConnectFooterIdeas"
 import {Link} from 'react-router-dom'
-import "./ConnectFooter_ideas.css"
+import "./ConnectFooterIdeas.css"
 
-function ConnectFooter_ideas() {
+function ConnectFooterIdeas() {
     return (
         <div className="connectfooter_ideas">
              <Link to='/'  className="button_welcome_connect_ideas">ACCUEIL</Link>
@@ -16,4 +16,4 @@ function ConnectFooter_ideas() {
     )
 }
 
-export default ConnectFooter_ideas
+export default ConnectFooterIdeas

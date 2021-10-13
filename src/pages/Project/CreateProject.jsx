@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
-import ConnectFooter_project from '../../components/footer/ConnectFooter_project.jsx'
-import Navbar from '../../components/Navbar.jsx'
+import ConnectFooterProject from '../../components/footer/ConnectFooterProject.jsx'
+import Footer from '../../components/footer/Footer.jsx'
 import "./CreateProject.css"
 
 function CreateProject() {
@@ -38,7 +38,7 @@ function CreateProject() {
 
     return (
         <div className="CreateProject">
-            <ConnectFooter_project/>
+            <ConnectFooterProject/>
             <form onSubmit={handleSubmit(createProject)} className="project_form">
                 <div className="head_Pform">
                     <div className = "head_left_Pform">
@@ -106,7 +106,7 @@ function CreateProject() {
                 </div>
                 <button className="create-project_submit-btn">Publier</button>
             </form> 
-            <Navbar/>
+            <Footer/>
         </div>
 
             

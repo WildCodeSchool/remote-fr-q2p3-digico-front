@@ -1,13 +1,14 @@
 import React from 'react';
-import ConnectFooter_ideas from '../../components/footer/ConnectFooter_ideas.jsx';
-import Navbar from '../../components/Navbar';
+import SubscribeHeader from "../../components/footer/SubscribeHeader"
+import Footer from '../../components/footer/Footer.jsx';
 import "./CreateIdea.css";
+
 
 
 function CreateIdea() {
     return (
         <div>
-            <ConnectFooter_ideas/> 
+            <SubscribeHeader/> 
             <form className="create-idea" >
                 <label>Titre de votre idée : </label>
                 <input className="idea-form-title" name="title" type="textarea"/>
@@ -24,7 +25,7 @@ function CreateIdea() {
                 <textarea className="idea-form-desc" name="desc" type="textarea" placeholder="Ceci est la description"/>
                 <input className="create-idea_submit-btn" type="submit"/>
             </form>
-            <Navbar/>
+            <Footer/>
           </div>
     )
 }

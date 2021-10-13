@@ -1,4 +1,5 @@
-@media screen and (max-width : 767px) {     .Ideas_footer{
+@media screen and (max-width : 767px) { 
+.Project_footer{
     margin-top: auto;  
     display: flex;
     position: fixed;
@@ -8,8 +9,9 @@
     width: 100vw;
     }
   
-.button_welcome_subscribe{
-    margin-left: 3%;
+.button_welcome_project_footer{
+    margin-left: 1%;
+    margin-right: 2%;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
@@ -38,16 +40,16 @@
     background: #070707;   
     }
     
-.button_idee_ideas_footer{
+.button_projet{
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 8%;
+    margin-left: 3%;
     text-align: center;
     color: rgb(255, 255, 255); 
     font-size: 12px; 
     line-height: 11px; 
     padding: 25px; 
-    border-radius: 11px; 
+    border-radius:11px; 
     font-family: Georgia, serif; 
     font-weight: normal; 
     text-decoration: none; 
@@ -71,11 +73,11 @@
 .button_welcome:hover{
     background-color : rgb(4, 178, 246);
     }
-
-.button_inscription_ideas_footer{
-    margin-top:1vh;
+    
+.button_inscription_project_footer{
+    margin-top:0.5vh;
     margin-bottom: 1vh;
-    margin-left:30%;
+    margin-left: 30%;
     text-align: center;
     color: rgb(255, 255, 255); 
     font-size: 12px; 
@@ -106,9 +108,9 @@
     background-color : rgb(4, 178, 246);
     }
     
-.button_connection_ideas_footer{
+.button_connection_project_footer{
     margin-bottom: 1vh;
-    margin-left:30%;
+    margin-left: 30%;
     text-align: center;
     color: rgb(255, 255, 255); 
     font-size: 12px; 
@@ -154,5 +156,5 @@
     font-size: 10.5px;
     margin-bottom: 5px;
     }
-    
+        
 }

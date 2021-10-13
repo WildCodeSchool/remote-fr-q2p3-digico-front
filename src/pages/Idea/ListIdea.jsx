@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import Navbar from '../../components/Navbar.jsx'
+import Footer from '../../components/footer/Footer'
 import IdeasCard from '../../components/IdeasCard.jsx';
 import CommentCard from '../../components/comments/CommentCard'
-import Project_footer from "../../components/footer/Project_footer.jsx"
+import ProjectFooter from "../../components/footer/ProjectFooter.jsx"
 import "./ListIdea.css"
 
 function ListIdea() {
@@ -25,7 +25,7 @@ function ListIdea() {
 
     return (
         <div>             
-             <Project_footer/>
+             <ProjectFooter/>
             <div className="ideas">
                 {ideas
                 .map((idea)=> 
@@ -40,7 +40,7 @@ function ListIdea() {
                 </div>
                 )}
             </div>
-            <Navbar/>
+            <Footer/>
         </div>
     )
 }

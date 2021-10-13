@@ -1,7 +1,7 @@
 import React from 'react'
-import "./ConnectFooter_project"
+import "./ConnectFooterProject"
 import {Link} from 'react-router-dom'
-import "./ConnectFooter_project.css"
+import "./ConnectFooterProject.css"
 
 function ConnectFooter_project() {
     return (

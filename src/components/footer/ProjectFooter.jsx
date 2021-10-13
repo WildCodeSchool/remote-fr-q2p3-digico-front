@@ -1,7 +1,7 @@
 import React from 'react'
-import "./Project_footer"
+import "./ProjectFooter"
 import {Link} from 'react-router-dom'
-import './Project_footer.css'
+import './ProjectFooter.css'
 
 function Project_footer() {
     return (

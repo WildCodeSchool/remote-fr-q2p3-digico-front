@@ -1,13 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import "./Navbar.css"
+import "./Footer.css"
 
 
-function Navbar() {
+function Footer() {
     return (
     <div>  
-        <div className="navbar">
-            <Link to="/creer-projet" className="linkNav">
+        <div className="Footer">
+            <Link to="/creer-projet" className="linkFooter">
             {/* <span></span>
             <span></span>
             <span></span>
@@ -15,10 +15,10 @@ function Navbar() {
             UN PROJET ?
             </Link>
 
-            {/* <Link to="/" className="logoLink" img src="">
-            </Link> */}
+            <Link to="/" className="logoLink">
+            </Link>
 
-            <Link to="/creer-idee" className="linkNav">
+            <Link to="/creer-idee" className="linkFooter">
            
             UNE IDÉE ?
             </Link>
@@ -27,4 +27,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Footer

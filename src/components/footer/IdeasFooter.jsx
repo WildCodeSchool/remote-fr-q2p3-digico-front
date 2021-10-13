@@ -1,11 +1,10 @@
 import React from 'react'
-import "./Ideas_footer"
 import {Link} from 'react-router-dom'
-import './Ideas_footer.css'
+import './IdeasFooter.css'
 
-function Ideas_footer() {
+function IdeasFooter() {
     return (
-        <div className="Ideas_footer">
+        <div className="IdeasFooter">
             <Link to='/'  className="button_welcome_subscribe">ACCUEIL</Link>
             <Link to='/liste-idee' className="button_idee_ideas_footer">IDEE</Link> 
             <div className="buttons_id">
@@ -17,4 +16,4 @@ function Ideas_footer() {
     )
 }
 
-export default Ideas_footer
+export default IdeasFooter
