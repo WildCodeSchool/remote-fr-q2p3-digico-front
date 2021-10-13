@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
+import axios from 'axios'
+
 import clapsIcon from '../assets/icons/clapsIcon.png';
 import groupIcon from '../assets/icons/groupIcon.png';
 import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
@@ -8,6 +10,28 @@ import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
 import './ProjectsCard.css'
 
 function ProjectsCard( {project} ) {
+    const url = `http://localhost:8000/api/projects/${project.id}`
+    const [claps, setClaps] = useState();
+
+    useEffect(() => {
+        axios
+        .get(url)
+        .then((res) => {
+            setClaps(res.data.claps)
+        })
+    }, [])
+
+    const updateClaps = () => {
+        const newClaps = claps + 1
+        axios.put(url, {
+            claps: newClaps
+        })
+        .then((res) => {
+            const newClap = res.data.claps
+            setClaps(newClap);
+        })
+    }
+
     return (
         <div className="ProjectsCard">
             <div className="img_container">
