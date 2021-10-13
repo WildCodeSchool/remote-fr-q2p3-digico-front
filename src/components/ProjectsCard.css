@@ -39,9 +39,16 @@
 }
 
 .left_project_icons{
-    width: 15%;
+    width: auto;
     display: flex;
     justify-content: space-between;
+}
+
+.claps_counter{
+    color: #795DE7;
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
 }
 
 .heartIcons{

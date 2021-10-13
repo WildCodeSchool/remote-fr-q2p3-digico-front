@@ -44,7 +44,8 @@ function ProjectsCard( {project} ) {
             </div>
             <div className="project_icons">
                 <div className="left_project_icons">
-                    <img src={clapsIcon} alt="clapsIcon"/>
+                    <img src={clapsIcon} alt="clapsIcon" onClick={updateClaps}/>
+                    {claps > 0 && <span className="claps_counter">{claps}</span>}
                     <img src={emptyHeartIcon} alt="emptyHeartIcon" class="heartIcons"/>
                 </div>
                     <span>{project.contributor}</span>
@@ -61,6 +62,8 @@ function ProjectsCard( {project} ) {
                 <div className="show_more">
                     <span>En savoir plus...</span>
                 </div>
+            </div>
+            <div className="project_icons">
             </div>
         </div>
     )
