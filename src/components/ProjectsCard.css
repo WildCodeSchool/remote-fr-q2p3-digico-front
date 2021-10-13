@@ -74,3 +74,9 @@
     justify-content: space-between;
     color: #227FBA;
 }
+
+.three_dots{
+    margin-top: 16%;
+    font-weight: 600;
+    margin-left: -7%;
+}

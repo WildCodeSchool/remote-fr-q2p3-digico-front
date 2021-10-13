@@ -47,6 +47,7 @@ function ProjectsCard( {project} ) {
                 <div className="short_desc_project">
                     <p>{project.description}</p>
                 </div>
+                <span className="three_dots">. . .</span>
             </div>
             <div className="project_icons">
                 <div className="claps">

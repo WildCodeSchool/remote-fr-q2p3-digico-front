@@ -3,13 +3,17 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios';
 import ConnectFooter from '../../components/footer/ConnectFooter'
 import Navbar from '../../components/Navbar.jsx'
+import FileUpload from './FileUpload';
 
 import "./CreateProject.css"
 
 function CreateProject() {
-    const url = "http://localhost:8000/api/projects/projectowner"
+    const url = "http://localhost:8000/api/projects"
     const { register, handleSubmit } = useForm();
-
+    const [file, setFile] = useState('');
+    const [filename, setFilename] = useState('');
+    const [uploadedFile, setUploadedFile] = useState({});
+    
     const [ project, setProject] = useState({
         title : "",
         description : "",
@@ -19,13 +23,13 @@ function CreateProject() {
         project_date : "",
         user_id: ""
     })
-
+    
     const createProject = e => {
         axios.post(url, {
             title: project.title,
             description: project.description,
             socials : project.socials,
-            img : project.img,
+            img : uploadedFile.filePath,
             localisation : project.localisation,
             project_date : project.project_date,
             user_id: project.user_id
@@ -33,6 +37,35 @@ function CreateProject() {
         alert("Votre projet à été créé 🚀")
     }
     
+    const onChange = e => {
+          setFile(e.target.files[0]);
+          setFilename(e.target.files[0].name);
+        };
+      
+        const onSubmit = async e => {
+        //   e.preventDefault();
+          const formData = new FormData();
+          formData.append('file', file);
+      
+          try {
+            const res = await axios.post('http://localhost:8000/api/projects/upload', formData, {
+              headers: {
+                'Content-Type': 'multipart/form-data'
+              }
+            });
+            const { fileName, filePath } = res.data;
+            setUploadedFile({ fileName, filePath });
+          } catch (err) {
+            console.log(err)
+          }
+        };
+
+    const submitForm = () => {
+        onSubmit();
+        createProject();
+        
+    }
+       
     function handleInputChange(e) {
         const newProject = { ...project}
         newProject[e.target.id] = e.target.value
@@ -42,18 +75,27 @@ function CreateProject() {
     return (
         <div className="CreateProject">
             <ConnectFooter/>
-            <form onSubmit={handleSubmit(createProject)} className="project_form">
+            <form onSubmit={handleSubmit(submitForm)} className="project_form">
                 <div className="head_Pform">
                     <div className = "head_left_Pform">
-                        <input 
+                        <FileUpload 
+                        method={(e) => {e.preventDefault(); onSubmit()}}
+                        value={file}
+                        onChange={(e) => {onChange(e)}}
+                        fileName={uploadedFile.fileName}
+                        filePath={uploadedFile.fileName}
+                    />
+                        {/* <input 
                             type="file"
                             className = "imgInput"
-                            id="img" 
-                            onChange ={(e) => handleInputChange(e)} 
+                            id="imgFile" 
+                            onChange ={onChange} 
                             value={project.img}
-                            required
                             placeholder="Image"/>
+                            <label>{filename}</label>
+                        <input type='submit' value='Télécharger'/> */}
                     </div>
+                    
                     <div className="head_right_Pform">
                         <input 
                             type="text" {...register("title")}
@@ -111,9 +153,9 @@ function CreateProject() {
                         <label for="user"> <br/>User ID :</label>
                         <input
                             type="number" {...register("user_id")}
-                            id="user"
+                            id="user_id"
                             onChange ={(e) => handleInputChange(e)}
-                            value={project.img}
+                            value={project.user_id}
                             className="contributors_input"
                         />
                     </div>

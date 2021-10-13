@@ -1,0 +1,28 @@
+.imgInput {
+    display: flex;
+    color: transparent;
+    text-align: center;
+    align-items: center;
+    margin: 7%;
+    width: 40vw;
+    height: 30.5vw;
+}
+
+.imgInput::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.imgInput::before{
+    content : "* Choisir une image";
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #ecf8ff);
+    border: 1px solid #999;
+    border-radius: 3px;
+    text-align: center;
+    padding: 6vh 2vw;
+}
+
+.imgInput:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #c1e7fd); 
+}
