@@ -14,7 +14,7 @@ function Login() {
              <form className="form_login" onSubmit={handleSubmit(onSubmit)}>
                 <input className="pseudo_login"  placeholder="username"/>
                 <input className="password_login"  placeholder="password"/>
-                <input className="button_login" type="submit"/>
+                <Link to='/utilisateur'><input className="button_login" type="submit"/></Link>
              </form>
              <p className="no_account">
                  Pas encore de compte ? Clique&nbsp;<Link to="/signup" >ici</Link>. 
