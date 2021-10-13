@@ -7,6 +7,7 @@ import DetailsProject from "./pages/Project/DetailsProject.jsx";
 import Signup from "./components/LogIn/Signup.jsx"
 import Login from "./components/LogIn/Login.jsx"
 import Contribution from "./pages/Contribution.jsx";
+import UserDetails from "./pages/User/UserDetails.jsx"
 
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/inscription" component={Login}/>
           <Route path="/details-project" component={DetailsProject}/>
           <Route path="/contribution" component={Contribution}/>
+          <Route path="/utilisateur/:id" component={UserDetails}/>
         </Switch>
       </Router>
     </div>
