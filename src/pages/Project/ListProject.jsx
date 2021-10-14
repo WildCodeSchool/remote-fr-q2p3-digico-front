@@ -16,7 +16,7 @@ function ListProject() {
     return (
 
         <div>
-            <SubscribeFooter/>
+            {/* <SubscribeFooter/> */}
                  <div className="projects-container">
                     {projects
                     .map ((project) =>
@@ -25,7 +25,7 @@ function ListProject() {
                     </div>
                     )}
                 </div>
-                <Navbar/>
+                {/* <Navbar/> */}
         </div>
     )
 }
