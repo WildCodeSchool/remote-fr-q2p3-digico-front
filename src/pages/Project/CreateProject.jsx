@@ -4,12 +4,24 @@ import axios from 'axios';
 import ConnectFooter from '../../components/footer/ConnectFooter'
 import Navbar from '../../components/Navbar.jsx'
 
+import cross from '../../assets/icons/cross.png';
+
 import "./CreateProject.css"
 
 function CreateProject() {
     const url = "http://localhost:8000/api/projects/projectowner"
     const { register, handleSubmit } = useForm();
+    const [ selectedImage, setSelectedImage ] = useState();
+    
+    const imageChange = (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+            setSelectedImage(e.target.files[0]);
+        }
+    }
 
+    const removeSelectedImage = () => {
+        setSelectedImage();
+    }
     const [ project, setProject] = useState({
         title : "",
         description : "",
@@ -39,63 +51,110 @@ function CreateProject() {
 
     return (
         <div className="CreateProject">
-            <ConnectFooter/>
+            {/* <ConnectFooter/> */}
             <form onSubmit={handleSubmit(createProject)} className="project_form">
                 <div className="head_Pform">
-                    <div className = "head_left_Pform">
+                    <p className="title_Pform">Création de projet</p>
+                    <p className="cancel_Pform">annuler <img src={cross} alt="cross"/></p>
+                </div>
+                <div className = "file_Pform">
+                    <div className="choose_img">
                         <input 
+                            accept="image/*"
                             type="file" {...register("img")}
                             className = "imgInput"
                             id="img" 
                             onChange ={(e) => handleInputChange(e)} 
+                            onChange= {imageChange}
                             value={project.img} 
                             placeholder="Image"/>
-                    </div>
-                    <div className="head_right_Pform">
-                        <input 
-                            type="text" {...register("title")}
-                            className = "title_input"
-                            id="title" 
+                            <p className="import_Pform">Importer une image</p>
+                            {selectedImage && (
+                                <div>
+                                    <img 
+                                        src={URL.createObjectURL(selectedImage)}
+                                        alt=""
+                                        className="img_preview"
+                                    />
+                                    <img src={cross} className="cancel_img_preview" onClick={removeSelectedImage} />
+                                </div>
+                            )}
+                        </div>
+                </div>
+                <div className="project_form">
+                    <div className="container_Pform">
+                        <div className="input_label_Pform">
+                            <label className="label_Pform">Titre du projet</label>
+                            <input 
+                                type="text" {...register("title")}
+                                className = "input_Pform"
+                                id="title" 
+                                onChange ={(e) => handleInputChange(e)} 
+                                value={project.title} />
+                        </div>
+                        <div className="input_label_Pform">
+                            <label className="label_Pform">Catégorie</label>
+                            <select className="input_Pform">
+                                <option value="option 1"></option>
+                                <option  value="option 2">Ecologie</option>
+                                <option  value="option 3">Social</option>
+                                <option  value="option 4">Tech</option>
+                            </select>
+                        </div>
+                        <div className="input_label_Pform">
+                            <label className="label_Pform">Localisation</label>
+                            <input 
+                                type="text" {...register("localisation")}
+                                className="input_Pform"
+                                id="localisation" 
+                                onChange ={(e) => handleInputChange(e)} 
+                                value={project.localisation} 
+                                placeholder=""/>
+                        </div>
+                        <div className="input_label_Pform">
+                            <label className="label_Pform">Description</label>
+                            <textarea 
+                                type="text" {...register("description")} 
+                                id="description"
+                                className="desc_Pform"
+                                onChange ={(e) => handleInputChange(e)} 
+                                value={project.description} >
+                            </textarea>
+                        </div>
+                        <div className="input_label_Pform">
+                            <label className="label_Pform">Date</label>
+                            <input 
+                                type="date" {...register("project_date")} 
+                                id="project_date"
+                                className = "input_Pform"
+                                onChange ={(e) => handleInputChange(e)} 
+                                value={project.project_date} 
+                                />
+                        </div>
+                        <div className="input_label_Pform">
+                            <label className="label_Pform">Réseaux Sociaux</label>
+                            <input 
+                            type="text" {...register("socials")} 
+                            id="socials"
+                            className = "input_Pform"
                             onChange ={(e) => handleInputChange(e)} 
-                            value={project.title} 
-                            placeholder="* Titre du projet :"/>
-                        <input 
-                            type="text" {...register("localisation")}
-                            className="localisation_input"
-                            id="localisation" 
-                            onChange ={(e) => handleInputChange(e)} 
-                            value={project.localisation} 
-                            placeholder="Localisation :"/>
-                        <input 
-                            type="date" {...register("project_date")} 
-                            id="project_date"
-                            className = "date_selector"
-                            onChange ={(e) => handleInputChange(e)} 
-                            value={project.project_date} 
-                            placeholder="Date"/>
+                            value={project.socials} />
+                        </div>
+                        <div className="input_label_Pform">
+                            <label className="label_Pform" for="contributors">Nombre de contributeurs nécessaires</label>
+                            <input
+                                type="number"
+                                id="contributors"
+                                className="input_Pform"
+                            />
+                        </div>
+                        <div>
+                            <button className="submitBtn_Pform">Publier</button>
+                        </div>
                     </div>
                 </div>
+                 {/*   </div>
                 <div className="body_Pform">
-                    <textarea 
-                        type="text" {...register("description")} 
-                        id="description"
-                        className="desc_text"
-                        onChange ={(e) => handleInputChange(e)} 
-                        value={project.description} 
-                        placeholder="* Description :"></textarea>
-                    <input 
-                        type="text" {...register("socials")} 
-                        id="socials"
-                        className = "socials_input"
-                        onChange ={(e) => handleInputChange(e)} 
-                        value={project.socials} 
-                        placeholder="@ Réseaux Sociaux:"/>
-                    <select className="categorie-list-project">
-                        <option className=""value="="> -- Choisir une catégorie -- </option>
-                        <option value="option 1">Ecologie</option>
-                        <option value="option 2">Social</option>
-                        <option value="option 3">Tech</option>
-                    </select>
                     <div className="contributors">
                         <label for="contributors">Contributeurs nécessaires :</label>
                         <input
@@ -105,11 +164,9 @@ function CreateProject() {
                         />
                     </div>
                 </div>
-                <button className="create-project_submit-btn">Publier</button>
-            </form> 
-            <Navbar/>
+                <button className="create-project_submit-btn">Publier</button>*/}
+            </form>  
         </div>
-
             
     )
 }

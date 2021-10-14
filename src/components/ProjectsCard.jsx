@@ -48,8 +48,10 @@ function ProjectsCard( {project} ) {
                     {claps > 0 && <span className="claps_counter">{claps}</span>}
                     <img src={emptyHeartIcon} alt="emptyHeartIcon" class="heartIcons"/>
                 </div>
-                    <span>{project.contributor}</span>
+                <div className="right_project_icons">
+                    <span className="contributors_count">/ {project.contributors}</span>
                     <img src={groupIcon} alt="groupeIcon"/>
+                </div>
             </div>
             <div className="project_info">
                 <div className="project_titles">
