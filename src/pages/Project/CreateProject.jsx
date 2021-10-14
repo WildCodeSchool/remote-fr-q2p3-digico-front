@@ -96,23 +96,25 @@ function CreateProject() {
                 </div>
                 <div className = "file_Pform">
                     <div className="choose_img">
-                    <FileUpload 
+                    {/* <FileUpload 
                         method={(e) => {e.preventDefault(); onSubmit()}}
                         value={file}
                         onChange={(e) => {onChange(e)}}
                         fileName={uploadedFile.fileName}
                         filePath={uploadedFile.fileName}
-                    />
-                        <FileUpload 
+                    /> */}
+                        <input
                             accept="image/*"
                             type="file" {...register("img")}
                             className = "imgInput"
                             id="img" 
-                            method={(e) => {e.preventDefault(); onSubmit()}}
+                            // method={(e) => {e.preventDefault(); onSubmit()}}
                             onChange ={(e) => handleInputChange(e)} 
                             onChange= {imageChange}
-                            onChange={(e) => {onChange(e)}}
-                            value={project.img} 
+                            // onChange={(e) => {onChange(e)}}
+                            // value={project.img} 
+                            // fileName={uploadedFile.fileName}
+                            // filePath={uploadedFile.fileName}
                             placeholder="Image"/>
                             <p className="import_Pform">Importer une image</p>
                             {selectedImage && (

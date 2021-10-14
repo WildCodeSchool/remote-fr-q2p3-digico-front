@@ -1,4 +1,4 @@
-.imgInput {
+/* .imgInput {
     display: flex;
     color: transparent;
     text-align: center;
@@ -25,4 +25,4 @@
 
 .imgInput:active::before {
     background: -webkit-linear-gradient(top, #e3e3e3, #c1e7fd); 
-}
+} */
