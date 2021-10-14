@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import {Link} from 'react-router-dom';
+import SubscribeHeader from '../../components/footer/SubscribeHeader'
+import background from'../../Assets/BackGround1.png'
 import "./signup.css"
 
 function Signup() {
@@ -11,6 +13,10 @@ function Signup() {
 
     return (
         <div>
+             <SubscribeHeader/>
+            <div className="background_signup">
+        <img src={background} alt="" /></div> 
+           
             <h1 className="pepidea_signup">PEP'IDEA</h1>
             <form className="form_signup"onSubmit={handleSubmit(onSubmit)}>
                 <input className="pseudo_signup"name="pseudonyme"  placeholder="username"/>

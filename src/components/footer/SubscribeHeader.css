@@ -1,18 +1,19 @@
 @media screen and (max-width : 767px) { 
 
 
-.subscribeHeader_accueil{
+.subscribeHeader{
     display: flex;
-    display: inline;
-    position: fixed;
+ flex-direction: row;
+    position: absolute;
     top: 0;
-    margin-top:30px ;
+    margin-top:120px ;
+    height: 100vh;
+    align-items: center;
     
-    /* height: 11px;
-    z-index: 1000; */
+    
     }
 
-
+/* 
 
 
 .button_connection_subscribe{
@@ -25,7 +26,7 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
-    /* display: inline-block; */
+  
     color: #FFFFFF;
     text-decoration: none;
     }
@@ -41,15 +42,47 @@
         font-weight: normal;
         font-size: 12px;
         line-height: 14px;
-        /* display: inline-block; */
+      
         color: #FFFFFF;
         text-decoration: none;
         }
-        
+         */
 
-
-
-
+         /* .subscribeHeader{
+            height: 100vh;
+            display: flex;
+           flex-direction: row;
+            align-items: center;
+          } */
+  
+          button.modal-toggle,
+          input[type="submit"] {
+              
+            background-color: rgb(61, 45, 48);
+            cursor: pointer;
+            font-size: 52px;
+            color: rgb(255, 253, 253);
+            padding: 1rem 2rem;
+           
+            border: none;
+          }
+  
+          button.modal-toggle:not(:first-child) {
+            margin-left: 10px;
+          }
+  
+          .form-group {
+            margin-top: 10px;
+          }
+  
+          input[type="text"],
+          input[type="password"],
+          input[type="email"] {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0.5rem 0.7rem;
+          }
+  
 
 
 }

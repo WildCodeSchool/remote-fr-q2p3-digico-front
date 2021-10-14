@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import {Link} from 'react-router-dom';
+import SubscribeHeader from '../../components/footer/SubscribeHeader'
+
 import './Login.css'
 function Login() {
     const {  handleSubmit, errors } = useForm();
@@ -10,6 +12,7 @@ function Login() {
 
     return (
         <div className="login">
+            <SubscribeHeader/>
             <h1 className="pepidea_login">PEP'IDEA</h1>
              <form className="form_login" onSubmit={handleSubmit(onSubmit)}>
                 <input className="pseudo_login"  placeholder="username"/>

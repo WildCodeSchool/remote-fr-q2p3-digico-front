@@ -10,6 +10,7 @@ function Welcome() {
     return (
       
     <div className="welcome">
+         
         <div className="background_welcome">
         <img src={background} alt="" /></div>  
         <SubscribeHeader/>
