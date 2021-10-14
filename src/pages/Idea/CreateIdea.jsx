@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
-import ConnectFooter from '../../components/footer/ConnectFooter'
-import Navbar from '../../components/Navbar';
+// import ConnectFooter from '../../components/footer/ConnectFooter'
+// import Navbar from '../../components/Navbar';
+import Vector from '../../assets/Vector.png'
 import "./CreateIdea.css";
 
 
@@ -12,7 +13,6 @@ function CreateIdea() {
   const [category, setCategory] = useState("")
   const [idea, setIdea] = useState({
     title: "",
-    // category: "",
     description: "",
     idea_date: "",
     user_id: "",
@@ -40,12 +40,16 @@ function CreateIdea() {
   }
 
     return (
-        <div>
-            <ConnectFooter/> 
+        <div className="idea_form">
+            {/* <ConnectFooter/>  */}
+            <div className="create-idea-top">
+            <p className="create_idea_title">Création d'idée</p>
+            <p className="create-idea-cancel">annuler  <img className="create-idea-cross" src={Vector}/></p>
+            </div>
             <form className="create-idea" onSubmit={createIdea}>
-                <label>Titre de votre idée : </label>
+                <label className="create-idea-label">Titre de votre idée : </label>
                 <input required className="idea-form-title" name="title" id="title" type="textarea" onChange={(e) => handleInputChange(e)} value={idea.title}/>
-                <label className="categorie-label">Catégorie : </label>
+                <label className="create-idea-label">Catégorie : </label>
                 <select required className="categorie-list-idea" name="categorieList" id="category" onChange={(e) => setCategory(e.target.value)} value={category}>
                 <option value=""> -- Choisir une catégorie -- </option>
                     <option value="Ecologie">Ecologie</option>
@@ -53,16 +57,13 @@ function CreateIdea() {
                     <option value="Tech">Tech</option>
                     <option value="Tech">Divers</option>
                 </select>
-                <label>Description détaillée : </label>
+                <label className="create-idea-label">Description détaillée : </label>
                 <textarea required className="idea-form-desc" name="desc" id="description" type="textarea" onChange={(e) => handleInputChange(e)} value={idea.description}/>
-                <label for="user"> <br/>User ID :</label>
-                <input required type="number" id="user_id"
-                  onChange ={(e) => handleInputChange(e)}
-                  value={idea.user_id}
-                  className="contributors_input"/> 
+                <label className="create-idea-label" for="user"> <br/>User ID :</label>
+                <input required type="number" id="user_id" onChange ={(e) => handleInputChange(e)} value={idea.user_id} className="contributors_input"/> 
                 <input className="create-idea_submit-btn" type="submit" value="Publier"/>
             </form>
-            <Navbar/>
+            {/* <Navbar/> */}
           </div>
     )
 }
