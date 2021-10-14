@@ -41,14 +41,11 @@
     justify-content: space-between;
 }
 
-<<<<<<< HEAD
-=======
 .comments {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
->>>>>>> 5b262493060238e844013940e9b8ac175b94630f
 .comment_form {
     margin-top: 1%;
     border-radius: 10px;
