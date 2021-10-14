@@ -10,6 +10,7 @@ import "./CreateProject.css"
 
 function CreateProject() {
     const url = "http://localhost:8000/api/projects/projectowner"
+    const [ category, setCategory] = useState("");
     const { register, handleSubmit } = useForm();
     const [ selectedImage, setSelectedImage ] = useState();
     
@@ -37,6 +38,7 @@ function CreateProject() {
             description: project.description,
             socials : project.socials,
             img : project.img,
+            category: category,
             localisation : project.localisation,
             project_date : project.project_date
         })
@@ -51,7 +53,6 @@ function CreateProject() {
 
     return (
         <div className="CreateProject">
-            {/* <ConnectFooter/> */}
             <form onSubmit={handleSubmit(createProject)} className="project_form">
                 <div className="head_Pform">
                     <p className="title_Pform">Création de projet</p>
@@ -94,7 +95,10 @@ function CreateProject() {
                         </div>
                         <div className="input_label_Pform">
                             <label className="label_Pform">Catégorie</label>
-                            <select className="input_Pform">
+                            <select id="category" 
+                                    onChange={(e) => setCategory(e.target.value)}
+                                    value={category}
+                                    className="input_Pform">
                                 <option value="option 1"></option>
                                 <option  value="option 2">Ecologie</option>
                                 <option  value="option 3">Social</option>
@@ -153,18 +157,6 @@ function CreateProject() {
                         </div>
                     </div>
                 </div>
-                 {/*   </div>
-                <div className="body_Pform">
-                    <div className="contributors">
-                        <label for="contributors">Contributeurs nécessaires :</label>
-                        <input
-                            type="number"
-                            id="contributors"
-                            className="contributors_input"
-                        />
-                    </div>
-                </div>
-                <button className="create-project_submit-btn">Publier</button>*/}
             </form>  
         </div>
             
