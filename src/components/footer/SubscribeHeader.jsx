@@ -17,50 +17,79 @@ function SubscribeHeader() {
 
 
         <div className="subscribeHeader">
-        <button className="modal-toggle" onClick={toggleLoginForm}>
-          Login
-        </button>
-        <button className="modal-toggle" onClick={toggleRegistrationForm}>
-          Register
-        </button>
+        <div className="modal-toggle_connecter" onClick={toggleLoginForm}>
+          Se connecter
+        </div>
+        <div className="modal-toggle_inscrire" onClick={toggleRegistrationForm}>
+          S'inscrire
+        </div>
 
-        <Modal
+        <Modal className="modal"
           isShowing={isLoginFormShowed}
           hide={toggleLoginForm}
-          title="Login"
+         
+         
+          
+          
         >
-          <form>
-            <div className="form-group">
-              <input type="text" placeholder="Username" />
+            <div className="title_heureux">Ha, te revoila!</div>
+            <div className="phrase_heureux">Nous sommes heureux de te revoir!</div>
+          <form className="encart">
+            <div className="form-group-mail">
+                <p className="form-group-mail-p">Email</p>
+              <input type="text"  />
             </div>
-            <div className="form-group">
-              <input type="text" placeholder="Password" />
+            <div className="form-group-mdp">
+                <p className="form-group-mdp-p">Mot de passe</p>
+              <input type="text"  />
             </div>
-            <div className="form-group">
-              <input type="submit" value="Login" />
+            <div className="form-group-bouton">
+      
+              <button className="bouton_connection">Se connecter</button>
             </div>
+
           </form>
+          <div className="phrase-redirection">
+            <p className="no-account">Besoin d'un compte ?</p>
+            <div className="pas-compte"
+            onClick={toggleRegistrationForm} > S'inscrire
+          </div>
+          </div>
         </Modal>
 
         <Modal
           isShowing={isRegistrationFormShowed}
           hide={toggleRegistrationForm}
-          title="Register"
+          
+          
+          
         >
+            <div className="title_bienvenue">Crée un compte</div>
+            <div className="phrase_bienvenue">Bienvenue sur pep'idea</div>
           <form>
-            <div className="form-group">
-              <input type="text" placeholder="Email Address" />
+            <div className="form-group-email-inscription">
+            <p className="form-group-mail-p-inscription">Email</p>
+              <input type="text"  />
             </div>
-            <div className="form-group">
-              <input type="text" placeholder="Username" />
+            <div className="form-group-mdp">
+                <p className="form-group-mdp-p-inscription">Mot de passe</p>
+              <input type="text"  />
             </div>
-            <div className="form-group">
-              <input type="text" placeholder="Password" />
+            <div className="form-group-mdp">
+                <p className="form-group-mdp-p-inscription-confirmation">Confirmer mot de passe</p>
+              <input type="text"  />
             </div>
-            <div className="form-group">
-              <input type="submit" value="Register" />
+            <div className="form-group-bouton-inscription">
+      
+              <button className="bouton_inscription">S'inscrire</button>
             </div>
           </form>
+          
+            
+            <div className="deja-compte"
+            onClick={toggleLoginForm} > Tu as déjà un compte ?
+          </div>
+          
         </Modal>
       </div>
 

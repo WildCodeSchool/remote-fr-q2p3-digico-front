@@ -5,10 +5,41 @@
     width: 100vw;
     height: 100vh;
     z-index: 1040;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .modal-wrapper {
+
+/* .revoila{
+    margin-bottom: 2%;
+    margin-left: 10%;
+    width: 231px;
+    height: 19px;
+    left: 64px;
+    top: 271px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+   
+} */
+
+/* .bienvenue{
+    margin-bottom: 2%;
+    margin-left: 10%;
+    width: 231px;
+    height: 19px;
+    left: 64px;
+    top: 271px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    
+} */
+.modal-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,30 +51,32 @@
     outline: 0;
     display: flex;
     align-items: center;
-  }
+    background-color: rgb(24,29,50, 0.5)
+    
+}
 
-  .modal {
+.modal {
     z-index: 100;
-    background: #fff;
+    background: rgb(43, 51, 72);
     position: relative;
     margin: auto;
-    border-radius: 5px;
     max-width: 500px;
     width: 80%;
     padding: 1rem;
   }
 
-  .modal-header {
+.modal-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
   }
 
-  .modal-close-button {
+.modal-close-button {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #000;
+    color: rgb(121, 93, 231);
     cursor: pointer;
     border: none;
-    background: transparent;
+    background: rgb(43, 51, 72);
+    margin-left: 90%;
   }
