@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaRegHandPaper, FaHeart, FaArrowRight } from 'react-icons/fa';
-import { HiUserGroup } from 'react-icons/hi';
+import { FaArrowRight } from 'react-icons/fa';
 import axios from 'axios'
+
+import clapsIcon from '../assets/icons/clapsIcon.png';
+import groupIcon from '../assets/icons/groupIcon.png';
+import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
 
 import './ProjectsCard.css'
 
@@ -39,23 +42,30 @@ function ProjectsCard( {project} ) {
                     </div>
                 </Link>
             </div>
+            <div className="project_icons">
+                <div className="left_project_icons">
+                    <img src={clapsIcon} alt="clapsIcon" onClick={updateClaps}/>
+                    {claps > 0 && <span className="claps_counter">{claps}</span>}
+                    <img src={emptyHeartIcon} alt="emptyHeartIcon" class="heartIcons"/>
+                </div>
+                <div className="right_project_icons">
+                    <span className="contributors_count">/ {project.contributors}</span>
+                    <img src={groupIcon} alt="groupeIcon"/>
+                </div>
+            </div>
             <div className="project_info">
                 <div className="project_titles">
                     <li>{project.title}</li>
-                    <li>{project.pseudonym}</li>
+                    <li className="user_pseudo">{project.pseudonym}</li>
                 </div>
                 <div className="short_desc_project">
                     <p>{project.description}</p>
                 </div>
-                <span className="three_dots">. . .</span>
+                <div className="show_more">
+                    <span>En savoir plus...</span>
+                </div>
             </div>
             <div className="project_icons">
-                <div className="claps">
-                    <FaRegHandPaper onClick={updateClaps}/>
-                    {claps > 0 && <span>{claps}</span>}
-                </div>
-                <HiUserGroup />
-                <FaHeart />
             </div>
         </div>
     )

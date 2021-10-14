@@ -1,8 +1,10 @@
 .CreateProject {
     display: flex;
     flex-direction: column;
-    margin-top : 25%;
     width: 100vw;
+    height: auto;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(179.88deg, #181D32 0.1%, #795DE7 195.3%);
 }
 
 .project_form {
@@ -12,24 +14,159 @@
 .head_Pform {
     display: flex;
     flex-direction: row;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 6%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.head_right_Pform {
+.title_Pform {
+    font-weight: 600;
+}
+
+.cancel_Pform{
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    width: 15%;
+    justify-content: space-between;
+}
+
+.head_Pform img {
+    width: 11px;
+    height : 11px;
+}
+
+.file_Pform {
+    margin-top: 2%;
+    height: 32vh;
+    width: 100vw;
+}
+
+.import_Pform{
+    display: flex;
+    position: absolute;
+    color: rgba(121, 93, 231, 0.55);
+    font-weight: 700;
+    font-size: 20px ;
+    width: 50%;
+    align-items: center;
+    margin-top: -38%;
+    margin-left: 25%;
+    margin-right: auto;
+}
+
+.imgInput {
+    display: flex;
+    color: transparent;
+    text-align: center;
+    align-items: center;
+    width: 99.5vw;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(121, 93, 231, 0.15);
+    border: 1px solid #795DE7;
+}
+
+.imgInput::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.imgInput::before{
+    content : "";
+    color: black;
+    display: inline-block;
+    text-align: center;
+    height: 30vh;
+    width: 100%;
+}
+
+.imgInput:active::before {
+    background: rgba(146, 127, 221, 0.15);
+}
+
+.img_preview{
+    width: 100%;
+    height: 33vh;
+    position: absolute;
+    object-fit: cover;
+    margin-top: -71%;
+}
+
+.cancel_img_preview{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin-top: -69%;
+    right: 0%;
+}
+
+.select, textarea{
+    color: white;
+}
+
+.project_form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    margin-right: auto;
+    width: 95%;
+    margin: 5%;
     margin-left: auto;
+    margin-right: auto;
+    color: white;
 }
 
-.title_input{
-    border: hidden;
-    border-bottom: 1px solid #227FBA;
-    padding-bottom: 2px;
+.container_Pform{
+    width: 90%;
+    color: white;
 }
 
-.localisation_input {
+.input_label_Pform{
+    display: flex;
+    flex-direction: column;
+}
+
+.label_Pform {
+    font-size: 12px;
+    color: white;
+    margin-top: 5%;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.input_Pform{
+    width: 100%;
+    height: 3.7vh;
+    background-color: #795DE7;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.desc_Pform{
+    border-radius: 5px;
+    background-color: #795DE7;
+    height: 13vh;
+    border-style: none;
+}
+
+.submitBtn_Pform {
+    margin-top: 7%;
+    margin-bottom: 5%;
+    width: 50%;
+    height: 3.7vh;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+    background-color: #795DE7;
+    border-style: none;
+}
+
+/* .localisation_input {
     border: hidden;
     border-bottom: 1px solid #227FBA;
     padding-bottom: 2px;
@@ -81,26 +218,4 @@
     margin-left: 2vw;
     border: 1px solid #227FBA;
     border-radius: 5px;
-}
-
-.create-project_submit-btn {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: rgb(255, 255, 255); 
-    font-size: 20px; 
-    line-height: 11px; 
-    padding: 20px; 
-    border-radius: 50px; 
-    font-family: Georgia, serif; 
-    font-weight: normal; 
-    text-decoration: none; 
-    font-style: normal;
-    font-variant: normal; 
-    text-transform: none; 
-    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
-    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
-    border: 2px solid rgb(209, 207, 207); 
-}
+} */
