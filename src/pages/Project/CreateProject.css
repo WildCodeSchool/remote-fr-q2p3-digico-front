@@ -17,9 +17,10 @@
     color: white;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 6%;
-    margin-right: 2%; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title_Pform {
@@ -40,7 +41,7 @@
 }
 
 .file_Pform {
-    /* margin-top: 2%; */
+    margin-top: 2%;
     height: 32vh;
     width: 100vw;
 }
@@ -64,7 +65,6 @@
     text-align: center;
     align-items: center;
     width: 99.5vw;
-    margin: 0;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -81,13 +81,12 @@
     color: black;
     display: inline-block;
     text-align: center;
-    height: 32vh;
+    height: 30vh;
     width: 100%;
 }
 
 .imgInput:active::before {
     background: rgba(146, 127, 221, 0.15);
-    height: 100%;
 }
 
 .img_preview{
@@ -166,57 +165,3 @@
     background-color: #795DE7;
     border-style: none;
 }
-
-/* .localisation_input {
-    border: hidden;
-    border-bottom: 1px solid #227FBA;
-    padding-bottom: 2px;
-}
-
-.date_selector{
-    color: #227FBA;
-}
-
-.body_Pform{
-    display: flex;
-    flex-direction: column;
-    justify-content: so;
-    width: 100vw;
-    height: 50vh;
-}
-
-.desc_text {
-    height: 50%;
-    width: 85%;
-    margin : 7% auto;
-    border-color: #227FBA;
-    border-radius: 5px;
-}
-
-.socials_input{
-    width : 75%;
-    margin: 0% auto;
-    border: hidden;
-    border-bottom: 1px solid #227FBA;
-    padding-bottom: 3px;
-}
-
-.categorie-list-project{
-    width: 75%;
-    margin-top: 7%;
-    margin: auto;
-    color: #227FBA;
-    padding : 5px;
-}
-
-.contributors {
-    margin: 0 auto 7% auto;
-}
-
-.contributors_input{
-    width: 7vw;
-    height: 2.2vh;
-    margin-left: 2vw;
-    border: 1px solid #227FBA;
-    border-radius: 5px;
-} */

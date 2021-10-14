@@ -12,9 +12,9 @@ import "./CreateProject.css"
 function CreateProject() {
     const url = "http://localhost:8000/api/projects"
     const { register, handleSubmit } = useForm();
-    // const [file, setFile] = useState('');
-    // const [filename, setFilename] = useState('');
-    // const [uploadedFile, setUploadedFile] = useState({});
+    const [file, setFile] = useState('');
+    const [filename, setFilename] = useState('');
+    const [uploadedFile, setUploadedFile] = useState({});
     const [ category, setCategory] = useState("");
     const [ selectedImage, setSelectedImage ] = useState();
     
@@ -33,8 +33,8 @@ function CreateProject() {
             title: project.title,
             description: project.description,
             socials : project.socials,
-            // img : uploadedFile.filePath,
-            img : project.img,
+            img : uploadedFile.filePath,
+            // img : project.img,
             category: category,
             localisation : project.localisation,
             project_date : project.project_date,
@@ -43,37 +43,39 @@ function CreateProject() {
         alert("Votre projet à été créé 🚀")
     }
       
-        // const onSubmit = async e => {
-        //   e.preventDefault();
-        //   const formData = new FormData();
-        //   formData.append('file', file);
+        const onSubmit = async e => {
+          e.preventDefault();
+          const formData = new FormData();
+          formData.append('file', file);
       
-        //   try {
-        //     const res = await axios.post('http://localhost:8000/api/projects/upload', formData, {
-        //       headers: {
-        //         'Content-Type': 'multipart/form-data'
-        //       }
-        //     });
-        //     const { fileName, filePath } = res.data;
-        //     setUploadedFile({ fileName, filePath });
-        //   } catch (err) {
-        //     console.log(err)
-        //   }
-        // };
+          try {
+            const res = await axios.post('http://localhost:8000/api/projects/upload', formData, {
+              headers: {
+                'Content-Type': 'multipart/form-data'
+              }
+            });
+            const { fileName, filePath } = res.data;
+            setUploadedFile({ fileName, filePath });
+          } catch (err) {
+            console.log(err)
+          }
+        };
 
-    // const submitForm = () => {
-    //     onSubmit();
-    //     createProject();
-    // }
+    const submitForm = () => {
+        onSubmit();
+        createProject();
+    }
 
-    // const onChange = e => {
-    //     setFile(e.target.files[0]);
-    //     setFilename(e.target.files[0].name);
-    //   };
+    const onChange = e => {
+        setFile(e.target.files[0]);
+        setFilename(e.target.files[0].name);
+      };
 
     const imageChange = (e) => {
         if (e.target.files && e.target.files.length > 0) {
             setSelectedImage(e.target.files[0]);
+            setFile(e.target.files[0]);
+            setFilename(e.target.files[0].name);
         }
     }
 
@@ -108,13 +110,13 @@ function CreateProject() {
                             type="file" {...register("img")}
                             className = "imgInput"
                             id="img" 
-                            // method={(e) => {e.preventDefault(); onSubmit()}}
+                            method={(e) => {e.preventDefault(); onSubmit()}}
                             onChange ={(e) => handleInputChange(e)} 
                             onChange= {imageChange}
                             // onChange={(e) => {onChange(e)}}
-                            // value={project.img} 
-                            // fileName={uploadedFile.fileName}
-                            // filePath={uploadedFile.fileName}
+                            value={uploadedFile.filePath} 
+                            fileName={uploadedFile.fileName}
+                            filePath={uploadedFile.fileName}
                             placeholder="Image"/>
                             <p className="import_Pform">Importer une image</p>
                             {selectedImage && (
@@ -200,7 +202,7 @@ function CreateProject() {
                             />
                         </div>
                         <div>
-                            <button className="submitBtn_Pform">Publier</button>
+                            <button onSubmit={onSubmit} className="submitBtn_Pform">Publier</button>
                         </div>
                     </div>
                 </div>
