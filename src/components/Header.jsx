@@ -5,9 +5,11 @@ import {Link} from 'react-router-dom'
 function Header() {
     return (
         <div className="header_container">
-            <p className="title_header"> PEP'IDEA</p>
+            
+            <Link to="/" className="title_header">
+            PEP'IDEA </Link>
             <Link to="/liste-projet" className="linkprojets">Projets</Link>
-            <Link to="/liste-idees" className="linkidees">Idées</Link>
+            <Link to="/ListIdea" className="linkidees">Idées</Link>
         </div>
     )
 }
