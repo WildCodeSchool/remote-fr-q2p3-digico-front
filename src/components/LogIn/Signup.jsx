@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import SubscribeHeader from '../../components/footer/SubscribeHeader'
 import background from'../../assets/BackGround1.png'
 import axios from 'axios';
-import "./signup.css"
+import "./signup.css";
 
 function Signup() {
     const { handleSubmit, errors, register } = useForm();
