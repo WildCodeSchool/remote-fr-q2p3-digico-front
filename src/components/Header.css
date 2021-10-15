@@ -9,8 +9,11 @@
     top: 0;
     z-index :1;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #181D32;
-    position: fixed;
+    position:fixed;
+    z-index: 1;
+    
 }
+
 
 .title_header{
     margin-top: 16%;

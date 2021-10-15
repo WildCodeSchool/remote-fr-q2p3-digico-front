@@ -3,9 +3,13 @@ import Footer from '../../components/footer/Footer.jsx';
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
+<<<<<<< HEAD
 // import ConnectFooter from '../../components/footer/ConnectFooter'
 // import Navbar from '../../components/Navbar';
 import Vector from '../../assets/Vector.png'
+=======
+import Vector from '../../Assets/Vector.png'
+>>>>>>> dev
 import "./CreateIdea.css";
 
 
