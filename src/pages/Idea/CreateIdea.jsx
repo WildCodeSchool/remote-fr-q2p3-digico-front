@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from 'axios';
 // import ConnectFooter from '../../components/footer/ConnectFooter'
 // import Navbar from '../../components/Navbar';
@@ -44,7 +44,7 @@ function CreateIdea() {
             {/* <ConnectFooter/>  */}
             <div className="create-idea-top">
             <p className="create_idea_title">Création d'idée</p>
-            <p className="create-idea-cancel">annuler  <img className="create-idea-cross" src={Vector}/></p>
+            <p className="create-idea-cancel">annuler  <Link to='/liste-idee'><img className="create-idea-cross" src={Vector}/></Link></p>
             </div>
             <form className="create-idea" onSubmit={createIdea}>
                 <label className="create-idea-label">Titre de votre idée : </label>
