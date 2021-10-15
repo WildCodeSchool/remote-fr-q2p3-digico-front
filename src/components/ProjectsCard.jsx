@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import axios from 'axios'
 
-import clapsIcon from '../assets/icons/clapsIcon.png';
-import groupIcon from '../assets/icons/groupIcon.png';
-import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
+import clapsIcon from '../Assets/icons/clapsIcon.png';
+import groupIcon from '../Assets/icons/groupIcon.png';
+import emptyHeartIcon from '../Assets/icons/emptyHeartIcon.png';
 
 import './ProjectsCard.css'
 
@@ -35,7 +35,7 @@ function ProjectsCard( {project} ) {
     return (
         <div className="ProjectsCard">
             <div className="img_container">
-                <Link to='/details-projet' className="project-card">
+                <Link to={{pathname: `/projets/${project.id}`}} className="project-card">
                     <img className="project_img" src={project.img} alt={project.title}/>
                     <div className="arrow_to_details">
                         <FaArrowRight />

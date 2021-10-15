@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import Navbar from '../../components/Navbar.jsx'
+import Footer from '../../components/footer/Footer'
 import IdeasCard from '../../components/IdeasCard.jsx';
-import CommentCard from '../../components/comments/CommentCard'
-import SubscribeFooter from "../../components/footer/SubscribeFooter.jsx"
+// import CommentCard from '../../components/comments/CommentCard'
+import Header from '../../components/Header';
 import "./ListIdea.css"
+
 
 function ListIdea() {
 
@@ -15,17 +16,11 @@ function ListIdea() {
         .then((res) => res.data)
         .then((data) => setIdeas(data))                
     }, [])
-    // const [comments, setComments] = useState([]);
-    // useEffect(() => {
-    //     axios
-    //     .get("http://localhost:8000/api/comments/comments_card")
-    //     .then((res) => res.data)
-    //     .then((data) => setComments(data))                
-    // }, [])
+   
 
     return (
         <div>             
-             <SubscribeFooter/>
+             <Header/>
             <div className="ideas">
                 {ideas
                 .map((idea)=> 
@@ -41,7 +36,7 @@ function ListIdea() {
                 </div>
                 )} */}
             </div>
-            <Navbar/>
+            <Footer/>
         </div>
     )
 }
