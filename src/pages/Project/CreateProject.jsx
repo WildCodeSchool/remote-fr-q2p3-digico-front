@@ -25,6 +25,8 @@ function CreateProject() {
         img : "",
         localisation : "",
         project_date : "",
+        claps: "",
+        contributors : "",
         user_id: ""
     })
     
@@ -33,8 +35,8 @@ function CreateProject() {
             title: project.title,
             description: project.description,
             socials : project.socials,
-            img : uploadedFile.filePath,
-            // img : project.img,
+            img : uploadedFile.fileName,
+            contributors: project.contributors,
             category: category,
             localisation : project.localisation,
             project_date : project.project_date,
@@ -43,23 +45,23 @@ function CreateProject() {
         alert("Votre projet à été créé 🚀")
     }
       
-        const onSubmit = async e => {
-          e.preventDefault();
-          const formData = new FormData();
-          formData.append('file', file);
-      
-          try {
-            const res = await axios.post('http://localhost:8000/api/projects/upload', formData, {
-              headers: {
-                'Content-Type': 'multipart/form-data'
-              }
-            });
-            const { fileName, filePath } = res.data;
-            setUploadedFile({ fileName, filePath });
-          } catch (err) {
-            console.log(err)
-          }
-        };
+    const onSubmit = async e => {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append('file', file);
+    
+        try {
+        const res = await axios.post('http://localhost:8000/api/projects/upload', formData, {
+            headers: {
+            'Content-Type': 'multipart/form-data'
+            }
+        });
+        const { fileName, filePath } = res.data;
+        setUploadedFile({ fileName, filePath });
+        } catch (err) {
+        console.log(err)
+        }
+    };
 
     const submitForm = () => {
         onSubmit();
@@ -73,7 +75,7 @@ function CreateProject() {
 
     const imageChange = (e) => {
         if (e.target.files && e.target.files.length > 0) {
-            setSelectedImage(e.target.files[0]);
+            // setSelectedImage(e.target.files[0]);
             setFile(e.target.files[0]);
             setFilename(e.target.files[0].name);
         }
@@ -110,19 +112,19 @@ function CreateProject() {
                             type="file" {...register("img")}
                             className = "imgInput"
                             id="img" 
-                            method={(e) => {e.preventDefault(); onSubmit()}}
-                            onChange ={(e) => handleInputChange(e)} 
-                            onChange= {imageChange}
-                            // onChange={(e) => {onChange(e)}}
+                            // method={(e) => {e.preventDefault(); onSubmit()}}
+                            onChange ={(e) => handleInputChange(e)}
+                            // onChange= {imageChange}
+                            onChange={(e) => {onChange(e)}}
                             value={uploadedFile.filePath} 
                             fileName={uploadedFile.fileName}
                             filePath={uploadedFile.fileName}
                             placeholder="Image"/>
                             <p className="import_Pform">Importer une image</p>
-                            {selectedImage && (
+                            {file && (
                                 <div>
                                     <img 
-                                        src={URL.createObjectURL(selectedImage)}
+                                        src={URL.createObjectURL(file)}
                                         alt=""
                                         className="img_preview"
                                     />
@@ -199,10 +201,20 @@ function CreateProject() {
                                 type="number"
                                 id="contributors"
                                 className="input_Pform"
+                                value={project.contributors}
+                                onChange ={(e) => handleInputChange(e)}
+                            />
+                            <label className="label_Pform" for="contributors">User ID</label>
+                            <input
+                                type="number"
+                                id="user_id"
+                                value={project.user_id}
+                                className="input_Pform"
+                                onChange ={(e) => handleInputChange(e)}
                             />
                         </div>
                         <div>
-                            <button onSubmit={onSubmit} className="submitBtn_Pform">Publier</button>
+                            <button onSubmit={submitForm} className="submitBtn_Pform">Publier</button>
                         </div>
                     </div>
                 </div>
