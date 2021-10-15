@@ -1,66 +1,84 @@
+.idea_form {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 5%;
+    padding-bottom: 70%;
+    height: auto;
+    width: auto;
+    background: linear-gradient(179.88deg, #181D32 0.1%, #795DE7 195.3%);
+    color: white;
+}
+.create_idea_title {
+    font-size: 22px;
+    font-weight: 700;
+}
+.create-idea-cancel {
+    font-size: 11px;
+    font-weight: 700;
+}
+.create-idea-cross {
+    padding-left: 5px;
+}
+.create-idea-top {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .create-idea {
-    margin-top: 25%;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    width: 75vw;
+    width: 90vw;
     margin-right: auto;
     margin-left: auto;
 }
-.create-idea label {
-    font-weight: bold;
-    padding-top: 3%;
+.create-idea-label {
+    font-weight: 700;
+    font-size: 12px;
+    padding-top: 7%;
 }
 
 .idea-form-title {
+    background: #795DE7;
+    border-radius: 5px;
     padding: 2%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.categorie-label {
-    margin-bottom: 5%;
-}
-select {
     margin-top: 2%;
     margin-bottom: 2%;
-    padding: 3%;
-    color: black;
 }
 
-.idea-form-img {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.img-label {
-    margin-top: 5%;
+.categorie-list-idea {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+    color: white;
+    background: #795DE7;
+    border-radius: 5px;
 }
 
 .idea-form-desc {
-    padding-bottom: 65%;
-    margin-top: 7%;
-    margin-bottom: 7%;
+    padding-bottom: 45%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: #795DE7;
+    border-radius: 5px;
 }
 
 
 .create-idea_submit-btn {
     display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
     margin-top: 8%;
-    color: rgb(255, 255, 255); 
-    font-size: 20px; 
-    line-height: 11px; 
-    padding: 20px; 
-    border-radius: 50px; 
-    font-family: Georgia, serif; 
-    font-weight: normal; 
+    color: white; 
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 55%;
+    font-weight: 700; 
     text-decoration: none; 
-    font-style: normal;
-    font-variant: normal; 
-    text-transform: none; 
-    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
-    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
-    border: 2px solid rgb(209, 207, 207); 
+    background-color: #795DE7;
+    border-radius: 5px;
+    border: 1px solid #795DE7; 
 }

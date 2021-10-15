@@ -1,8 +1,7 @@
 .projects-container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    margin-top: 25%;
-    padding-bottom: 180px;
+    height: 100%;
     width: 100%;
+    background: linear-gradient(179.88deg, #181D32 0.1%, #795DE7 195.3%);
 }
