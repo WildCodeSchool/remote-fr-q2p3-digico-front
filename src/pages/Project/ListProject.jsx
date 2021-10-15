@@ -17,6 +17,7 @@ function ListProject() {
 
         <div>
             <Header/>
+            <div className="headerSpace"></div>
                  <div className="projects-container">
                     {projects
                     .map ((project) =>
