@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import Navbar from '../../components/Navbar'
-import ConnectFooter from '../../components/footer/ConnectFooter'
+import Header from '../../components/Header'
+import Footer from '../../components/footer/Footer'
 import "./UserDetails.css"
 
 function UserDetails(props) {
@@ -17,7 +17,7 @@ function UserDetails(props) {
 
     return (
         <div className="user-container">
-            <ConnectFooter/>
+            <Header/>
                 <div className="container-top"> 
                     <div className="container-img">
                         <img className="user-avatar" src={process.env.PUBLIC_URL + "/assets/" + user.user_img} alt={user.pseudonym} />
@@ -33,7 +33,7 @@ function UserDetails(props) {
                     <button className="user-button1">Idées</button>
                     <button className="user-button2">Contributions</button>
                 </div>
-            <Navbar/>
+            <Footer/>
         </div>
     )
 }
