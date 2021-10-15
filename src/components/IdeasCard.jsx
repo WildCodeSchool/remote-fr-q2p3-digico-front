@@ -1,8 +1,16 @@
 import React, {useState} from 'react'
 import {FaRegHandPaper, FaRegCommentDots, FaHeart} from 'react-icons/fa';
+import CommentCard from '../components/comments/CommentCard'
 import './IdeasCard.css'
 
-function IdeasCard({idea}) {
+function IdeasCard({idea, comment}) {
+    // const [ideas, setIdeas] = useState([]);
+    // useEffect(() => {
+    //     axios
+    //     .get("http://localhost:8000/api/ideas/ideaowner")
+    //     .then((res) => res.data)
+    //     .then((data) => setIdeas(data))                
+    // }, [])
 
     const [showComments, setShowComments] = useState(false);
     return (
@@ -30,7 +38,7 @@ function IdeasCard({idea}) {
                 <input className="comment_form" type="text" placeholder="Com" />
                 </div>
                 <div className="coms">
-                <span>Com1 : Blablabla</span>
+                <CommentCard comment={comment} />
                 </div>
             </div>}
             </div>

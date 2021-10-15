@@ -15,14 +15,11 @@ function Navbar() {
             UN PROJET ?
             </Link>
 
-            {/* <Link to="/" className="logoLink">
+            {/* <Link to="/" className="logoLink" img src="">
             </Link> */}
 
             <Link to="/creer-idee" className="linkNav">
-            {/* <span></span>
-            <span></span>
-            <span></span>
-            <span></span> */}
+           
             UNE IDÉE ?
             </Link>
         </div>

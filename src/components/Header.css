@@ -1,0 +1,86 @@
+@media screen and (max-width : 767px) { 
+
+.header_container{
+    display: flex;
+    flex-direction: row;
+    width: 375px;
+    height: 87px;
+    left: 0px;
+    top: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #181D32;
+    position: fixed;
+}
+
+.title_header{
+    margin-top: 16%;
+    width: 123px;
+    height: 18.58px;
+    right: 239px;
+    top: 52px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF; 
+    text-decoration: none;
+}
+
+.linkprojets{
+    margin-top: 16%;
+    width: 38.57px;
+    height: 15.2px;
+    right: 13.29px;
+    top: 55px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15.4286px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-left: 35%;
+    text-decoration: none;
+}
+
+.linkprojets:hover{
+    color: rgb(121, 93, 231);
+    
+}
+.linkidees{
+    margin-top: 16%;
+    width: 38.57px;
+    height: 15.2px;
+    right: 13.29px;
+    top: 55px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15.4286px;
+    line-height: 18px;
+    color: #FFFFFF; 
+    margin-left: 7%;
+    text-decoration: none;
+}
+
+.linkidees:hover{
+    color: rgb(121, 93, 231);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
