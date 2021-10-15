@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import axios from 'axios';
 // import ConnectFooter from '../../components/footer/ConnectFooter'
 // import Navbar from '../../components/Navbar';
-import Vector from '../../Assets/Vector.png'
+import Vector from '../../assets/Vector.png'
 import "./CreateIdea.css";
 
 
