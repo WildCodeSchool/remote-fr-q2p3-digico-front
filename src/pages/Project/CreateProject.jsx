@@ -38,7 +38,11 @@ function CreateProject() {
 
     return (
         <div className="CreateProject">
+
             <Header/>
+
+            
+
             <form onSubmit={handleSubmit(createProject)} className="project_form">
                 <div className="head_Pform">
                     <div className = "head_left_Pform">
@@ -106,7 +110,11 @@ function CreateProject() {
                 </div>
                 <button className="create-project_submit-btn">Publier</button>
             </form> 
+
             <Footer/>
+
+          
+
         </div>
 
             

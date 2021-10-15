@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaRegHandPaper, FaHeart, FaArrowRight } from 'react-icons/fa';
-import { HiUserGroup } from 'react-icons/hi';
+import { FaArrowRight } from 'react-icons/fa';
+import axios from 'axios'
+
+import clapsIcon from '../Assets/icons/clapsIcon.png';
+import groupIcon from '../Assets/icons/groupIcon.png';
+import emptyHeartIcon from '../Assets/icons/emptyHeartIcon.png';
 
 import './ProjectsCard.css'
 
 function ProjectsCard( {project} ) {
-    
+    const url = `http://localhost:8000/api/projects/${project.id}`
+    const [claps, setClaps] = useState();
+
+    useEffect(() => {
+        axios
+        .get(url)
+        .then((res) => {
+            setClaps(res.data.claps)
+        })
+    }, [])
+
+    const updateClaps = () => {
+        const newClaps = claps + 1
+        axios.put(url, {
+            claps: newClaps
+        })
+        .then((res) => {
+            const newClap = res.data.claps
+            setClaps(newClap);
+        })
+    }
+
     return (
         <div className="ProjectsCard">
             <div className="img_container">
@@ -17,19 +42,28 @@ function ProjectsCard( {project} ) {
                     </div>
                 </Link>
             </div>
+            <div className="project_icons">
+                <div className="left_project_icons">
+                    <img src={clapsIcon} alt="clapsIcon" onClick={updateClaps}/>
+                    {claps > 0 && <span className="claps_counter">{claps}</span>}
+                    <img src={emptyHeartIcon} alt="emptyHeartIcon" class="heartIcons"/>
+                </div>
+                    <span>{project.contributor}</span>
+                    <img src={groupIcon} alt="groupeIcon"/>
+            </div>
             <div className="project_info">
                 <div className="project_titles">
                     <li>{project.title}</li>
-                    <li>{project.pseudonym}</li>
+                    <li className="user_pseudo">{project.pseudonym}</li>
                 </div>
                 <div className="short_desc_project">
                     <p>{project.description}</p>
                 </div>
+                <div className="show_more">
+                    <span>En savoir plus...</span>
+                </div>
             </div>
             <div className="project_icons">
-                <FaRegHandPaper />
-                <HiUserGroup />
-                <FaHeart />
             </div>
         </div>
     )
