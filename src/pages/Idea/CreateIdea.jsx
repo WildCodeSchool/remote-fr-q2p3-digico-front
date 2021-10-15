@@ -3,8 +3,6 @@ import Footer from '../../components/footer/Footer.jsx';
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
-// import ConnectFooter from '../../components/footer/ConnectFooter'
-// import Navbar from '../../components/Navbar';
 import Vector from '../../Assets/Vector.png'
 import "./CreateIdea.css";
 

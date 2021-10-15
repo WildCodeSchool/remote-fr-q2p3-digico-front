@@ -9,7 +9,7 @@ function Header() {
             <Link to="/" className="title_header">
             PEP'IDEA </Link>
             <Link to="/liste-projet" className="linkprojets">Projets</Link>
-            <Link to="/ListIdea" className="linkidees">Idées</Link>
+            <Link to="/liste-idee" className="linkidees">Idées</Link>
         </div>
     )
 }
