@@ -1,14 +1,15 @@
 import React from 'react'
-import ConnectFooterIdeas from '../components/footer/ConnectFooterIdeas'
+import Header from '../components/Header'
 // import {Link} from 'react-router-dom'
 import "./Contribution.css"
+import Footer from '../components/footer/Footer'
 
 
 
 function Contribution() {
     return (
         <div>
-            <ConnectFooterIdeas/>
+            <Header/>
             <div className="form_contrib">
             <label className="dispo_contrib"> Mes disponibilités</label>
             <label className="dispo_contrib_start"> A partir du :</label>
@@ -20,7 +21,9 @@ function Contribution() {
             <button className="button_submit_contrib">JE ME PROPOSE</button>
 
             </div>   
+            <Footer/>
         </div>
+        
     )
 }
 

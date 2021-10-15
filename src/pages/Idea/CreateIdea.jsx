@@ -1,5 +1,5 @@
 import React from 'react';
-import SubscribeHeader from "../../components/footer/SubscribeHeader"
+import Header from '../../components/Header.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 import "./CreateIdea.css";
 
@@ -8,7 +8,7 @@ import "./CreateIdea.css";
 function CreateIdea() {
     return (
         <div>
-            <SubscribeHeader/> 
+            <Header/> 
             <form className="create-idea" >
                 <label>Titre de votre idée : </label>
                 <input className="idea-form-title" name="title" type="textarea"/>

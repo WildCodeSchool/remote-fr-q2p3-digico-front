@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Footer from '../../components/footer/Footer'
-import IdeasFooter from "../../components/footer/IdeasFooter.jsx"
 import ProjectsCard from '../../components/ProjectsCard.jsx'
+import Header from '../../components/Header'
 import './ListProject.css'
 
 function ListProject() {
@@ -16,7 +16,7 @@ function ListProject() {
     return (
 
         <div>
-            <IdeasFooter/>
+            <Header/>
                  <div className="projects-container">
                     {projects
                     .map ((project) =>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios';
-import SubscribeHeader from '../../components/footer/SubscribeHeader.jsx';
+import Header from '../../components/Header.jsx';
 import Footer from '../../components/footer/Footer.jsx'
 import "./CreateProject.css"
 
@@ -38,7 +38,7 @@ function CreateProject() {
 
     return (
         <div className="CreateProject">
-            <SubscribeHeader/>
+            <Header/>
             <form onSubmit={handleSubmit(createProject)} className="project_form">
                 <div className="head_Pform">
                     <div className = "head_left_Pform">

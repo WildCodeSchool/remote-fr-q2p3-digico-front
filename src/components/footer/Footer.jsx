@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import home from '../../Assets/home.png'
 import "./Footer.css"
 
 
@@ -8,19 +9,16 @@ function Footer() {
     <div>  
         <div className="Footer">
             <Link to="/creer-projet" className="linkFooter">
-            {/* <span></span>
-            <span></span>
-            <span></span>
-            <span></span> */}
-            UN PROJET ?
+          J'ai un projet ?
             </Link>
 
             <Link to="/" className="logoLink">
+                <img src={home} alt="logo_home" />
             </Link>
 
             <Link to="/creer-idee" className="linkFooter">
            
-            UNE IDÉE ?
+            J'ai une idée ?
             </Link>
         </div>
     </div> 

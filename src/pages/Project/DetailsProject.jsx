@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import Footer from '../../components/footer/Footer'
-import ConnectFooterIdeas from "../../components/footer/ConnectFooterIdeas"
+import Header from '../../components/Header'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import "./DetailsProject.css"
@@ -20,7 +20,7 @@ function DetailsProject(props) {
    
     return (
         <div>
-            <ConnectFooterIdeas/>
+            <Header/>
 
                 <div className="container_details_project">
                  <div className="image_details_projet">
