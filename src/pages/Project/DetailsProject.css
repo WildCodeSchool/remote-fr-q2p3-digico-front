@@ -1,17 +1,35 @@
 @media screen and (max-width: 767px) {
 
-
-.contrib{
-
-    margin-top:160%;
+.container_details_project{
     display: flex;
     flex-direction: column;
+    
    
 }
 
-.button_contribution{
+.image_details_projet{
     
-    margin-top:15%;
+    padding: 5vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-top: 12vh;
+    
+    border: black;
+}
+
+.description_details_project{
+ 
+    padding: 16vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-top: 2vh;
+    
+}
+
+.button_contribution{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vh;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -19,7 +37,7 @@
     font-size: 12px; 
     line-height: 11px; 
     padding: 20px; 
-    border-radius: 50px; 
+    border-radius: 40px; 
     font-family: Georgia, serif; 
     font-weight: normal; 
     text-decoration: none; 
@@ -29,8 +47,8 @@
     background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
     box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
     border: 2px solid rgb(209, 207, 207); 
-    display: inline-block;}
-                
+    /* display: inline-block; */
+}        
     .myButton:hover {
     background: #000000; 
     }
@@ -40,6 +58,13 @@
 
 }
 
+.banner_details_project{
+  
+    padding: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-top: 1vh;
+}
 
 
 

@@ -1,10 +1,17 @@
+import Header from '../../components/Header.jsx';
+import Footer from '../../components/footer/Footer.jsx';
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import axios from 'axios';
+<<<<<<< HEAD
 // import ConnectFooter from '../../components/footer/ConnectFooter'
 // import Navbar from '../../components/Navbar';
 import Vector from '../../assets/Vector.png'
+=======
+import Vector from '../../Assets/Vector.png'
+>>>>>>> dev
 import "./CreateIdea.css";
+
 
 
 function CreateIdea() {
@@ -41,7 +48,7 @@ function CreateIdea() {
 
     return (
         <div className="idea_form">
-            {/* <ConnectFooter/>  */}
+            <Header/>
             <div className="create-idea-top">
             <p className="create_idea_title">Création d'idée</p>
             <p className="create-idea-cancel">annuler  <Link to='/liste-idee'><img className="create-idea-cross" src={Vector}/></Link></p>
@@ -63,7 +70,7 @@ function CreateIdea() {
                 <input required type="number" id="user_id" onChange ={(e) => handleInputChange(e)} value={idea.user_id} className="contributors_input"/> 
                 <input className="create-idea_submit-btn" type="submit" value="Publier"/>
             </form>
-            {/* <Navbar/> */}
+            <Footer/>
           </div>
     )
 }

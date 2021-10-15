@@ -46,6 +46,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .comment_form {
     margin-top: 1%;
     border-radius: 10px;

@@ -2,9 +2,13 @@
     text-align: center;
     margin-top: 15vh;
 }
-
+.background_signup{
+    background-size: cover;
+  position: absolute;
+  background: linear-gradient(179.88deg,#181D32 0.1%, #795DE7 195.3%) no-repeat center fixed;
+}
 .form_signup{
-    
+    position: relative;
     flex-direction: column;
     width: 50vw;
     margin-right: auto;
@@ -13,30 +17,35 @@
 }
 
 .pseudo_signup{
+    position: relative;
    background-color: rgb(211, 212, 212);
     padding: 1vh;
     margin-bottom: 1vh;
 }
 
 .email_signup{
+    position: relative;
     background-color: rgb(211, 212, 212);
     padding: 1vh;
     margin-bottom: 1vh;
 }
 
 .phone_signup{
+    position: relative;
     background-color: rgb(211, 212, 212);
     padding: 1vh;
     margin-bottom: 1vh;
 }
 
 .password_signup{
+    position: relative;
     background-color: rgb(211, 212, 212);
     padding: 1vh;
     margin-bottom: 2vh;
 }
 
 .button_submit{
+    position: relative;
     margin-left: 20px;
     text-align: center;
     margin-top: auto;
@@ -59,14 +68,17 @@
     margin-bottom: 5vh;}
             
 .myButton:hover {
+    position: relative;
     background: #000000; 
     }
             
 .myButton:active {
+    position: relative;
     background: #070707;   
     }
 
 .sentence_no_account{
+    position: relative;
     display: flex;
     font-size: 2vh; 
     text-align: center;
@@ -74,7 +86,7 @@
     }
 
 .button_welcome_signup{
-    position: fixed;
+    position: relative;
     bottom: 0;
     margin-left: 15vh;
     text-align: center;
@@ -98,9 +110,11 @@
     margin-bottom: 5vh;}
                 
 .myButton:hover {
+    position: relative;
     background: #000000; 
     }
                 
 .myButton:active {
+    position: relative;
     background: #070707;   
     }

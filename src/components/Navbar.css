@@ -2,7 +2,7 @@
     
     .navbar {
         display: flex;
-        flex-direction: row;
+        flex-direction:column;
         justify-content: space-around;
         margin-top: 1%;
         position: fixed;
@@ -19,6 +19,7 @@
         text-decoration : none;
         width:52px;
         height:52px;
+        
         }
 
         

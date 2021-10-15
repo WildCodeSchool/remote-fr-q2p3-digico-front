@@ -2,10 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import axios from 'axios'
+<<<<<<< HEAD
 
 import clapsIcon from '../assets/icons/clapsIcon.png';
 import groupIcon from '../assets/icons/groupIcon.png';
 import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
+=======
+import clapsIcon from '../Assets/icons/clapsIcon.png';
+import groupIcon from '../Assets/icons/groupIcon.png';
+import emptyHeartIcon from '../Assets/icons/emptyHeartIcon.png';
+>>>>>>> dev
 
 import './ProjectsCard.css'
 
@@ -35,7 +41,7 @@ function ProjectsCard( {project} ) {
     return (
         <div className="ProjectsCard">
             <div className="img_container">
-                <Link to='/details-projet' className="project-card">
+                <Link to={{pathname: `/projets/${project.id}`}} className="project-card">
                     <img className="project_img" src={project.img} alt={project.title}/>
                     <div className="arrow_to_details">
                         <FaArrowRight />
@@ -48,8 +54,10 @@ function ProjectsCard( {project} ) {
                     {claps > 0 && <span className="claps_counter">{claps}</span>}
                     <img src={emptyHeartIcon} alt="emptyHeartIcon" class="heartIcons"/>
                 </div>
-                    <span>{project.contributor}</span>
+                <div className="right_project_icons">
+                    <span className="contributors_count">/ {project.contributors}</span>
                     <img src={groupIcon} alt="groupeIcon"/>
+                </div>
             </div>
             <div className="project_info">
                 <div className="project_titles">

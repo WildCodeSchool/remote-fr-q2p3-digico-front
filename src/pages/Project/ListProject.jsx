@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import Navbar from '../../components/Navbar.jsx'
-import SubscribeFooter from "../../components/footer/SubscribeFooter.jsx"
+import Footer from '../../components/footer/Footer'
 import ProjectsCard from '../../components/ProjectsCard.jsx'
+import Header from '../../components/Header'
 import './ListProject.css'
 
 function ListProject() {
@@ -16,7 +16,8 @@ function ListProject() {
     return (
 
         <div>
-            {/* <SubscribeFooter/> */}
+            <Header/>
+            <div className="headerSpace"></div>
                  <div className="projects-container">
                     {projects
                     .map ((project) =>
@@ -25,7 +26,7 @@ function ListProject() {
                     </div>
                     )}
                 </div>
-                {/* <Navbar/> */}
+                <Footer/>
         </div>
     )
 }
