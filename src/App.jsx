@@ -6,6 +6,7 @@ import ListProject from "./pages/Project/ListProject.jsx";
 import DetailsProject from "./pages/Project/DetailsProject.jsx";
 import Signup from "./components/Login/Signup.jsx"
 import Login from "./components/Login/Login.jsx"
+import Error from "./pages/Error/Error.jsx"
 import Contribution from "./pages/Contribution.jsx";
 import UserDetails from "./pages/User/UserDetails.jsx"
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/projets/:id" component={DetailsProject}/>
           <Route path="/contribution" component={Contribution}/>
           <Route path="/utilisateur/:id" component={UserDetails}/>
+          <Route component={Error}/>
         </Switch>
       </Router>
     </div>

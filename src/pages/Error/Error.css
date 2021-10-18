@@ -1,0 +1,23 @@
+.main-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	height: 100vh;
+	justify-content: space-around;
+	background: linear-gradient(179.88deg, #181D32 0.1%, #795DE7 195.3%);
+}
+
+.error {
+	margin-top: 10%;
+	color: #e2dada;
+	font-size: 200px;
+}
+
+.errorPage {
+	color: #e2dada;
+	line-height: 1.5;
+}
+
+.pageError {
+	color: #e2dada;
+}
