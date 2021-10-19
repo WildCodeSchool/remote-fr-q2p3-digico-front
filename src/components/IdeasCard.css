@@ -1,16 +1,15 @@
 .idea_card_container {
-    /* border: solid black 1px; */
+    color: white;
     height: auto;
     display: flex;
     flex-direction: column;
     margin-bottom: 8%;
     margin-left: 2%;
     margin-right: 2%;
-    border-radius: 5px;
-    background-color: rgb(34,127,186,.1);
+    padding-top: 5%;
 }  
 .idea_header {
-    color: #227FBA;
+    color: white;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
@@ -28,7 +27,8 @@
 }
 
 .idea_icons {
-    color: #227FBA;
+    background: #795DE7;
+    color: white;
     display: flex;
     justify-content: space-between;
     padding: 2%;
@@ -57,5 +57,5 @@
     justify-content: space-evenly;
     padding-top: 5%;
     padding-bottom: 2%;
-    color: hotpink;
+    color: white;
 }
