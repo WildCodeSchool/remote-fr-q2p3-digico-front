@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+
 import "./Modal.css"
 
+
 const Modal = ({ isShowing, hide, title, ...props }) =>
+
+
   isShowing
     ? ReactDOM.createPortal(
         <>

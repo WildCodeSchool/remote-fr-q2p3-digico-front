@@ -2,7 +2,7 @@ import {useState} from 'react';
 import { useForm } from 'react-hook-form';
 import {Link} from 'react-router-dom';
 import SubscribeHeader from '../../components/footer/SubscribeHeader'
-import background from'../../assets/BackGround1.png'
+import background from'../../Assets/BackGround1.png'
 import axios from 'axios';
 import "./signup.css"
 

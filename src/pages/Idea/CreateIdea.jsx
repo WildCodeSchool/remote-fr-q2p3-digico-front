@@ -3,13 +3,7 @@ import Footer from '../../components/footer/Footer.jsx';
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import axios from 'axios';
-<<<<<<< HEAD
-// import ConnectFooter from '../../components/footer/ConnectFooter'
-// import Navbar from '../../components/Navbar';
-import Vector from '../../assets/Vector.png'
-=======
 import Vector from '../../Assets/Vector.png'
->>>>>>> dev
 import "./CreateIdea.css";
 
 
@@ -37,9 +31,7 @@ function CreateIdea() {
     alert("Votre idée a été crée.")
     history.push('/liste-idee')
   }
-  // function handleCategory(e) {
-  //   const newCategory
-  // }
+ 
   function handleInputChange(e) {
     const newIdea= {...idea}
     newIdea[e.target.id] = e.target.value

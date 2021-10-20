@@ -8,37 +8,7 @@
   }
 
 
-/* .revoila{
-    margin-bottom: 2%;
-    margin-left: 10%;
-    width: 231px;
-    height: 19px;
-    left: 64px;
-    top: 271px;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    color: #FFFFFF;
-   
-} */
 
-/* .bienvenue{
-    margin-bottom: 2%;
-    margin-left: 10%;
-    width: 231px;
-    height: 19px;
-    left: 64px;
-    top: 271px;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    color: #FFFFFF;
-    
-} */
 .modal-wrapper {
     position: fixed;
     top: 0;
@@ -51,7 +21,8 @@
     outline: 0;
     display: flex;
     align-items: center;
-    background-color: rgb(24,29,50, 0.5)
+    background-color: rgb(24,29,50, 0.5);
+    
     
 }
 
@@ -63,12 +34,14 @@
     max-width: 500px;
     width: 80%;
     padding: 1rem;
+    
   }
 
 .modal-header {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+   
   }
 
 .modal-close-button {
