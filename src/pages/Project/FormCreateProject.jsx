@@ -1,0 +1,204 @@
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+// import FileUpload from './FileUpload';
+
+import Header from '../../components/Header.jsx';
+import Footer from '../../components/footer/Footer.jsx';
+import cross from '../../assets/icons/cross.png';
+import './FormCreateProject.css'
+
+function FormCreateProject() {
+    const url = "http://localhost:8000/api/projects"
+    const { register, handleSubmit } = useForm();
+    const [ category, setCategory] = useState("");
+    const [file, setFile] = useState('');
+    const [filename, setFilename] = useState('');
+    const [uploadedFile, setUploadedFile] = useState({});
+
+    const handleChange = e => {
+        setFile(e.target.files[0]);
+        setFilename(e.target.files[0].name);
+      };
+
+    const onSubmit = async e => {
+        const formData = new FormData();
+        formData.append('file', file);
+
+    try {
+        const res = await axios.post('http://localhost:8000/api/projects/upload', formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+            const { fileName, filePath } = res.data;
+            setUploadedFile({ fileName, filePath });
+        } catch (err) {
+            console.log(err)
+        }
+    };
+    
+    const [ project, setProject] = useState({
+        title : "",
+        description : "",
+        socials : "",
+        img : "",
+        localisation : "",
+        project_date : "",
+        claps: "",
+        contributors : "",
+        user_id: ""
+    })
+
+    const createProject = e => {
+        axios.post(url, {
+            title: project.title,
+            description: project.description,
+            socials : project.socials,
+            img : uploadedFile.fileName,
+            contributors: project.contributors,
+            category: category,
+            localisation : project.localisation,
+            project_date : project.project_date,
+            user_id: project.user_id
+        })
+        alert("Votre projet à été créé 🚀")
+    }
+
+    function handleInputChange(e) {
+        const newProject = { ...project}
+        newProject[e.target.id] = e.target.value
+        setProject(newProject)
+    }
+
+    const submitForm = () => {
+        onSubmit();
+        createProject();
+    }
+
+    return (
+        <div className="CreateProject">
+            <Header/>
+            <form onSubmit={handleSubmit(createProject)} className="project_form">
+                <div className="head_Pform">
+                    <p className="title_Pform">Création de projet</p>
+                    <p className="cancel_Pform">annuler <img src={cross} alt="cross"/></p>
+                </div>
+                <div>
+                    <input type='file' id='fileUp' onChange={handleChange} />
+                    <label>{filename}</label>
+                </div>
+                    <input type='submit' value='Télécharger'/>
+                    {uploadedFile ? (
+                    <div>
+                        <p>{uploadedFile.fileName}</p>
+                        <img src={uploadedFile.filePath} alt="" />
+                    </div>
+                    ) : null}
+                {/* <div className="file_Pform">
+                    <div className="choose_img">
+                        <input
+                            type="file"
+                            value={file}
+                            fileName={uploadedFile.fileName}
+                            filePath={uploadedFile.fileName}
+                        />
+                    </div>
+                </div> */}
+                <div className="project_form">
+                    <div className="container_Pform">
+                    <div className="input_label_Pform">
+                            <label className="label_Pform">Titre du projet</label>
+                            <input
+                                type="text" 
+                                {...register("title")}
+                                id="title" 
+                                onChange ={(e) => handleInputChange(e)} 
+                                value={project.title}
+                                className = "input_Pform"
+                                />
+                        </div>
+                    <div className="input_label_Pform">
+                        <label className="label_Pform">Catégorie</label>
+                        <select id="category" 
+                                onChange={(e) => setCategory(e.target.value)}
+                                value={category}
+                                className="input_Pform">
+                            <option value="option 1"></option>
+                            <option  value="Ecologie">Ecologie</option>
+                            <option  value="Social">Social</option>
+                            <option  value="Technologie">Tech</option>
+                        </select>
+                    </div>
+                    <div className="input_label_Pform">
+                        <label className="label_Pform">Localisation</label>
+                        <input 
+                            type="text"
+                            {...register("localisation")}
+                            id="localisation" 
+                            onChange ={(e) => handleInputChange(e)} 
+                            value={project.localisation}
+                            placeholder=""
+                            className = "input_Pform"/>
+                    </div>
+                    <div className="input_label_Pform">
+                        <label className="label_Pform">Description</label>
+                        <textarea 
+                            type="text"
+                            {...register("description")} 
+                            id="description"
+                            className = "desc_Pform"
+                            onChange ={(e) => handleInputChange(e)} 
+                            value={project.description}>
+                        </textarea>
+                    </div>
+                    <div className="input_label_Pform">
+                        <label className="label_Pform">Date</label>
+                        <input 
+                            type="date"
+                            {...register("project_date")}
+                            id="project_date"
+                            onChange ={(e) => handleInputChange(e)} 
+                            value={project.project_date}
+                            className = "input_Pform" />
+                    </div>
+                    <div className="input_label_Pform">
+                        <label className="label_Pform">Réseaux Sociaux</label>
+                        <input 
+                        type="text"
+                        {...register("socials")}
+                        id="socials"
+                        onChange ={(e) => handleInputChange(e)} 
+                        value={project.socials}
+                        className = "input_Pform"/>
+                    </div>
+                    <div className="input_label_Pform">
+                        <label className="label_Pform" for="contributors">Nombre de contributeurs nécessaires</label>
+                        <input
+                            type="number"
+                            {...register("contributors")}
+                            id="contributors"
+                            onChange ={(e) => handleInputChange(e)}
+                            value={project.contributors}
+                            className = "input_Pform"/>
+                        <label className="label_Pform" for="user_id">User ID</label>
+                        <input
+                            type="number"
+                            {...register("user_id")}
+                            id="user_id"
+                            value={project.user_id}
+                            onChange ={(e) => handleInputChange(e)}
+                            className = "input_Pform" />
+                    </div>
+                    <div>
+                        <button onSubmit={submitForm} className="submitBtn_Pform">Publier</button>
+                    </div>
+                    </div>
+                </div>
+            </form>
+            <Footer/>
+        </div>
+    )
+}
+
+export default FormCreateProject

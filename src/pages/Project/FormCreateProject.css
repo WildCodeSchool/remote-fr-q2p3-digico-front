@@ -1,4 +1,4 @@
-/* .CreateProject {
+.CreateProject {
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -61,52 +61,6 @@
     margin-right: auto;
 }
 
-.imgInput {
-    display: flex;
-    color: transparent;
-    text-align: center;
-    align-items: center;
-    width: 99.5vw;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(121, 93, 231, 0.15);
-    border: 1px solid #795DE7;
-}
-
-.imgInput::-webkit-file-upload-button {
-    visibility: hidden;
-}
-
-.imgInput::before{
-    content : "";
-    color: black;
-    display: inline-block;
-    text-align: center;
-    height: 30vh;
-    width: 100%;
-}
-
-.imgInput:active::before {
-    background: rgba(146, 127, 221, 0.15);
-}
-
-.img_preview{
-    width: 100%;
-    height: 33vh;
-    position: absolute;
-    object-fit: cover;
-    margin-top: -71%;
-}
-
-.cancel_img_preview{
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    margin-top: -69%;
-    margin-left: 90%;
-}
-
 .select, textarea{
     color: white;
 }
@@ -123,8 +77,8 @@
 }
 
 .container_Pform{
-    width: 90%;
     color: white;
+    width: 95%;
 }
 
 .input_label_Pform{
@@ -152,7 +106,7 @@
 .desc_Pform{
     border-radius: 5px;
     background-color: #795DE7;
-    height: 13vh;
+    height: 20vh;
     border-style: none;
 }
 
@@ -166,4 +120,4 @@
     color: white;
     background-color: #795DE7;
     border-style: none;
-} */
+}

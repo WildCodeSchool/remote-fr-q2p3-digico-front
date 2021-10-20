@@ -37,11 +37,11 @@ function SubscribeHeader() {
           <form className="encart">
             <div className="form-group-mail">
                 <p className="form-group-mail-p">Email</p>
-              <input type="text"  />
+              <input type="text" className="inputSubscribeHeader" />
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p">Mot de passe</p>
-              <input type="text"  />
+              <input type="text" className="inputSubscribeHeader" />
             </div>
             <div className="form-group-bouton">
       
@@ -69,15 +69,15 @@ function SubscribeHeader() {
           <form>
             <div className="form-group-email-inscription">
             <p className="form-group-mail-p-inscription">Email</p>
-              <input type="text"  />
+              <input type="text"  className="inputSubscribeHeader"/>
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p-inscription">Mot de passe</p>
-              <input type="text"  />
+              <input type="password"  className="inputSubscribeHeader"/>
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p-inscription-confirmation">Confirmer mot de passe</p>
-              <input type="text"  />
+              <input type="email"  className="inputSubscribeHeader"/>
             </div>
             <div className="form-group-bouton-inscription">
       

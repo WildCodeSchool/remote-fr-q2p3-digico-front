@@ -8,7 +8,7 @@ function Footer() {
     return (
     <div>  
         <div className="Footer">
-            <Link to="/creer-projet" className="linkFooter">
+            <Link to="/creationProjet" className="linkFooter">
           J'ai un projet ?
             </Link>
 

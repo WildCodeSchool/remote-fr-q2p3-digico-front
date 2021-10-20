@@ -100,13 +100,13 @@ function CreateProject() {
                 </div>
                 <div className = "file_Pform">
                     <div className="choose_img">
-                    {/* <FileUpload 
+                    <FileUpload 
                         method={(e) => {e.preventDefault(); onSubmit()}}
                         value={file}
                         onChange={(e) => {onChange(e)}}
                         fileName={uploadedFile.fileName}
                         filePath={uploadedFile.fileName}
-                    /> */}
+                    />
                         <input
                             accept="image/*"
                             type="file" {...register("img")}
@@ -114,8 +114,8 @@ function CreateProject() {
                             id="img" 
                             // method={(e) => {e.preventDefault(); onSubmit()}}
                             onChange ={(e) => handleInputChange(e)}
-                            // onChange= {imageChange}
-                            onChange={(e) => {onChange(e)}}
+                            onChange= {imageChange}
+                            // onChange={(e) => {onChange(e)}}
                             value={uploadedFile.filePath} 
                             fileName={uploadedFile.fileName}
                             filePath={uploadedFile.fileName}
@@ -200,13 +200,15 @@ function CreateProject() {
                             <input
                                 type="number"
                                 id="contributors"
+                                {...register("contributors")}
                                 className="input_Pform"
                                 value={project.contributors}
                                 onChange ={(e) => handleInputChange(e)}
                             />
-                            <label className="label_Pform" for="contributors">User ID</label>
+                            <label className="label_Pform" for="user_id">User ID</label>
                             <input
                                 type="number"
+                                {...register("user_id")}
                                 id="user_id"
                                 value={project.user_id}
                                 className="input_Pform"
@@ -218,11 +220,9 @@ function CreateProject() {
                         </div>
                     </div>
                 </div>
-                <button className="create-project_submit-btn">Publier</button>
             </form> 
             <Footer/>
         </div>
-            
     )
 }
 
