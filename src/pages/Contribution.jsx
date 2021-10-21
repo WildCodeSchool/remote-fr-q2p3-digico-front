@@ -1,27 +1,49 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import Header from '../components/Header'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import "./Contribution.css"
 import Footer from '../components/footer/Footer'
+import Vector from '../../src/Assets/Vector.png'
+import axios from 'axios'
 
 
 
-function Contribution() {
+function Contribution(props) {
+    const projectId = props.match.params.id
+    const [project, setProject] = useState({});
+
+    useEffect(() => {
+        axios
+        .get(`http://localhost:8000/api/projects/projectowner/${projectId}`)
+        .then((res) => {
+            setProject(res.data)
+            console.log(res)
+        })
+
+    }, [projectId])
+
     return (
-        <div>
-            <Header/>
+        <div className="container_contribution">
+            <Header />
+           <div className="header_projet_contrib">
+            Je me propose
+            
+            <Link to='/liste-projet' className="annuler_contrib">annuler<img className="croix_annuler_contrib" src={Vector} alt="" /></Link>
+            
+            </div>
             <div className="form_contrib">
-            <label className="dispo_contrib"> Mes disponibilités</label>
-            <label className="dispo_contrib_start"> A partir du :</label>
+            <div className="project_titles_jmpropose">
+                    <li>{project.title}</li>
+            <label className="dispo_contrib_start"> Mes disponibilités</label>
             <input className="date_contrib" type="date" />
-            <label className="dispo_contrib_end">Jusqu'au :</label>
-            <input className="date_contrib" type="date" />
+            
             <label className="title_desc_contrib">Dis nous en plus</label>
-            <textarea className="description_contribution" type="textarea"  placeholder="juste quelques lignes pour te présenter nous expliquer ce que tu pourrais apporter au projet "/>
-            <button className="button_submit_contrib">JE ME PROPOSE</button>
+            <textarea className="description_contribution" type="textarea"/>
+            <button className="button_submit_contrib">Soumettre</button>
 
             </div>   
             <Footer/>
+        </div>
         </div>
         
     )

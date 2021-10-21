@@ -17,7 +17,7 @@ function DetailsProject(props) {
 
     useEffect(() => {
         axios
-        .get(`http://localhost:8000/api/projects/${projectId}`)
+        .get(`http://localhost:8000/api/projects/projectowner/${projectId}`)
         .then((res) => {
             setProject(res.data)
             setClaps(res.data.claps)
