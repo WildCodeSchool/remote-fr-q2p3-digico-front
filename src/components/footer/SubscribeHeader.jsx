@@ -12,11 +12,11 @@ function SubscribeHeader() {
         isShowing: isRegistrationFormShowed,
         toggle: toggleRegistrationForm
       } = useModal();
-      const url = "http://localhot:8000/api/users"
+      const url = "http://localhost:8000/api/users/register"
 const [user, setUser] = useState({
     email: "",
     password: "",
-    confirmpassword:"",
+    confirm_password:"",
 })
 
 const createUser = e => {
@@ -24,14 +24,14 @@ const createUser = e => {
     axios.post(url, {
         email: user.email,
         password: user.password,
-        confirmpassword: user.confirm_password,
+        confirm_password: user.confirm_password,
     })
     alert("vous êtes bien enregistré(e)")
 }
 
     function handleInputChange(e) {
         const newUser = {...user}
-        newUser [e.target.value] = e.target.value 
+        newUser[e.target.id] = e.target.value 
         setUser(newUser)
     }
 
@@ -59,11 +59,11 @@ const createUser = e => {
           <form className="encart">
             <div className="form-group-mail">
                 <p className="form-group-mail-p">Email</p>
-              <input type="text" id="email" onChange={(e) => handleInputChange(e)} value={user.email} placeholder="email"/>
+              <input type="text" id="email" onChange={(e) => handleInputChange(e)} value={user.email} />
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p">Mot de passe</p>
-                <input type="text" id="password" onChange={(e) => handleInputChange(e)} value={user.password} placeholder="password"/>
+                <input type="text" id="password" onChange={(e) => handleInputChange(e)} value={user.password} />
             </div>
             <div className="form-group-bouton">
       
@@ -82,7 +82,9 @@ const createUser = e => {
         <Modal
           isShowing={isRegistrationFormShowed}
 
-
+          createUser={createUser}
+          handleInputChange={handleInputChange}
+          user={user}
           hide={toggleRegistrationForm}
         >
             
@@ -92,15 +94,15 @@ const createUser = e => {
           <form onSubmit={createUser}>
             <div className="form-group-email-inscription">
             <p className="form-group-mail-p-inscription">Email</p>
-            <input type="text" id="email" onChange={(e) => handleInputChange(e)} value={user.email} placeholder="email"/>
+            <input type="email" id="email" onChange={(e) => handleInputChange(e)} value={user.email} />
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p-inscription">Mot de passe</p>
-                <input type="text" id="password" onChange={(e) => handleInputChange(e)} value={user.password} placeholder="password"/>
+                <input type="password" id="password" onChange={(e) => handleInputChange(e)} value={user.password} />
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p-inscription-confirmation">Confirmer mot de passe</p>
-                <input type="text" id="confirmpassword" onChange={(e) => handleInputChange(e)} value={user.confirm_password} placeholder="confirm_password"/>
+                <input type="password" id="confirm_password" onChange={(e) => handleInputChange(e)} value={user.confirm_password} />
             </div>
             <div className="form-group-bouton-inscription">
       

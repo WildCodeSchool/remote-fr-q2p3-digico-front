@@ -1,10 +1,4 @@
 @media screen and (max-width: 767px) {
-
-
-
-   
-
-    
     .container_projet_details{
 
         background: linear-gradient(179.88deg,#181D32 0.1%, #795DE7 195.3%) no-repeat center fixed;
@@ -22,6 +16,7 @@
     .img_container_details{
         height: 60%;
         width: 100%;
+        
     }
     
     .project_img_details {

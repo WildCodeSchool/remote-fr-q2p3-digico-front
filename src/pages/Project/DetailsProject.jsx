@@ -21,7 +21,7 @@ function DetailsProject(props) {
         .then((res) => {
             setProject(res.data)
             setClaps(res.data.claps)
-            console.log(res)
+            console.log(res.data)
         })
     }, [projectId])
         

@@ -5,6 +5,7 @@
     padding-bottom: 200%;
     display: flex;
     flex-direction: column;
+    border-style: none;
 }
 
 .header_projet_contrib{
@@ -21,6 +22,7 @@
     line-height: 26px;
     background:rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
+    border-style: none;
 }
 
 .annuler_contrib{
@@ -37,6 +39,7 @@
     color: #FFFFFF;
     margin: left 80px ;
     top: 50%;
+    border-style: none;
     
 }
 
@@ -46,6 +49,7 @@
     height: 11px;
     margin-left: 32%;
   color: #FFFFFF;
+  border-style: none;
     
 }
 
@@ -53,6 +57,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 120px;
+    border-style: none;
    
 }
 .project_titles_jmpropose{
@@ -67,6 +72,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
+    border-style: none;
 }
 
 .dispo_contrib_start{
@@ -79,7 +85,8 @@
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    color: #FFFFFF; 
+    color: #FFFFFF;
+    border-style: none; 
 }
 .date_contrib{
     position: absolute;
@@ -88,6 +95,7 @@
     top: 95%;
     background: #795DE7;
     border-radius: 5px;
+    border-style: none;
    
 }
 
@@ -102,6 +110,7 @@
     font-size: 12px;
     line-height: 15px;
     color: #FFFFFF;
+    border-style: none;
 }
 
 .description_contribution{
@@ -111,6 +120,7 @@
     margin-top: 40%;
     background: #795DE7;
     border-radius: 5px;
+    border-style: none;
 }
 
 .button_submit_contrib{
@@ -121,6 +131,7 @@
     background: #795DE7;
     border-radius: 6.60714px;
     color: #FFFFFF;
+    border-style: none;
 }
             
 
