@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-// import FileUpload from './FileUpload';
+import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header.jsx';
 import Footer from '../../components/footer/Footer.jsx';
@@ -55,7 +55,7 @@ function FormCreateProject() {
             title: project.title,
             description: project.description,
             socials : project.socials,
-            img : uploadedFile.fileName,
+            img : uploadedFile.filePath,
             contributors: project.contributors,
             category: category,
             localisation : project.localisation,
@@ -82,19 +82,22 @@ function FormCreateProject() {
             <form onSubmit={handleSubmit(createProject)} className="project_form">
                 <div className="head_Pform">
                     <p className="title_Pform">Création de projet</p>
-                    <p className="cancel_Pform">annuler <img src={cross} alt="cross"/></p>
+                    <Link to={{pathname: `/liste-projet`}} className="link_list">
+                        <p className="cancel_Pform">annuler</p>
+                        <img src={cross} alt="cross"/>
+                    </Link>
                 </div>
                 <div>
                     <input type='file' id='fileUp' onChange={handleChange} />
                     <label>{filename}</label>
                 </div>
-                    <input type='submit' value='Télécharger'/>
-                    {uploadedFile ? (
+                {/* <input type='submit' value='Télécharger'/> */}
+                {uploadedFile ? (
                     <div>
                         <p>{uploadedFile.fileName}</p>
                         <img src={uploadedFile.filePath} alt="" />
                     </div>
-                    ) : null}
+                ) : null}
                 {/* <div className="file_Pform">
                     <div className="choose_img">
                         <input

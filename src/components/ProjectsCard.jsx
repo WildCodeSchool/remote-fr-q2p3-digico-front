@@ -53,6 +53,7 @@ function ProjectsCard( {project} ) {
                     <img src={groupIcon} alt="groupeIcon"/>
                 </div>
             </div>
+            <Link to={{pathname: `/projets/${project.id}`}}>
             <div className="project_info">
                 <div className="project_titles">
                     <li>{project.title}</li>
@@ -65,8 +66,9 @@ function ProjectsCard( {project} ) {
                     <span>En savoir plus...</span>
                 </div>
             </div>
+            </Link>
             <div className="project_icons">
-            </div>
+            </div> 
         </div>
     )
 }

@@ -35,12 +35,12 @@ function FileUpload() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-        <div>
-            <input type='file' id='fileUp' onChange={handleChange} />
-            <label>{filename}</label>
-        </div>
-        <input type='submit' value='Télécharger'/>
-        </form>
+                <div>
+                    <input type='file' id='fileUp' onChange={handleChange} />
+                    <label>{filename}</label>
+                </div>
+                {/* <input type='submit' value='Télécharger'/> */}
+            </form>
 
         {uploadedFile ? (
         <div>
