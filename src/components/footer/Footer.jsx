@@ -12,7 +12,7 @@ function Footer() {
           J'ai un projet ?
             </Link>
 
-            <Link to="/utilisateur/:id" className="logoLink">
+            <Link to="/utilisateur/:id/mes-badges" className="logoLink">
                 <img src={home} alt="logo_home" />
             </Link>
 
