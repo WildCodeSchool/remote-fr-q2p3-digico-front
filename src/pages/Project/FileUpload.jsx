@@ -39,7 +39,7 @@ function FileUpload() {
                     <input type='file' id='fileUp' onChange={handleChange} />
                     <label>{filename}</label>
                 </div>
-                {/* <input type='submit' value='Télécharger'/> */}
+                <input type='submit' value='Télécharger'/>
             </form>
 
         {uploadedFile ? (

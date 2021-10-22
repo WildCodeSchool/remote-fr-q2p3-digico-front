@@ -35,7 +35,7 @@ function ProjectsCard( {project} ) {
     return (
         <div className="ProjectsCard">
             <div className="img_container">
-                <Link to={{pathname: `/projets/${project.id}`}} className="project-card">
+                <Link to={{pathname: `/projets/${project.id}`}}>
                     <img className="project_img" src={project.img} alt={project.title}/>
                     <div className="arrow_to_details">
                         <FaArrowRight />
@@ -53,7 +53,7 @@ function ProjectsCard( {project} ) {
                     <img src={groupIcon} alt="groupeIcon"/>
                 </div>
             </div>
-            <Link to={{pathname: `/projets/${project.id}`}}>
+            <Link to={{pathname: `/projets/${project.id}`}} style={{ textDecoration: 'none' }}>
             <div className="project_info">
                 <div className="project_titles">
                     <li>{project.title}</li>

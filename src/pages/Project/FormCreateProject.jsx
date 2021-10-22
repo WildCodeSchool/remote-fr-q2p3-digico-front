@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import ProjectFormModal from '../../components/ProjectFormModal.jsx';
 
 import Header from '../../components/Header.jsx';
 import Footer from '../../components/footer/Footer.jsx';
@@ -15,6 +16,7 @@ function FormCreateProject() {
     const [file, setFile] = useState('');
     const [filename, setFilename] = useState('');
     const [uploadedFile, setUploadedFile] = useState({});
+    const [modalOpen, setModalOpen] = useState(false);
 
     const handleChange = e => {
         setFile(e.target.files[0]);
@@ -56,13 +58,13 @@ function FormCreateProject() {
             description: project.description,
             socials : project.socials,
             img : uploadedFile.filePath,
+            // img : project.img,
             contributors: project.contributors,
             category: category,
             localisation : project.localisation,
             project_date : project.project_date,
             user_id: project.user_id
         })
-        alert("Votre projet à été créé 🚀")
     }
 
     function handleInputChange(e) {
@@ -78,6 +80,11 @@ function FormCreateProject() {
 
     return (
         <div className="CreateProject">
+            <div className="modalBg">
+                <div className="FormModal">
+                    {modalOpen && <ProjectFormModal setOpenModal={setModalOpen}/>}
+                </div>
+            </div>
             <Header/>
             <form onSubmit={handleSubmit(createProject)} className="project_form">
                 <div className="head_Pform">
@@ -88,10 +95,10 @@ function FormCreateProject() {
                     </Link>
                 </div>
                 <div>
-                    <input type='file' id='fileUp' onChange={handleChange} />
+                    <input {...register("img")} type='file' id='fileUp' onChange={handleChange} />
                     <label>{filename}</label>
                 </div>
-                {/* <input type='submit' value='Télécharger'/> */}
+                {/* <input type="button" value="Télécharger" onClick={onSubmit}/> */}
                 {uploadedFile ? (
                     <div>
                         <p>{uploadedFile.fileName}</p>
@@ -155,6 +162,9 @@ function FormCreateProject() {
                             value={project.description}>
                         </textarea>
                     </div>
+                    {/* <div className="FormModal">
+                        {modalOpen && <ProjectFormModal setOpenModal={setModalOpen}/>}
+                    </div> */}
                     <div className="input_label_Pform">
                         <label className="label_Pform">Date</label>
                         <input 
@@ -194,7 +204,13 @@ function FormCreateProject() {
                             className = "input_Pform" />
                     </div>
                     <div>
-                        <button onSubmit={submitForm} className="submitBtn_Pform">Publier</button>
+                        <button 
+                            onSubmit={submitForm}
+                            onClick={() => {
+                                setModalOpen(true);
+                            }}
+                            className="submitBtn_Pform">Publier
+                        </button>
                     </div>
                     </div>
                 </div>
