@@ -3,10 +3,10 @@ import Footer from '../../components/footer/Footer'
 import Header from '../../components/Header'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
-import clapsIcon from '../../Assets/icons/clapsIcon.png'
-import groupIcon from '../../Assets/icons/groupIcon.png';
-import emptyHeartIcon from '../../Assets/icons/emptyHeartIcon.png';
-import vector from '../../Assets/icons/vector.png';
+import clapsIcon from '../../assets/icons/clapsIcon.png'
+import groupIcon from '../../assets/icons/groupIcon.png';
+import emptyHeartIcon from '../../assets/icons/emptyHeartIcon.png';
+import vector from '../../assets/icons/vector.png';
 import "./DetailsProject.css"
 
 

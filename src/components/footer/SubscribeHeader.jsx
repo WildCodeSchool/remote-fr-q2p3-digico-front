@@ -4,7 +4,6 @@ import './SubscribeHeader.css'
 import useModal from '../UseModal';
 import Modal from '../Modal';
 import {useForm} from 'react-hook-form'
-import * as Yup from 'yup';
 
 
 function SubscribeHeader() {

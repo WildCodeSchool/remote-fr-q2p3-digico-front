@@ -1,0 +1,59 @@
+.projectFormModal{
+    width: 100%;
+    height: 100%;
+    margin-top: -30%;
+    display: flex;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.modalContainer{
+    display: flex;
+    width: 70%;
+    height: 15%;
+    padding: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 8px;
+    background-color: #2B3348;
+}
+
+.projectModalTxt{
+    margin-bottom: 10%;
+}
+
+.modalContainer p{
+    color: white;
+}
+
+.modalTitle{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.modalText{
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.projectModalBtn{
+    height: 25%;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #795DE7;
+    color: white;
+    text-align: center;
+}
+
+.oktxt {
+    width: 100%;
+    height: 100%;
+    margin-top: 1.5%;
+}

@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import {Link} from 'react-router-dom'
 import "./Contribution.css"
 import Footer from '../components/footer/Footer'
-import Vector from '../../src/Assets/Vector.png'
+import Vector from '../../src/assets/Vector.png'
 import axios from 'axios'
 
 

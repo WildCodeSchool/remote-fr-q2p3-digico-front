@@ -1,11 +1,27 @@
-/* .imgInput {
+/* .import_Pform{
+    display: flex;
+    position: absolute;
+    color: rgba(121, 93, 231, 0.55);
+    font-weight: 700;
+    font-size: 20px ;
+    width: 50%;
+    align-items: center;
+    margin-top: -38%;
+    margin-left: 25%;
+    margin-right: auto;
+} */
+
+.imgInput {
     display: flex;
     color: transparent;
     text-align: center;
     align-items: center;
-    margin: 7%;
-    width: 40vw;
-    height: 30.5vw;
+    width: 99.5vw;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(121, 93, 231, 0.15);
+    border: 1px solid #795DE7;
 }
 
 .imgInput::-webkit-file-upload-button {
@@ -13,16 +29,30 @@
 }
 
 .imgInput::before{
-    content : "* Choisir une image";
+    content : "";
     color: black;
     display: inline-block;
-    background: -webkit-linear-gradient(top, #f9f9f9, #ecf8ff);
-    border: 1px solid #999;
-    border-radius: 3px;
     text-align: center;
-    padding: 6vh 2vw;
+    height: 30vh;
+    width: 100%;
 }
 
 .imgInput:active::before {
-    background: -webkit-linear-gradient(top, #e3e3e3, #c1e7fd); 
-} */
+    background: rgba(146, 127, 221, 0.15);
+}
+
+.img_preview{
+    width: 100%;
+    height: 33vh;
+    position: absolute;
+    object-fit: cover;
+    margin-top: -71%;
+}
+
+.cancel_img_preview{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin-top: -69%;
+    margin-left: 90%;
+}
