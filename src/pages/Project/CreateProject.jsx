@@ -5,7 +5,6 @@ import axios from 'axios';
 import cross from '../../Assets/icons/cross.png';
 import Header from '../../components/Header.jsx';
 import Footer from '../../components/footer/Footer.jsx'
-
 import "./CreateProject.css"
 
 function CreateProject() {
