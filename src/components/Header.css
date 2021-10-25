@@ -5,7 +5,7 @@
     flex-direction: row;
     width: 375px;
     height: 87px;
-    left: 0px;
+    
     top: 0;
     z-index :1;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #181D32;
@@ -28,6 +28,7 @@
     line-height: 23px;
     color: #FFFFFF; 
     text-decoration: none;
+    margin-left: 3%;
 }
 
 .linkprojets{

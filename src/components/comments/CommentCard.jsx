@@ -1,33 +1,24 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import './CommentCard.css'
-import { FaCommentSlash } from 'react-icons/fa'
 
-function IdeaComments({comment, idea}) {
-
+function CommentCard({idea}) {
     const [comments, setComments] = useState([]);
     useEffect(() => {
         axios
-        .get("http://localhost:8000/api/comments/comments_card")
+        .get(`http://localhost:8000/api/ideas/${idea.id}/comments`)
         .then((res) => res.data)
-        .then((data) => setComments(data))                
-    }, [])
-
-// console.log(idea.id);
+        .then((data) => setComments(data))  
+                    
+    }, [idea.id])
     return (
         <div className="comment_card_container">
-            {comments
-                // .filter(comment => comment.idea_id === idea.id)
-                .map((comment)=>
-                <div key={comment.id} className="comment_container">
-                    {comment.comment_content}
-                    {comment.comment_date}
-                    {/* <CommentCard comment={comment} /> */}
+                <div key={comments.id} className="comment_container">
+                    {comments.comment_content}
+                    {comments.comment_date}
                 </div>
-                )}
-                {/* {comment.comment_content} */}
         </div>
     )
 }
 
-export default IdeaComments
+export default CommentCard

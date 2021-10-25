@@ -1,18 +1,46 @@
-import React from 'react'
-import "./SubscribeHeader"
-// import {Link} from 'react-router-dom'
+import {useState, useRef} from 'react'
+import axios from 'axios';
 import './SubscribeHeader.css'
 import useModal from '../UseModal';
 import Modal from '../Modal';
+import {useForm} from 'react-hook-form'
 
 
 function SubscribeHeader() {
 
+
+
+    const { register, handleSubmit, watch} = useForm();
     const { isShowing: isLoginFormShowed, toggle: toggleLoginForm } = useModal();
     const {
         isShowing: isRegistrationFormShowed,
         toggle: toggleRegistrationForm
       } = useModal();
+      const url = "http://localhost:8000/api/users/register"
+const [user, setUser] = useState({
+    email: "",
+    password: "",
+    confirm_password:"",
+})
+// const password = useRef({});
+//   password.current = watch("password", "");
+const createUser = e => {
+    // e.preventDefault();
+    axios.post(url, {
+        email: user.email,
+        password: user.password,
+        confirm_password: user.confirm_password,
+    })
+    alert("vous êtes bien enregistré(e)")
+}
+
+    function handleInputChange(e) {
+        const newUser = {...user}
+        newUser[e.target.id] = e.target.value 
+        setUser(newUser)
+    }
+
+  
     return (
 
 
@@ -26,22 +54,22 @@ function SubscribeHeader() {
 
         <Modal className="modal"
           isShowing={isLoginFormShowed}
+          
           hide={toggleLoginForm}
-         
-         
-          
-          
         >
+          
             <div className="title_heureux">Ha, te revoila!</div>
             <div className="phrase_heureux">Nous sommes heureux de te revoir!</div>
           <form className="encart">
             <div className="form-group-mail">
                 <p className="form-group-mail-p">Email</p>
-              <input type="text" className="inputSubscribeHeader" />
+              {/* <input type="text" id="email" onChange={(e) => handleInputChange(e)} value={user.email} /> */}
+              <input type="text" id="email" onChange={(e) => handleInputChange(e)} value={user.email} />
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p">Mot de passe</p>
-              <input type="text" className="inputSubscribeHeader" />
+                {/* <input type="text" id="password" onChange={(e) => handleInputChange(e)} value={user.password} /> */}
+                <input type="password" id="password" onChange={(e) => handleInputChange(e)} value={user.password} />
             </div>
             <div className="form-group-bouton">
       
@@ -59,26 +87,34 @@ function SubscribeHeader() {
 
         <Modal
           isShowing={isRegistrationFormShowed}
+
+          createUser={createUser}
+          handleInputChange={handleInputChange}
+          user={user}
           hide={toggleRegistrationForm}
-          
-          
-          
         >
+            
             <div className="title_bienvenue">Crée un compte</div>
             <div className="phrase_bienvenue">Bienvenue sur pep'idea</div>
-          <form>
+            
+          <form onSubmit={handleSubmit(createUser)}>
             <div className="form-group-email-inscription">
             <p className="form-group-mail-p-inscription">Email</p>
-              <input type="text"  className="inputSubscribeHeader"/>
+            {/* <input type="email" id="email" onChange={(e) => handleInputChange(e)} value={user.email} /> */}
+            <input type="email" {...register("email")} id="email" onChange={(e) => handleInputChange(e)} value={user.email} />
             </div>
             <div className="form-group-mdp">
+           
                 <p className="form-group-mdp-p-inscription">Mot de passe</p>
-              <input type="password"  className="inputSubscribeHeader"/>
+                {/* <input type="password" id="password" onChange={(e) => handleInputChange(e)} value={user.password} /> */}
+                <input type="password"{...register("password")}  id="password" onChange={(e) => handleInputChange(e)} value={user.password} />
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p-inscription-confirmation">Confirmer mot de passe</p>
-              <input type="email"  className="inputSubscribeHeader"/>
+                {/* <input type="password" id="confirm_password" onChange={(e) => handleInputChange(e)} value={user.confirm_password} /> */}
+                <input type="password"{...register("confirm_password",)}  id="confirm_password" onChange={(e) => handleInputChange(e)} value={user.confirm_password} />
             </div>
+            
             <div className="form-group-bouton-inscription">
       
               <button className="bouton_inscription">S'inscrire</button>
@@ -92,19 +128,6 @@ function SubscribeHeader() {
           
         </Modal>
       </div>
-
-        // <div className="subscribeHeader_accueil">
-        //    <div className="inscription"> 
-        //     <Link to='/signup'  className="button_inscription_subscribe">Se connecter</Link>
-        //     <Modal/>
-        //     </div>
-        //     <div className="connection">
-        //     <Link to='/login'  className="button_connection_subscribe">S'inscrire</Link> 
-        //     </div>
-        //     </div>
-
-        
-                           
       
     )
 }

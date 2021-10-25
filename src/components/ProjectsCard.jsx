@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import axios from 'axios'
-
 import clapsIcon from '../assets/icons/clapsIcon.png';
 import groupIcon from '../assets/icons/groupIcon.png';
 import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';

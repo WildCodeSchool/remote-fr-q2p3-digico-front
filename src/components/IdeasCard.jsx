@@ -1,18 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
+import axios from 'axios';
 import {FaRegHandPaper, FaRegCommentDots, FaHeart} from 'react-icons/fa';
 import CommentCard from '../components/comments/CommentCard'
 import './IdeasCard.css'
 
 function IdeasCard({idea, comment}) {
-    // const [ideas, setIdeas] = useState([]);
-    // useEffect(() => {
-    //     axios
-    //     .get("http://localhost:8000/api/ideas/ideaowner")
-    //     .then((res) => res.data)
-    //     .then((data) => setIdeas(data))                
-    // }, [])
+  const [showComments, setShowComments] = useState(false);
+  const [ideas, setIdeas] = useState([]);
+    useEffect(() => {
+        axios
+        .get("http://localhost:8000/api/ideas/ideaowner")
+        .then((res) => res.data)
+        .then((data) => setIdeas(data))                
+    }, [])
 
-    const [showComments, setShowComments] = useState(false);
     return (
         <div className="idea_card_container">
             <div className="idea_header">
@@ -38,11 +39,11 @@ function IdeasCard({idea, comment}) {
                 <input className="comment_form" type="text" placeholder="Com" />
                 </div>
                 <div className="coms">
-                <CommentCard comment={comment} />
+                <CommentCard comment={comment} idea={idea} />
                 </div>
             </div>}
             </div>
             </div>
-    )}
+                    )}
 
 export default IdeasCard
