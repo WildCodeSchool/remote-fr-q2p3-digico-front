@@ -14,7 +14,7 @@ function Welcome() {
         <div className="background_welcome">
         <img src={background} alt="" /></div>  
         <SubscribeHeader/>
-    <div className="image_details_projet">
+    <div className="image_details_projet_home">
         <img src={logo} alt="image_logo" />
                  </div>
     <div className="titre_welcome">

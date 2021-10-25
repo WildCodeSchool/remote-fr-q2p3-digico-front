@@ -9,7 +9,7 @@ function Footer() {
     <div>  
         <div className="Footer">
             <Link to="/creer-projet" className="linkFooter">
-          J'ai un projet ?
+          J'ai un projet
             </Link>
 
             <Link to="/utilisateur/:id" className="logoLink">
@@ -18,7 +18,7 @@ function Footer() {
 
             <Link to="/creer-idee" className="linkFooter">
            
-            J'ai une idée ?
+            J'ai une idée
             </Link>
         </div>
     </div> 

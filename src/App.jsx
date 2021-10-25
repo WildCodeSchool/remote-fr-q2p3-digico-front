@@ -9,6 +9,7 @@ import Login from "./components/Login/Login.jsx"
 import Error from "./pages/Error/Error.jsx"
 import Contribution from "./pages/Contribution.jsx";
 import UserDetails from "./pages/User/UserDetails.jsx"
+import IdeasCard from "./components/IdeasCard.jsx";
 
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contribution" component={Contribution}/>
           <Route path="/utilisateur/:id" component={UserDetails}/>
           <Route component={Error}/>
+
         </Switch>
       </Router>
     </div>
