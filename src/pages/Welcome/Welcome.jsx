@@ -1,8 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import SubscribeHeader from '../../components/footer/SubscribeHeader'
-import logo from '../../Assets/logo.png'
-import background from'../../Assets/BackGround1.png'
+import logo from '../../assets/logo.png'
+import background from'../../assets/BackGround1.png'
 
 import "./Welcome.css"
 
