@@ -14,11 +14,12 @@
   background: linear-gradient(179.88deg,#181D32 0.1%, #795DE7 195.3%) no-repeat center fixed;
 }
 
-.image_details_projet{
+.image_details_projet_home{
   
   position: relative;
   display: flex;
   flex-direction: column;
+  margin-top: 40%;
  
 }
 

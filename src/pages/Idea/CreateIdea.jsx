@@ -3,7 +3,7 @@ import Footer from '../../components/footer/Footer.jsx';
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import axios from 'axios';
-import Vector from '../../assets/Vector.png'
+import Vector from '../../Assets/Vector.png'
 import "./CreateIdea.css";
 
 
@@ -31,9 +31,7 @@ function CreateIdea() {
     alert("Votre idée a été crée.")
     history.push('/liste-idee')
   }
-  // function handleCategory(e) {
-  //   const newCategory
-  // }
+ 
   function handleInputChange(e) {
     const newIdea= {...idea}
     newIdea[e.target.id] = e.target.value
