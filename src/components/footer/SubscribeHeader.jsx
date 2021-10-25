@@ -1,12 +1,17 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import axios from 'axios';
 import './SubscribeHeader.css'
 import useModal from '../UseModal';
 import Modal from '../Modal';
+import {useForm} from 'react-hook-form'
+import * as Yup from 'yup';
 
 
 function SubscribeHeader() {
 
+
+
+    const { register, handleSubmit, watch} = useForm();
     const { isShowing: isLoginFormShowed, toggle: toggleLoginForm } = useModal();
     const {
         isShowing: isRegistrationFormShowed,
@@ -18,9 +23,10 @@ const [user, setUser] = useState({
     password: "",
     confirm_password:"",
 })
-
+// const password = useRef({});
+//   password.current = watch("password", "");
 const createUser = e => {
-    e.preventDefault();
+    // e.preventDefault();
     axios.post(url, {
         email: user.email,
         password: user.password,
@@ -35,8 +41,7 @@ const createUser = e => {
         setUser(newUser)
     }
 
-
-
+  
     return (
 
 
@@ -59,11 +64,13 @@ const createUser = e => {
           <form className="encart">
             <div className="form-group-mail">
                 <p className="form-group-mail-p">Email</p>
+              {/* <input type="text" id="email" onChange={(e) => handleInputChange(e)} value={user.email} /> */}
               <input type="text" id="email" onChange={(e) => handleInputChange(e)} value={user.email} />
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p">Mot de passe</p>
-                <input type="text" id="password" onChange={(e) => handleInputChange(e)} value={user.password} />
+                {/* <input type="text" id="password" onChange={(e) => handleInputChange(e)} value={user.password} /> */}
+                <input type="password" id="password" onChange={(e) => handleInputChange(e)} value={user.password} />
             </div>
             <div className="form-group-bouton">
       
@@ -91,19 +98,24 @@ const createUser = e => {
             <div className="title_bienvenue">Crée un compte</div>
             <div className="phrase_bienvenue">Bienvenue sur pep'idea</div>
             
-          <form onSubmit={createUser}>
+          <form onSubmit={handleSubmit(createUser)}>
             <div className="form-group-email-inscription">
             <p className="form-group-mail-p-inscription">Email</p>
-            <input type="email" id="email" onChange={(e) => handleInputChange(e)} value={user.email} />
+            {/* <input type="email" id="email" onChange={(e) => handleInputChange(e)} value={user.email} /> */}
+            <input type="email" {...register("email")} id="email" onChange={(e) => handleInputChange(e)} value={user.email} />
             </div>
             <div className="form-group-mdp">
+           
                 <p className="form-group-mdp-p-inscription">Mot de passe</p>
-                <input type="password" id="password" onChange={(e) => handleInputChange(e)} value={user.password} />
+                {/* <input type="password" id="password" onChange={(e) => handleInputChange(e)} value={user.password} /> */}
+                <input type="password"{...register("password")}  id="password" onChange={(e) => handleInputChange(e)} value={user.password} />
             </div>
             <div className="form-group-mdp">
                 <p className="form-group-mdp-p-inscription-confirmation">Confirmer mot de passe</p>
-                <input type="password" id="confirm_password" onChange={(e) => handleInputChange(e)} value={user.confirm_password} />
+                {/* <input type="password" id="confirm_password" onChange={(e) => handleInputChange(e)} value={user.confirm_password} /> */}
+                <input type="password"{...register("confirm_password",)}  id="confirm_password" onChange={(e) => handleInputChange(e)} value={user.confirm_password} />
             </div>
+            
             <div className="form-group-bouton-inscription">
       
               <button className="bouton_inscription">S'inscrire</button>

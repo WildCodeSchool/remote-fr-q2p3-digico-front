@@ -1,18 +1,19 @@
 .container_contribution{
-    background: linear-gradient(179.88deg,#181D32 0.1%, #795DE7 195.3%) no-repeat center fixed;
+    background: linear-gradient(179.88deg,#14192b 0.1%, #795DE7 195.3%) no-repeat center fixed;
     width: 100%;
     height: 100%;
-    padding-bottom: 200%;
+    padding-bottom: 184.5%;
     display: flex;
     flex-direction: column;
     border-style: none;
+    
 }
 
 .header_projet_contrib{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 30px;
-    padding-left: 2%;
+    padding-left: 3%;
     padding-top: 5%;
     top: 9%;
     font-family: "Roboto";
@@ -29,7 +30,7 @@
     position: absolute;
     width: 37px;
     height: 10px;
-    margin-left: 50%;
+    margin-left: 49%;
     text-decoration: none;
     font-family: "Roboto";
     font-style: normal;
@@ -48,24 +49,24 @@
     width: 11px;
     height: 11px;
     margin-left: 32%;
-  color: #FFFFFF;
-  border-style: none;
+    color: #FFFFFF;
+    border-style: none;
     
 }
 
 .form_contrib{
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
+    margin-top: 32%;
     border-style: none;
+    margin-left: 4%
    
 }
 .project_titles_jmpropose{
     position: absolute;
-    width: 206px;
-    height: 20px;
-    left: 13px;
-    margin-top: 10%;
+    width: 100%;
+    text-decoration: none;
+    margin-top: 36%;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: bold;
@@ -73,13 +74,15 @@
     line-height: 20px;
     color: #FFFFFF;
     border-style: none;
+    list-style-type: none;
+    margin-left: 3%
 }
 
 .dispo_contrib_start{
     position: absolute;
     width: 206px;
     height: 15px;
-    top: 20%;
+    top: 23%;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: bold;
@@ -90,12 +93,13 @@
 }
 .date_contrib{
     position: absolute;
-    width: 349px;
-    height: 31px;
-    top: 95%;
+    width: 93%;
+    height: 3%;
+    top: 25%;
     background: #795DE7;
     border-radius: 5px;
     border-style: none;
+    color: #FFFFFF;
    
 }
 
@@ -103,7 +107,7 @@
     position: absolute;
     width: 212.98px;
     height: 15px;
-    margin-top: 30%;
+    margin-top: 35%;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: bold;
@@ -115,8 +119,8 @@
 
 .description_contribution{
     position: absolute;
-    width: 348px;
-    height: 215px;
+    width: 93%;
+    height: 25%;
     margin-top: 40%;
     background: #795DE7;
     border-radius: 5px;
@@ -125,9 +129,9 @@
 
 .button_submit_contrib{
     position: absolute;
-    width: 185px;
-    height: 31px;
-    margin-top: 155%;
+    width:43%;
+    height: 4%;
+    margin-top: 103%;
     background: #795DE7;
     border-radius: 6.60714px;
     color: #FFFFFF;

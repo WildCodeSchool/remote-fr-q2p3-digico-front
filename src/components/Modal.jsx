@@ -28,8 +28,8 @@ const Modal = ({ isShowing, hide, title,handleInputChange,createUser,user, ...pr
                 <div className="modal-body">{props.children}</div>
 
                 <div>
-                <div className="title_bienvenue">Crée un compte</div>
-            <div className="phrase_bienvenue">Bienvenue sur pep'idea</div>
+                {/* <div className="title_bienvenue">Crée un compte</div>
+            <div className="phrase_bienvenue">Bienvenue sur pep'idea</div> */}
             
           {/* <form onSubmit={createUser}>
             <div className="form-group-email-inscription">
