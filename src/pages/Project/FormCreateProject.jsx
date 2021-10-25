@@ -58,7 +58,6 @@ function FormCreateProject() {
             description: project.description,
             socials : project.socials,
             img : uploadedFile.filePath,
-            // img : project.img,
             contributors: project.contributors,
             category: category,
             localisation : project.localisation,
@@ -95,26 +94,14 @@ function FormCreateProject() {
                     </Link>
                 </div>
                 <div>
-                    <input {...register("img")} type='file' id='fileUp' onChange={handleChange} />
-                    <label>{filename}</label>
+                    <input {...register("img")} type='file' className='fileUp' onChange={handleChange} />
                 </div>
-                {/* <input type="button" value="Télécharger" onClick={onSubmit}/> */}
                 {uploadedFile ? (
-                    <div>
-                        <p>{uploadedFile.fileName}</p>
-                        <img src={uploadedFile.filePath} alt="" />
+                    <div className="preview_container">
+                        <img className="image_preview" src={uploadedFile.filePath} alt="" />
                     </div>
                 ) : null}
-                {/* <div className="file_Pform">
-                    <div className="choose_img">
-                        <input
-                            type="file"
-                            value={file}
-                            fileName={uploadedFile.fileName}
-                            filePath={uploadedFile.fileName}
-                        />
-                    </div>
-                </div> */}
+                <input type="button" className="uploadBtn" value="Télécharger l'image" onClick={onSubmit}/>
                 <div className="project_form">
                     <div className="container_Pform">
                     <div className="input_label_Pform">
@@ -162,9 +149,6 @@ function FormCreateProject() {
                             value={project.description}>
                         </textarea>
                     </div>
-                    {/* <div className="FormModal">
-                        {modalOpen && <ProjectFormModal setOpenModal={setModalOpen}/>}
-                    </div> */}
                     <div className="input_label_Pform">
                         <label className="label_Pform">Date</label>
                         <input 

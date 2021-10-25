@@ -11,7 +11,6 @@
 
 .project_form {
     width: 100vw;
-    /* z-index: 0 ; */
 }
 
 .head_Pform {
@@ -21,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 6%;
+    margin-bottom: 3%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -58,6 +57,10 @@
     width: 100vw;
 }
 
+.fileUp {
+    margin-bottom: 5%;
+}
+
 .import_Pform{
     display: flex;
     position: absolute;
@@ -69,6 +72,31 @@
     margin-top: -38%;
     margin-left: 25%;
     margin-right: auto;
+}
+
+.preview_container{
+    width: 100%;
+}
+
+.image_preview {
+    height: 30vh;
+    width: 100%;
+    border: 1px solid black;
+    object-fit: cover;
+    opacity: 0.9;
+    position: relative;
+}
+
+#fil-upload-button {
+    color: white;
+}
+
+.uploadBtn{
+    background-color: #795DE7;
+    color: white;
+    border-style: none;
+    padding: 2%;
+    border-radius: 5px;
 }
 
 .select, textarea{
