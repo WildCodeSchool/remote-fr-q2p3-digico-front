@@ -2,16 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import axios from 'axios'
-<<<<<<< HEAD
 import clapsIcon from '../assets/icons/clapsIcon.png';
 import groupIcon from '../assets/icons/groupIcon.png';
 import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
 
-=======
-import clapsIcon from '../Assets/icons/clapsIcon.png';
-import groupIcon from '../Assets/icons/groupIcon.png';
-import emptyHeartIcon from '../Assets/icons/emptyHeartIcon.png';
->>>>>>> 0fd73f0a01e69407dbc62418712498b57196c4b6
 import './ProjectsCard.css'
 
 function ProjectsCard( {project} ) {

@@ -11,12 +11,7 @@ function Footer() {
             <Link to="/creationProjet" className="linkFooter">
                 <p className="footerBtnTxt">J'ai un projet ?</p>
             </Link>
-<<<<<<< HEAD
             <Link to="/utilisateur/:id" className="logoLink">
-=======
-
-            <Link to="/utilisateur/:id/mes-badges" className="logoLink">
->>>>>>> 0fd73f0a01e69407dbc62418712498b57196c4b6
                 <img src={home} alt="logo_home" />
             </Link>
             <Link to="/creer-idee" className="linkFooter">
