@@ -3,10 +3,20 @@ import axios from 'axios'
 import Header from '../../components/Header'
 import Footer from '../../components/footer/Footer'
 import "./UserDetails.css"
+// import { Link } from 'react-router-dom'
+import UserProjects from './Tab/UserProjects.jsx'
+import UserBadges from './Tab/UserBadges.jsx'
+import UserContribs from './Tab/UserContribs.jsx'
+import UserIdeas from './Tab/UserIdeas.jsx'
+
+
+
+import { useRouteMatch, Switch, Route, Link } from 'react-router-dom';
 
 function UserDetails(props) {
     const [user, setUser] = useState([]);
     const usersId = props.match.params.id
+    let { path, url } = useRouteMatch();
 
     useEffect(() => {
         axios
@@ -28,11 +38,17 @@ function UserDetails(props) {
                     </div>
                 </div>
                 <div className="container-button">
-                    <button className="user-button1">Badges</button>
-                    <button className="user-button1">Projets</button>
-                    <button className="user-button1">Idées</button>
-                    <button className="user-button2">Contributions</button>
-                </div>
+                    <Link to={`${url}/mes-badges`} className="user-button1">Badges</Link>
+                    <Link to={`${url}/mes-projets`} className="user-button1">Projets</Link>
+                    <Link to={`${url}/mes-idees`} className="user-button1">Idées</Link>
+                    <Link to={`${url}/mes-contributions`} className="user-button2">Contributions</Link>
+                </div>   
+                <Switch>
+                    <Route exact path={`${path}/mes-badges`} component={UserBadges}></Route>
+                    <Route path={`${path}/mes-projets`} component={UserProjects}></Route>
+                    <Route path={`${path}/mes-idees`} component={UserIdeas}></Route>
+                    <Route path={`${path}/mes-contributions`} component={UserContribs}></Route>
+                </Switch>
             <Footer/>
         </div>
     )
