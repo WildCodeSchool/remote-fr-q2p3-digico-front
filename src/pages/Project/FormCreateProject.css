@@ -3,6 +3,8 @@
     flex-direction: column;
     width: 100vw;
     height: auto;
+    margin-top: 23%;
+    margin-bottom: 18%;
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(179.88deg, #181D32 0.1%, #795DE7 195.3%);
 }
@@ -18,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 6%;
+    margin-bottom: 3%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -32,7 +34,16 @@
     font-size: 10px;
     align-items: center;
     width: 15%;
+    width: auto;
+    margin-right: 5px;
+}
+
+.link_list {
+    display: flex;
     justify-content: space-between;
+    text-decoration: none;
+    color: white;
+    align-items: center;
 }
 
 .head_Pform img {
@@ -44,6 +55,10 @@
     margin-top: 2%;
     height: 32vh;
     width: 100vw;
+}
+
+.fileUp {
+    margin-bottom: 5%;
 }
 
 .import_Pform{
@@ -59,50 +74,29 @@
     margin-right: auto;
 }
 
-.imgInput {
-    display: flex;
-    color: transparent;
-    text-align: center;
-    align-items: center;
-    width: 99.5vw;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(121, 93, 231, 0.15);
-    border: 1px solid #795DE7;
+.preview_container{
+    width: 100%;
 }
 
-.imgInput::-webkit-file-upload-button {
-    visibility: hidden;
-}
-
-.imgInput::before{
-    content : "";
-    color: black;
-    display: inline-block;
-    text-align: center;
+.image_preview {
     height: 30vh;
     width: 100%;
-}
-
-.imgInput:active::before {
-    background: rgba(146, 127, 221, 0.15);
-}
-
-.img_preview{
-    width: 100%;
-    height: 33vh;
-    position: absolute;
+    border: 1px solid black;
     object-fit: cover;
-    margin-top: -71%;
+    opacity: 0.9;
+    position: relative;
 }
 
-.cancel_img_preview{
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    margin-top: -69%;
-    right: 0%;
+#fil-upload-button {
+    color: white;
+}
+
+.uploadBtn{
+    background-color: #795DE7;
+    color: white;
+    border-style: none;
+    padding: 2%;
+    border-radius: 5px;
 }
 
 .select, textarea{
@@ -121,8 +115,8 @@
 }
 
 .container_Pform{
-    width: 90%;
     color: white;
+    width: 95%;
 }
 
 .input_label_Pform{
@@ -150,7 +144,7 @@
 .desc_Pform{
     border-radius: 5px;
     background-color: #795DE7;
-    height: 13vh;
+    height: 20vh;
     border-style: none;
 }
 

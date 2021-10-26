@@ -1,9 +1,13 @@
 import Header from '../../components/Header.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from 'axios';
+<<<<<<< HEAD
 import Vector from '../../Assets/Vector.png'
+=======
+import Vector from '../../assets/Vector.png'
+>>>>>>> dev
 import "./CreateIdea.css";
 
 
@@ -31,9 +35,7 @@ function CreateIdea() {
     alert("Votre idée a été crée.")
     history.push('/liste-idee')
   }
-  // function handleCategory(e) {
-  //   const newCategory
-  // }
+ 
   function handleInputChange(e) {
     const newIdea= {...idea}
     newIdea[e.target.id] = e.target.value
@@ -45,7 +47,7 @@ function CreateIdea() {
             <Header/>
             <div className="create-idea-top">
             <p className="create_idea_title">Création d'idée</p>
-            <p className="create-idea-cancel">annuler  <img className="create-idea-cross" src={Vector}/></p>
+            <p className="create-idea-cancel">annuler  <Link to='/liste-idee'><img className="create-idea-cross" src={Vector}/></Link></p>
             </div>
             <form className="create-idea" onSubmit={createIdea}>
                 <label className="create-idea-label">Titre de votre idée : </label>

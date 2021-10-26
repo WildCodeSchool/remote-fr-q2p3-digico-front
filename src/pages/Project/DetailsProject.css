@@ -1,53 +1,157 @@
 @media screen and (max-width: 767px) {
+    .container_projet_details{
 
-.container_details_project{
-    display: flex;
-    flex-direction: column;
+        background: linear-gradient(179.88deg,#181D32 0.1%, #795DE7 195.3%) no-repeat center fixed;
+        width: 100%;
+        height: 80%;
+        padding-bottom: 100%;
+    }
+    .vector_details{
+        position:absolute;
+        margin-top: 35%;
+        z-index: 1;
+        margin-left: 2%;
+        
+    }
+    .img_container_details{
+        height: 60%;
+        width: 100%;
+        
+    }
+    
+    .project_img_details {
+        height: 30vh;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+        position: relative;
+        margin-top: 23%;
+        margin-bottom: -3%;
+       
+    }
     
    
-}
+    .project_icons_details{
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+        width: 93%;
+        text-align: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        color: #227FBA;
+       padding-top: 2%;
+    }
+    .left_project_icons_details{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+    
+    .right_project_icons_details{
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .claps_counter_details{
+        color: #795DE7;
+        font-weight: 600;
+        font-size: 12px;
+        margin-right: 20%;
+    }
+    
+    .heartIcons_details{
+        margin: auto;
+        height: 15px;
+        width: 15px;
+        margin-left: 15%;
+        margin-bottom:1%;
+       
+    }
 
-.image_details_projet{
+    .barre{
+        position:absolute;
+        width: 345px;
+        height: 0px;
+        left: 11px;
+        top: 47%;
+
+border: 1px solid #795DE7;
+    }
     
-    padding: 5vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    margin-top: 12vh;
+    .contributors_count_details{
+        color: white;
+        font-weight: 600;
+        font-size: 12px;
+        margin-right: 10px;
+    }
     
+    .project_info_details{
+        display: flex;
+        flex-direction: column;
+        height: 15vh;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+    }
+    
+    .project_titles_details {
+        display: flex;
+        width: 100%;
+        font-size :12px;
+        font-weight: 600;
+        list-style: none;
+        justify-content: space-between;
+    }
+    
+    .user_pseudo_details{
+        color: #795DE7;
+    }
+    
+    .project_titles_details li{
+        padding: 5px;
+    }
+    
+    .desc_project_details {
+        margin: 5px;
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 12px;
+        max-height: 420px ;
+        overflow: hidden;
+    }
+    
+}
+/* .image_details_projet{
+    margin-top: 18%;
     border: black;
-}
+    object-fit: cover;
+} */
 
-.description_details_project{
- 
-    padding: 16vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    margin-top: 2vh;
+
     
-}
+
 
 .button_contribution{
     display: flex;
-    flex-direction: column;
-    margin-top: 4vh;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    width: 139px;
+    height: 28px;
+    left: 11px;
+    margin-top: 80%;
+    background: #795DE7;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    text-decoration: none;
     text-align: center;
-    color: rgb(255, 255, 255); 
-    font-size: 12px; 
-    line-height: 11px; 
-    padding: 20px; 
-    border-radius: 40px; 
-    font-family: Georgia, serif; 
-    font-weight: normal; 
-    text-decoration: none; 
-    font-style: normal;
-    font-variant: normal; 
-    text-transform: none; 
-    background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
-    box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
-    border: 2px solid rgb(209, 207, 207); 
-    /* display: inline-block; */
+    align-items: center;
 }        
     .myButton:hover {
     background: #000000; 
@@ -55,17 +159,6 @@
                 
     .myButton:active {
     background: #070707;
-
-}
-
-.banner_details_project{
-  
-    padding: 2vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    margin-top: 1vh;
-}
-
 
 
 

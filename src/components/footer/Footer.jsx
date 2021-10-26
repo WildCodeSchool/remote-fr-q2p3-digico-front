@@ -8,17 +8,14 @@ function Footer() {
     return (
     <div>  
         <div className="Footer">
-            <Link to="/creer-projet" className="linkFooter">
-          J'ai un projet ?
+            <Link to="/creationProjet" className="linkFooter">
+                <p className="footerBtnTxt">J'ai un projet ?</p>
             </Link>
-
             <Link to="/utilisateur/:id" className="logoLink">
                 <img src={home} alt="logo_home" />
             </Link>
-
             <Link to="/creer-idee" className="linkFooter">
-           
-            J'ai une idée ?
+                <p className="footerBtnTxt">J'ai une idée ?</p>
             </Link>
         </div>
     </div> 

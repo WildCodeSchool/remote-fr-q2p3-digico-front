@@ -1,61 +1,80 @@
 .idea_card_container {
-    /* border: solid black 1px; */
+    color: white;
     height: auto;
     display: flex;
     flex-direction: column;
     margin-bottom: 8%;
-    margin-left: 2%;
-    margin-right: 2%;
-    border-radius: 5px;
-    background-color: rgb(34,127,186,.1);
-}  
-.idea_header {
-    color: #227FBA;
-    font-weight: bold;
+    padding-top: 5%;
+}
+.idea-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+.idea-user-img-container {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    padding-left: 5%;
+    padding-right: 3%;
+}
+
+.idea-user-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.idea-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%
+}
+
+.idea_header {
+    display: flex;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 1%;
     padding-right: 1%;
+    justify-content: space-between;
 }
+
+.idea-left-header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+}
+/* .idea-right-header {
+    display: flex;
+} */
+
 .idea_content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding-left: 2%;
     height: 100%;
 }
-
-.idea_icons {
-    color: #227FBA;
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-    
-}
-.left_icons {
-    display: flex;
-    align-items: center;
-    width: 15%;
-    justify-content: space-between;
+.idea-date {
+    padding-top: 3%;
+    font-size: 12px;
 }
 
-.comments {
+.comment-toggle {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.comment_form {
-    margin-top: 1%;
-    border-radius: 10px;
-}
-.coms {
+    background: #795DE7;
+    color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-top: 5%;
-    padding-bottom: 2%;
-    color: hotpink;
+    justify-content: space-between;
+    margin-top: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 0px 0px 15px 15px;    
+}
+.show-comments {
+    font-weight: 700;
+    padding-left: 5%;
 }

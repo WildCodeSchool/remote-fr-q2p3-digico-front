@@ -138,9 +138,7 @@ button.modal-toggle:not(:first-child) {
     color: rgb(255, 255, 255);
 }
           
-input[type="text"],
-input[type="password"],
-input[type="email"] {
+.inputSubscribeHeader {
     box-sizing: border-box;
     width: 90%;
     padding: 0.5rem 0.7rem;
