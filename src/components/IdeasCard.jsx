@@ -1,7 +1,8 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios';
-import {FaRegHandPaper, FaRegCommentDots, FaHeart} from 'react-icons/fa';
 import CommentCard from '../components/comments/CommentCard'
+import clapsIcon from '../Assets/icons/clapsIcon.png';
+import emptyHeartIcon from '../Assets/icons/emptyHeartIcon.png';
 import './IdeasCard.css'
 
 function IdeasCard({idea, comment}) {
@@ -16,32 +17,35 @@ function IdeasCard({idea, comment}) {
 
     return (
         <div className="idea_card_container">
+            <div className="idea-container">
+            <div className="idea-user-img-container">
+            <img className="idea-user-img" src={process.env.PUBLIC_URL + "/assets/" + idea.user_img} alt={idea.pseudonym}/>
+            </div>
+            <div className="idea-content-container">
             <div className="idea_header">
-                <span className="idea_title">{idea.title}</span>
-                <span className="owner_name">{idea.pseudonym}</span>
+                <div className="idea-left-header">
+                    <span className="idea_title">{idea.pseudonym}</span>
+                    <span className="owner_name">{idea.title}</span>
+                    </div>
+                <div className="idea-right-header">
+                    <img src={clapsIcon} alt="clapsIcon" />
+                    <img src={emptyHeartIcon} alt="emptyHeartIcon" class="heartIcons"/>
+                </div>
             </div>
             <div className="idea_content">
-                <p className="idea desc">{idea.description}</p>
+                <p className="idea-desc">{idea.description}</p>
+                <span className="idea-date">Idée créé le : {idea.idea_date}</span>
             </div>
-            <div className="idea_icons">
-                <div className="left_icons">
-                    <FaRegHandPaper/>
-                    <FaRegCommentDots onClick={() => setShowComments(!showComments)}/>
-                </div>
-                <div className="right_icons">
-                    <FaHeart/>
-                </div>
             </div>
-            <div className="idea_comments">
+            </div>
+            <div className="comment-toggle">
+                    <div className="show-comments" onClick={() => setShowComments(!showComments)}>Commentaires...</div>
+                <div className="idea_comments">
             {showComments &&
-            <div className="comments">
-                <div>
-                <input className="comment_form" type="text" placeholder="Com" />
-                </div>
                 <div className="coms">
                 <CommentCard comment={comment} idea={idea} />
-                </div>
-            </div>}
+                </div>}
+            </div>
             </div>
             </div>
                     )}
