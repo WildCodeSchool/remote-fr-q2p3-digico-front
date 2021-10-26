@@ -3,7 +3,11 @@ import Footer from '../../components/footer/Footer.jsx';
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import axios from 'axios';
+<<<<<<< HEAD
+import Vector from '../../Assets/Vector.png'
+=======
 import Vector from '../../assets/Vector.png'
+>>>>>>> dev
 import "./CreateIdea.css";
 
 
