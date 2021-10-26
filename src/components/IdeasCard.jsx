@@ -1,8 +1,8 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios';
 import CommentCard from '../components/comments/CommentCard'
-import clapsIcon from '../Assets/icons/clapsIcon.png';
-import emptyHeartIcon from '../Assets/icons/emptyHeartIcon.png';
+import clapsIcon from '../assets/icons/clapsIcon.png';
+import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
 import './IdeasCard.css'
 
 function IdeasCard({idea, comment}) {
