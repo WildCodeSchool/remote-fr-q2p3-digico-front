@@ -4,7 +4,6 @@ import axios from 'axios';
 // import FileUpload from './FileUpload';
 
 import cross from '../../Assets/icons/cross.png';
-
 import Header from '../../components/Header.jsx';
 import Footer from '../../components/footer/Footer.jsx'
 
