@@ -1,12 +1,8 @@
-
-
-
 .ProjectsCard{
     display: flex;
     text-decoration: none;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-  
 }
 
 .img_container{
@@ -20,7 +16,6 @@
     object-fit: cover;
     opacity: 0.9;
     position: relative;
-   
 }
 
 .arrow_to_details {
@@ -48,7 +43,6 @@
     width: auto;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
 }
 
 .right_project_icons{

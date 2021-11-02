@@ -1,13 +1,8 @@
-@media screen and (max-width: 767px) {
-    /* .buttoms_home{
-        padding-bottom: 10vh;
-    } a revoir selon remplissage*/
 .welcome{
- width: 100%;
- height: 100%;
-
- 
+  width: 100%;
+  height: 100%;
 }
+
 .background_welcome{
   background-size: cover;
   position: absolute;
@@ -15,16 +10,13 @@
 }
 
 .image_details_projet_home{
-  
   position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 40%;
- 
 }
 
 .titre_welcome{
-  
   position: relative;
   display: flex;
   flex-direction: column;
@@ -41,7 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-    }
+}
 
 .pepidea {
   position: relative;
@@ -54,9 +46,7 @@
   line-height: 58px;
   text-align: center;
   color: #ffffff;
-    }
-   
-}
+  }
 
 .buttonWelcome {
   position: relative;
@@ -68,7 +58,6 @@
 }
 
 .linkWelcome {
-  
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -88,7 +77,4 @@
   line-height: 15px;
   color: #FFFFFF;
   align-items: center;
-     
-           
 }
-

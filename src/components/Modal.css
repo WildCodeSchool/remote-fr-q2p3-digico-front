@@ -7,8 +7,6 @@
     z-index: 1040;
   }
 
-
-
 .modal-wrapper {
     position: fixed;
     top: 0;
@@ -22,8 +20,6 @@
     display: flex;
     align-items: center;
     background-color: rgb(24,29,50, 0.5);
-    
-    
 }
 
 .modal {
@@ -34,14 +30,12 @@
     max-width: 500px;
     width: 80%;
     padding: 1rem;
-    
   }
 
 .modal-header {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-   
   }
 
 .modal-close-button {

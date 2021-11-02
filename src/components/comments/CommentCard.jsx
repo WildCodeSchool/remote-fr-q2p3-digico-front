@@ -14,17 +14,16 @@ function CommentCard({idea}) {
     return (
         <div className="comment_card_container">
             <textarea className="comment_form" type="text" placeholder="Com"> </textarea>
-            {/* <input className="submit-comment" type="submit" value="Commenter"/> */}
                 <div key={comments.id} className="comment_container">
                     <div className="container-comment-user-img">
                     <img className="comment-user-img" src={process.env.PUBLIC_URL + "/assets/" + comments.user_img} alt={comments.pseudonym}/>
-                    </div>
+                        </div>
                     <div className="comment-content">
                     <div className="comment-header">    
                     <span className="comment-user">{comments.pseudonym}</span>
                     <span className="comment_date">{comments.comment_date}</span>
-                    </div>
-                    <div>
+                        </div>
+                        <div>
                     <span className="comment-desc">{comments.comment_content}</span>
                     </div>
                     </div>
@@ -32,5 +31,4 @@ function CommentCard({idea}) {
         </div>
     )
 }
-
 export default CommentCard
