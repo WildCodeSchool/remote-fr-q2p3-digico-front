@@ -20,21 +20,20 @@ function Contribution(props) {
     return (
         <div className="container_contribution">
             <Header />
-           <div className="header_projet_contrib">
-            Je me propose
-            <Link to='/liste-projet' className="annuler_contrib">annuler<img className="croix_annuler_contrib" src={Vector} alt="" /></Link>
-            </div>
-            <div className="project_titles_jmpropose">
+                <div className="header_projet_contrib">
+                    Je me propose <Link to='/liste-projet' className="annuler_contrib">annuler<img className="croix_annuler_contrib" src={Vector} alt="" /></Link>
+                </div>
+                <div className="project_titles_jmpropose">
                     <li>{project.title}</li>
-                    </div>   
-            <div className="form_contrib">
-            <label className="dispo_contrib_start"> Mes disponibilités</label>
-            <input className="date_contrib" type="date" />
-            <label className="title_desc_contrib">Dis nous en plus</label>
-            <textarea className="description_contribution" type="textarea"/>
-            <button className="button_submit_contrib">Soumettre</button>
-        </div>
-        <Footer/>
+                </div>  
+                <div className="form_contrib">
+                    <label className="dispo_contrib_start"> Mes disponibilités</label>
+                    <input className="date_contrib" type="date" />
+                    <label className="title_desc_contrib">Dis nous en plus</label>
+                    <textarea className="description_contribution" type="textarea"/>
+                    <button className="button_submit_contrib">Soumettre</button>
+                </div>
+            <Footer/>
         </div>
     )
 }

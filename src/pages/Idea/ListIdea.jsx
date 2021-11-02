@@ -7,19 +7,18 @@ import "./ListIdea.css"
 
 
 function ListIdea() {
-
     const [ideas, setIdeas] = useState([]);
+
     useEffect(() => {
         axios
         .get("http://localhost:8000/api/ideas/ideaowner")
         .then((res) => res.data)
         .then((data) => setIdeas(data))                
     }, [])
-   
 
     return (
         <div>             
-             <Header/>
+            <Header/>
             <div className="ideas">
                 {ideas
                 .map((idea)=> 

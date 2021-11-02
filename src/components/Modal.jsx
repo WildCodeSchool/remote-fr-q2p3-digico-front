@@ -1,8 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import {useState} from 'react'
-import axios from 'axios';
 import "./Modal.css"
 
 const Modal = ({ isShowing, hide, title,handleInputChange,createUser,user, ...props }) =>
@@ -13,7 +11,7 @@ const Modal = ({ isShowing, hide, title,handleInputChange,createUser,user, ...pr
             <div className="modal-wrapper">
               <div className="modal">
                 <div className="modal-header">
-                <button 
+                  <button 
                     type="button"
                     className="modal-close-button"
                     onClick={hide}
@@ -23,8 +21,6 @@ const Modal = ({ isShowing, hide, title,handleInputChange,createUser,user, ...pr
                   <h4 className="revoila">{title}</h4>
                 </div>
                 <div className="modal-body">{props.children}</div>
-                <div>
-                </div>
               </div>
             </div>
           </div>

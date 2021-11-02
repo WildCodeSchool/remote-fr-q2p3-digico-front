@@ -27,8 +27,7 @@
     margin-left: 10%;
 }
 
-button.modal-toggle,
-input[type="submit"] {
+button.modal-toggle {
     background-color: rgb(8, 8, 8);
     cursor: pointer;
     font-size: 20px;

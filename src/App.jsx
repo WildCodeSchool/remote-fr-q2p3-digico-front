@@ -7,7 +7,6 @@ import DetailsProject from "./pages/Project/DetailsProject.jsx";
 import Error from "./pages/Error/Error.jsx"
 import Contribution from "./pages/Contribution.jsx";
 import UserDetails from "./pages/User/UserDetails.jsx"
-import IdeasCard from "./components/IdeasCard.jsx";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
