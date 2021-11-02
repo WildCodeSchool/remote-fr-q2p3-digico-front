@@ -17,5 +17,4 @@ function ProjectFormModal( {setOpenModal} ) {
         </div>
     )
 }
-
 export default ProjectFormModal
