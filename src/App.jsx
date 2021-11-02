@@ -4,6 +4,7 @@ import CreateIdea from "./pages/Idea/CreateIdea.jsx";
 import ListIdea from "./pages/Idea/ListIdea.jsx";
 import ListProject from "./pages/Project/ListProject.jsx";
 import DetailsProject from "./pages/Project/DetailsProject.jsx";
+import Error from "./pages/Error/Error.jsx"
 import Contribution from "./pages/Contribution.jsx";
 import UserDetails from "./pages/User/UserDetails.jsx"
 import IdeasCard from "./components/IdeasCard.jsx";
@@ -23,6 +24,8 @@ function App() {
           <Route path="/projets/:id" component={DetailsProject}/>
           <Route path="/contribution" component={Contribution}/>
           <Route path="/utilisateur/:id" component={UserDetails}/>
+          <Route component={Error}/>
+
         </Switch>
       </Router>
     </div>
