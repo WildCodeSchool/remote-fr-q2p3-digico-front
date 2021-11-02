@@ -1,5 +1,4 @@
 import Welcome from "./pages/Welcome/Welcome.jsx";
-// import CreateProject from "./pages/Project/CreateProject.jsx";
 import FormCreateProject from "./pages/Project/FormCreateProject";
 import CreateIdea from "./pages/Idea/CreateIdea.jsx";
 import ListIdea from "./pages/Idea/ListIdea.jsx";
@@ -17,7 +16,6 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          {/* <Route path="/creer-projet" component={CreateProject}/> */}
           <Route path='/creationProjet' component={FormCreateProject}/>
           <Route exact path="/" component={Welcome}/>
           <Route path="/creer-idee" component={CreateIdea}/>
@@ -27,6 +25,7 @@ function App() {
           <Route path="/contribution" component={Contribution}/>
           <Route path="/utilisateur/:id" component={UserDetails}/>
           <Route component={Error}/>
+
         </Switch>
       </Router>
     </div>

@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import home from '../../assets/home.png'
 import "./Footer.css"
 
-
 function Footer() {
     return (
     <div>  
@@ -21,5 +20,4 @@ function Footer() {
     </div> 
     )
 }
-
 export default Footer

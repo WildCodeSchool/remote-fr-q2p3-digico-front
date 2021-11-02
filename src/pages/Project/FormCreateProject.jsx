@@ -3,9 +3,8 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ProjectFormModal from '../../components/ProjectFormModal.jsx';
-
-import Header from '../../components/Header.jsx';
-import Footer from '../../components/footer/Footer.jsx';
+import Header from '../../components/footer_header/Header';
+import Footer from '../../components/footer_header/Footer.jsx';
 import cross from '../../assets/icons/cross.png';
 import './FormCreateProject.css'
 

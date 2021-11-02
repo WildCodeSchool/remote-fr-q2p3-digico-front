@@ -41,7 +41,6 @@ function FileUpload() {
                 </div>
                 <input type='submit' value='Télécharger'/>
             </form>
-
         {uploadedFile ? (
         <div>
             <p>{uploadedFile.fileName}</p>
@@ -61,5 +60,4 @@ function FileUpload() {
         </div>    
     )
 }
-
 export default FileUpload
