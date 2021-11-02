@@ -1,0 +1,10 @@
+.global-container {
+    display: flex;
+    justify-content: center;
+}
+
+.coming {
+    margin-top: 12vh;
+    font-size: 80px;
+    text-align: center;
+}
