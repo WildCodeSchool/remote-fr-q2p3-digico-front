@@ -43,12 +43,14 @@ function UserDetails(props) {
                     <Link to={`${url}/mes-idees`} className="user-button1">Idées</Link>
                     <Link to={`${url}/mes-contributions`} className="user-button2">Contributions</Link>
                 </div>   
+                <div className="container-element">
                 <Switch>
                     <Route exact path={`${path}/mes-badges`} component={UserBadges}></Route>
                     <Route path={`${path}/mes-projets`} component={UserProjects}></Route>
                     <Route path={`${path}/mes-idees`} component={UserIdeas}></Route>
                     <Route path={`${path}/mes-contributions`} component={UserContribs}></Route>
                 </Switch>
+                </div>
             <Footer/>
         </div>
     )
