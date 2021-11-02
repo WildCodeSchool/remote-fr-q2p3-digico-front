@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import axios from 'axios'
-import clapsIcon from '../Assets/icons/clapsIcon.png';
-import groupIcon from '../Assets/icons/groupIcon.png';
-import emptyHeartIcon from '../Assets/icons/emptyHeartIcon.png';
+import clapsIcon from '../assets/icons/clapsIcon.png';
+import groupIcon from '../assets/icons/groupIcon.png';
+import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
 import './ProjectsCard.css'
 
 function ProjectsCard( {project} ) {
@@ -33,7 +33,7 @@ function ProjectsCard( {project} ) {
     return (
         <div className="ProjectsCard">
             <div className="img_container">
-                <Link to={{pathname: `/projets/${project.id}`}} className="project-card">
+                <Link to={{pathname: `/projets/${project.id}`}}>
                     <img className="project_img" src={project.img} alt={project.title}/>
                     <div className="arrow_to_details">
                         <FaArrowRight />
@@ -51,6 +51,7 @@ function ProjectsCard( {project} ) {
                     <img src={groupIcon} alt="groupeIcon"/>
                 </div>
             </div>
+            <Link to={{pathname: `/projets/${project.id}`}} style={{ textDecoration: 'none' }}>
             <div className="project_info">
                 <div className="project_titles">
                     <li>{project.title}</li>
@@ -63,10 +64,10 @@ function ProjectsCard( {project} ) {
                     <span>En savoir plus...</span>
                 </div>
             </div>
+            </Link>
             <div className="project_icons">
-            </div>
+            </div> 
         </div>
     )
 }
-
 export default ProjectsCard

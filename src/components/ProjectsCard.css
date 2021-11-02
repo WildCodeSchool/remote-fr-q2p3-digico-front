@@ -43,7 +43,6 @@
     width: auto;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
 }
 
 .right_project_icons{
@@ -114,4 +113,5 @@
     font-size: 8px;
     font-weight: 400;
     margin-left: 5px;
+    margin-top: 1%;
 }

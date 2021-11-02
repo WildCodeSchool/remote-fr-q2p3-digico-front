@@ -9,7 +9,6 @@
     position: relative;
 }
 
-
 .container-top {
     display: flex;
     flex-direction: row;
@@ -56,7 +55,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
 }
 
 .user-button1 {

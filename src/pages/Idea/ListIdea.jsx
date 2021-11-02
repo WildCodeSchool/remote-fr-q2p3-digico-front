@@ -1,40 +1,31 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import Footer from '../../components/footer/Footer'
+import Footer from '../../components/footer_header/Footer'
 import IdeasCard from '../../components/IdeasCard.jsx';
-// import CommentCard from '../../components/comments/CommentCard'
-import Header from '../../components/Header';
+import Header from '../../components/footer_header/Header';
 import "./ListIdea.css"
 
 
 function ListIdea() {
-
     const [ideas, setIdeas] = useState([]);
+
     useEffect(() => {
         axios
         .get("http://localhost:8000/api/ideas/ideaowner")
         .then((res) => res.data)
         .then((data) => setIdeas(data))                
     }, [])
-   
 
     return (
         <div>             
-             <Header/>
+            <Header/>
             <div className="ideas">
                 {ideas
                 .map((idea)=> 
                 <div key={idea.id} className="idea_container">
                     <IdeasCard idea={idea} />
-                    {/* <CommentCard comment={comment} /> */}
                 </div>
                 )}
-                {/* {comments
-                .map((comment)=>
-                <div key={comment.id} className="comment_container">
-                    <CommentCard comment={comment} />
-                </div>
-                )} */}
             </div>
             <Footer/>
         </div>

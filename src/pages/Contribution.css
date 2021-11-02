@@ -1,69 +1,136 @@
-.form_contrib{
-display: flex;
-flex-direction: column;
-margin-top: 120px;
-margin-left: 5vh;
-margin-right: 5vh;
+.container_contribution{
+    background: linear-gradient(179.88deg,#14192b 0.1%, #795DE7 195.3%) no-repeat center fixed;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 184.5%;
+    display: flex;
+    flex-direction: column;
+    border-style: none;
 }
 
-.dispo_contrib{
-margin-top: 1vh;
-font-size: 30px;
-margin-bottom: 2vh;
-text-align: left;
+.header_projet_contrib{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    padding-left: 3%;
+    padding-top: 5%;
+    top: 9%;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    background:rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    border-style: none;
+}
+
+.annuler_contrib{
+    position: absolute;
+    width: 37px;
+    height: 10px;
+    margin-left: 47%;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    margin: left 80px ;
+    top: 50%;
+    border-style: none;
+}
+
+.croix_annuler_contrib{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    margin-left: 32%;
+    color: #FFFFFF;
+    border-style: none;
+}
+
+.form_contrib{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32%;
+    border-style: none;
+    margin-left: 4%
+}
+
+.project_titles_jmpropose{
+    position: absolute;
+    width: 100%;
+    text-decoration: none;
+    margin-top: 36%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border-style: none;
+    list-style-type: none;
+    margin-left: 3%
 }
 
 .dispo_contrib_start{
-margin-top: 3vh;
-margin-bottom: 1vh;
-text-align: left;   
+    position: absolute;
+    width: 206px;
+    height: 15px;
+    top: 23%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    border-style: none; 
 }
 
-.dispo_contrib_end{
-margin-top: 2vh;
-margin-bottom: 2vh;
-text-align: left;   
+.date_contrib{
+    position: absolute;
+    width: 93%;
+    height: 3%;
+    top: 25%;
+    background: #795DE7;
+    border-radius: 5px;
+    border-style: none;
+    color: #FFFFFF;
 }
 
 .title_desc_contrib{
-margin-top: 2vh;
-margin-bottom: 3vh;
-text-align: left;
-font-size: 30px;
+    position: absolute;
+    width: 212.98px;
+    height: 15px;
+    margin-top: 35%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    border-style: none;
 }
 
 .description_contribution{
-margin-top: 5px;
-padding-bottom: 80%;
-text-align: justify;
-/* text-shadow: ;     */
+    position: absolute;
+    width: 93%;
+    height: 25%;
+    margin-top: 40%;
+    background: #795DE7;
+    border-radius: 5px;
+    border-style: none;
 }
 
 .button_submit_contrib{
-margin-top:15%;
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-color: rgb(255, 255, 255); 
-font-size: 12px; 
-line-height: 11px; 
-padding: 20px; 
-border-radius: 50px; 
-font-family: Georgia, serif; 
-font-weight: normal; 
-text-decoration: none; 
-font-style: normal;
-font-variant: normal; 
-text-transform: none; 
-background-image: linear-gradient(to right, rgb(49, 55, 59) 0%, rgb(36, 38, 39) 50%, rgb(94, 95, 95) 100%);
-box-shadow: rgb(143, 142, 142) 5px 5px 15px 5px; 
-border: 2px solid rgb(209, 207, 207); 
-display: inline-block;}
-            
-.myButton:hover {
-background: #000000; 
-}
-            
-.myButton:active {
-background: #070707;   
+    position: absolute;
+    width:43%;
+    height: 4%;
+    margin-top: 103%;
+    background: #795DE7;
+    border-radius: 6.60714px;
+    color: #FFFFFF;
+    border-style: none;
 }
