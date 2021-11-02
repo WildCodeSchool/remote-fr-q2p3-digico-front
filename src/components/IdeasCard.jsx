@@ -18,36 +18,36 @@ function IdeasCard({idea, comment}) {
     return (
         <div className="idea_card_container">
             <div className="idea-container">
-            <div className="idea-user-img-container">
-            <img className="idea-user-img" src={process.env.PUBLIC_URL + "/assets/" + idea.user_img} alt={idea.pseudonym}/>
-            </div>
-            <div className="idea-content-container">
-            <div className="idea_header">
-                <div className="idea-left-header">
-                    <span className="idea_title">{idea.pseudonym}</span>
-                    <span className="owner_name">{idea.title}</span>
+                <div className="idea-user-img-container">
+                    <img className="idea-user-img" src={process.env.PUBLIC_URL + "/assets/" + idea.user_img} alt={idea.pseudonym}/>
+                </div>
+                <div className="idea-content-container">
+                    <div className="idea_header">
+                        <div className="idea-left-header">
+                            <span className="idea_title">{idea.pseudonym}</span>
+                            <span className="owner_name">{idea.title}</span>
+                        </div>
+                        <div className="idea-right-header">
+                            <img src={clapsIcon} alt="clapsIcon" />
+                            <img src={emptyHeartIcon} alt="emptyHeartIcon" class="heartIcons"/>
+                        </div>
                     </div>
-                <div className="idea-right-header">
-                    <img src={clapsIcon} alt="clapsIcon" />
-                    <img src={emptyHeartIcon} alt="emptyHeartIcon" class="heartIcons"/>
+                    <div className="idea_content">
+                        <p className="idea-desc">{idea.description}</p>
+                        <span className="idea-date">Idée créé le : {idea.idea_date}</span>
+                    </div>
                 </div>
             </div>
-            <div className="idea_content">
-                <p className="idea-desc">{idea.description}</p>
-                <span className="idea-date">Idée créé le : {idea.idea_date}</span>
-            </div>
-            </div>
-            </div>
             <div className="comment-toggle">
-                    <div className="show-comments" onClick={() => setShowComments(!showComments)}>Commentaires...</div>
+                <div className="show-comments" onClick={() => setShowComments(!showComments)}>Commentaires...</div>
                 <div className="idea_comments">
-            {showComments &&
-                <div className="coms">
-                <CommentCard comment={comment} idea={idea} />
-                </div>}
+                    {showComments &&
+                        <div className="coms">
+                        <CommentCard comment={comment} idea={idea} />
+                        </div>}
+                </div>
             </div>
-            </div>
-            </div>
-                    )}
+        </div>
+    )}
 
 export default IdeasCard
