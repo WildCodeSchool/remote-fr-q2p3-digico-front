@@ -5,7 +5,6 @@ import axios from 'axios'
 import clapsIcon from '../assets/icons/clapsIcon.png';
 import groupIcon from '../assets/icons/groupIcon.png';
 import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
-
 import './ProjectsCard.css'
 
 function ProjectsCard( {project} ) {
@@ -71,5 +70,4 @@ function ProjectsCard( {project} ) {
         </div>
     )
 }
-
 export default ProjectsCard

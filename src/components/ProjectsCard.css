@@ -3,7 +3,6 @@
     text-decoration: none;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-  
 }
 
 .img_container{
@@ -17,7 +16,6 @@
     object-fit: cover;
     opacity: 0.9;
     position: relative;
-   
 }
 
 .arrow_to_details {

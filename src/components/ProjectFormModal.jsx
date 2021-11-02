@@ -14,9 +14,7 @@ function ProjectFormModal( {setOpenModal} ) {
                     <p className="oktxt">ok</p>
                 </Link>
             </div>
-            
         </div>
     )
 }
-
 export default ProjectFormModal

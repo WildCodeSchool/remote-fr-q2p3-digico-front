@@ -1,15 +1,14 @@
 import {useState, useEffect} from 'react'
-import Header from '../components/Header'
+import Header from '../components/footer_header/Header'
 import {Link} from 'react-router-dom'
 import "./Contribution.css"
-import Footer from '../components/footer/Footer'
+import Footer from '../components/footer_header/Footer'
 import Vector from '../../src/assets/Vector.png'
 import axios from 'axios'
 
 function Contribution(props) {
     const projectId = props.match.params.id
     const [project, setProject] = useState({});
-
     useEffect(() => {
         axios
         .get(`http://localhost:8000/api/projects/projectowner/${projectId}`)
@@ -18,7 +17,6 @@ function Contribution(props) {
             console.log(res)
         })
     }, [projectId])
-
     return (
         <div className="container_contribution">
             <Header />
@@ -37,8 +35,6 @@ function Contribution(props) {
                 </div>
             <Footer/>
         </div>
-         
     )
 }
-
 export default Contribution

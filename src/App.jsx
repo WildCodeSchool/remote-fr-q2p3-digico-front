@@ -24,6 +24,7 @@ function App() {
           <Route path="/contribution" component={Contribution}/>
           <Route path="/utilisateur/:id" component={UserDetails}/>
           <Route component={Error}/>
+
         </Switch>
       </Router>
     </div>

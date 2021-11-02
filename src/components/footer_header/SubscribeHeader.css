@@ -1,6 +1,3 @@
-@media screen and (max-width : 767px) { 
-
-
 .subscribeHeader{
     position: absolute;
     display: flex;
@@ -19,32 +16,32 @@
     flex-direction: column;
     margin-left: 10%;
 }
+
 .modal-toggle_connecter{
     color: rgb(255, 255, 255);
     margin-left: 15%;
-     }
+}
 
 .modal-toggle_inscrire{
     color: rgb(255, 255, 255);
     margin-left: 10%;
-     }
+}
 
-button.modal-toggle,
-input[type="submit"] {
+button.modal-toggle {
     background-color: rgb(8, 8, 8);
     cursor: pointer;
     font-size: 20px;
     color: rgb(250, 250, 250);
     padding: 1rem 2rem;
-    }
+}
   
 button.modal-toggle:not(:first-child) {
     margin-left: 10px;
-    }
+}
 
 .form-group-mail-p{
     color: rgb(255, 255, 255);
-  }
+}
 .form-group-mail-p-inscription{
     color: rgb(255, 255, 255); 
 }
@@ -111,7 +108,6 @@ button.modal-toggle:not(:first-child) {
     position: relative;
 }
 
-
 .bouton_connection{
     justify-content: center;
     margin-top: 10%;
@@ -147,6 +143,7 @@ button.modal-toggle:not(:first-child) {
     border: none;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
     }
 
 .phrase-redirection{
@@ -170,7 +167,6 @@ button.modal-toggle:not(:first-child) {
     line-height: 12px;
     color: #FFFFFF;
     margin-right: 5%;
-    
     }
 
 .pas-compte{
@@ -195,50 +191,3 @@ button.modal-toggle:not(:first-child) {
     line-height: 12px;
     color: #795DE7;
     }
-/* 
-
-
-.button_connection_subscribe{
-    margin-top: 20px;
-    margin-bottom: auto;
-    margin-left: 20px;
-    text-align: center;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
-  
-    color: #FFFFFF;
-    text-decoration: none;
-    }
-  
-    .button_inscription_subscribe{
-        margin-top: 20px;
-        margin-bottom: auto;
-        margin-left: -170px;
-        margin-right:10px;
-        text-align: center;
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 14px;
-      
-        color: #FFFFFF;
-        text-decoration: none;
-        }
-         */
-
-         /* .subscribeHeader{
-            height: 100vh;
-            display: flex;
-           flex-direction: row;
-            align-items: center;
-          } */
-  
-     
-  
-
-
-}

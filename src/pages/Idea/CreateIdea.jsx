@@ -1,5 +1,5 @@
-import Header from '../../components/Header.jsx';
-import Footer from '../../components/footer/Footer.jsx';
+import Header from '../../components/footer_header/Header'
+import Footer from '../../components/footer_header/Footer.jsx';
 import React, { useState } from 'react';
 import { Link, useHistory } from "react-router-dom";
 import axios from 'axios';

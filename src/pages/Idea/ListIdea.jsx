@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import Footer from '../../components/footer/Footer'
+import Footer from '../../components/footer_header/Footer'
 import IdeasCard from '../../components/IdeasCard.jsx';
-import Header from '../../components/Header';
+import Header from '../../components/footer_header/Header';
 import "./ListIdea.css"
 
 

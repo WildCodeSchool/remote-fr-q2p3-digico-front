@@ -53,6 +53,7 @@
     padding-left: 2%;
     height: 100%;
 }
+
 .idea-date {
     padding-top: 3%;
     font-size: 12px;
@@ -71,6 +72,7 @@
     padding-bottom: 3%;
     border-radius: 0px 0px 15px 15px;    
 }
+
 .show-comments {
     font-weight: 700;
     padding-left: 5%;

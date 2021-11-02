@@ -1,17 +1,14 @@
 p {
     line-height: 1.5;
 }
-
 *{
     margin: 0;
     padding: 0;  
 }
-
 :root {
     --main-color: #e2dada;
     --second-color: #363636;
     --third-color: #64626e;
-
     --main-font: "Roboto";
     --second-font: "Comic Neue";
 }

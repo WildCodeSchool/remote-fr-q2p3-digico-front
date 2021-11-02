@@ -32,5 +32,4 @@ function CommentCard({idea}) {
         </div>
     )
 }
-
 export default CommentCard
