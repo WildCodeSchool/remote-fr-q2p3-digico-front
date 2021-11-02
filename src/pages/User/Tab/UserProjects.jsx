@@ -3,9 +3,9 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
-import clapsIcon from '../../../Assets/icons/clapsIcon.png'
-import emptyHeartIcon from '../../../Assets/icons/emptyHeartIcon.png'
-import groupIcon from '../../../Assets/icons/groupIcon.png'
+import clapsIcon from '../../../assets/icons/clapsIcon.png'
+import emptyHeartIcon from '../../../assets/icons/emptyHeartIcon.png'
+import groupIcon from '../../../assets/icons/groupIcon.png'
 
 import './UserProjects.css'
 
