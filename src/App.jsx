@@ -20,7 +20,7 @@ function App() {
           <Route path="/creer-idee" component={CreateIdea}/>
           <Route path="/liste-idee" component={ListIdea}/>
           <Route path="/liste-projet" component={ListProject}/>
-          <Route path="/projets/:id" component={DetailsProject}/>
+          <Route path="/projects/:id" component={DetailsProject}/>
           <Route path="/contribution" component={Contribution}/>
           <Route path="/utilisateur/:id" component={UserDetails}/>
           <Route component={Error}/>

@@ -42,8 +42,10 @@ button.modal-toggle:not(:first-child) {
 .form-group-mail-p{
     color: rgb(255, 255, 255);
 }
+
 .form-group-mail-p-inscription{
-    color: rgb(255, 255, 255); 
+    color: rgb(255, 255, 255);
+    margin-top: 7%;
 }
 .form-group-mdp-p{
     color: rgb(255, 255, 255);
@@ -139,6 +141,7 @@ button.modal-toggle:not(:first-child) {
     width: 90%;
     padding: 0.5rem 0.7rem;
     background-color: rgb(20, 26, 43);
+    color: white;
     border-radius: 5px;
     border: none;
     margin-left: auto;

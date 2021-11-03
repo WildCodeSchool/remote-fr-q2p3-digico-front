@@ -8,12 +8,11 @@ import emptyHeartIcon from '../assets/icons/emptyHeartIcon.png';
 import './ProjectsCard.css'
 
 function ProjectsCard( {project} ) {
-    const url = `http://localhost:8000/api/projects/${project.id}`
     const [claps, setClaps] = useState();
 
     useEffect(() => {
         axios
-        .get(url)
+        .get(`http://localhost:8000/api/projects/projectowner/${project.id}`)
         .then((res) => {
             setClaps(res.data.claps)
         })
@@ -21,7 +20,7 @@ function ProjectsCard( {project} ) {
 
     const updateClaps = () => {
         const newClaps = claps + 1
-        axios.put(url, {
+        axios.put(`http://localhost:8000/api/projects/${project.id}`, {
             claps: newClaps
         })
         .then((res) => {
@@ -33,7 +32,7 @@ function ProjectsCard( {project} ) {
     return (
         <div className="ProjectsCard">
             <div className="img_container">
-                <Link to={{pathname: `/projets/${project.id}`}}>
+                <Link to={{pathname: `/projects/${project.id}`}}>
                     <img className="project_img" src={project.img} alt={project.title}/>
                     <div className="arrow_to_details">
                         <FaArrowRight />
@@ -51,7 +50,7 @@ function ProjectsCard( {project} ) {
                     <img src={groupIcon} alt="groupeIcon"/>
                 </div>
             </div>
-            <Link to={{pathname: `/projets/${project.id}`}} style={{ textDecoration: 'none' }}>
+            <Link to={{pathname: `/projects/${project.id}`}} style={{ textDecoration: 'none' }}>
             <div className="project_info">
                 <div className="project_titles">
                     <li>{project.title}</li>

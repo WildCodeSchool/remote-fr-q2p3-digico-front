@@ -11,7 +11,7 @@ import "./DetailsProject.css"
 
 function DetailsProject(props) {
     const projectId = props.match.params.id
-    const [project, setProject] = useState({});
+    const [project, setProject] = useState([]);
     const [claps, setClaps] = useState();
     useEffect(() => {
         axios
@@ -19,7 +19,6 @@ function DetailsProject(props) {
         .then((res) => {
             setProject(res.data)
             setClaps(res.data.claps)
-            console.log(res.data)
         })
     }, [projectId])
     const updateClaps = () => {
