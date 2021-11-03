@@ -14,12 +14,14 @@ function SubscribeHeader() {
       } = useModal();
     const url = "http://localhost:8000/api/users/register"
     const [user, setUser] = useState({
+        pseudonym : "",
         email: "",
         password: "",
         confirm_password:"",
     })
     const createUser = e => {
       axios.post(url, {
+          pseudonym : user.pseudonym,
           email: user.email,
           password: user.password,
           confirm_password: user.confirm_password,
@@ -72,6 +74,8 @@ function SubscribeHeader() {
           <div className="phrase_bienvenue">Bienvenue sur pep'idea</div>
           <form onSubmit={handleSubmit(createUser)}>
             <div className="form-group-email-inscription">
+            <p className="form-group-mail-p">Pseudo</p>
+              <input className="inputSubscribeHeader" type="text" {...register("pseudonym")} id="pseudonym" onChange={(e) => handleInputChange(e)} value={user.pseudonym} />
               <p className="form-group-mail-p-inscription">Email</p>
               <input className="inputSubscribeHeader" type="email" {...register("email")} id="email" onChange={(e) => handleInputChange(e)} value={user.email} />
             </div>
