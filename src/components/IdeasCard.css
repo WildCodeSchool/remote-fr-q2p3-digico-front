@@ -1,0 +1,79 @@
+.idea_card_container {
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8%;
+    padding-top: 5%;
+}
+.idea-container {
+    display: flex;
+}
+
+.idea-user-img-container {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    padding-left: 5%;
+    padding-right: 3%;
+}
+
+.idea-user-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.idea-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%
+}
+
+.idea_header {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    justify-content: space-between;
+}
+
+.idea-left-header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+}
+
+.idea_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+    height: 100%;
+}
+
+.idea-date {
+    padding-top: 3%;
+    font-size: 12px;
+}
+
+.comment-toggle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #795DE7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 0px 0px 15px 15px;    
+}
+
+.show-comments {
+    font-weight: 700;
+    padding-left: 5%;
+}

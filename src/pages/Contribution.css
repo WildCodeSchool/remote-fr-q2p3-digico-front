@@ -1,0 +1,136 @@
+.container_contribution{
+    background: linear-gradient(179.88deg,#14192b 0.1%, #795DE7 195.3%) no-repeat center fixed;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 184.5%;
+    display: flex;
+    flex-direction: column;
+    border-style: none;
+}
+
+.header_projet_contrib{
+    position: fixed;
+    width: 100%;
+    height: 30px;
+    padding-left: 3%;
+    padding-top: 5%;
+    top: 9%;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    background:rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+    border-style: none;
+}
+
+.annuler_contrib{
+    position: absolute;
+    width: 37px;
+    height: 10px;
+    margin-left: 47%;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    margin: left 80px ;
+    top: 50%;
+    border-style: none;
+}
+
+.croix_annuler_contrib{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    margin-left: 32%;
+    color: #FFFFFF;
+    border-style: none;
+}
+
+.form_contrib{
+    display: flex;
+    flex-direction: column;
+    margin-top: 32%;
+    border-style: none;
+    margin-left: 4%
+}
+
+.project_titles_jmpropose{
+    position: absolute;
+    width: 100%;
+    text-decoration: none;
+    margin-top: 36%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border-style: none;
+    list-style-type: none;
+    margin-left: 3%
+}
+
+.dispo_contrib_start{
+    position: absolute;
+    width: 206px;
+    height: 15px;
+    top: 23%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    border-style: none; 
+}
+
+.date_contrib{
+    position: absolute;
+    width: 93%;
+    height: 3%;
+    top: 25%;
+    background: #795DE7;
+    border-radius: 5px;
+    border-style: none;
+    color: #FFFFFF;
+}
+
+.title_desc_contrib{
+    position: absolute;
+    width: 212.98px;
+    height: 15px;
+    margin-top: 35%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    border-style: none;
+}
+
+.description_contribution{
+    position: absolute;
+    width: 93%;
+    height: 25%;
+    margin-top: 40%;
+    background: #795DE7;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.button_submit_contrib{
+    position: absolute;
+    width:43%;
+    height: 4%;
+    margin-top: 103%;
+    background: #795DE7;
+    border-radius: 6.60714px;
+    color: #FFFFFF;
+    border-style: none;
+}

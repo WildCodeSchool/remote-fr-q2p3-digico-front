@@ -1,0 +1,196 @@
+.subscribeHeader{
+    position: absolute;
+    display: flex;
+    width: 60%;
+    margin-top: 3vh;
+    color: rgb(255, 255, 255);
+    margin-right: 50%;
+}
+
+.modal{
+    margin-top: 70%;
+}
+
+.modal-body{
+    display:flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.modal-toggle_connecter{
+    color: rgb(255, 255, 255);
+    margin-left: 15%;
+}
+
+.modal-toggle_inscrire{
+    color: rgb(255, 255, 255);
+    margin-left: 10%;
+}
+
+button.modal-toggle {
+    background-color: rgb(8, 8, 8);
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(250, 250, 250);
+    padding: 1rem 2rem;
+}
+  
+button.modal-toggle:not(:first-child) {
+    margin-left: 10px;
+}
+
+.form-group-mail-p{
+    color: rgb(255, 255, 255);
+}
+
+.form-group-mail-p-inscription{
+    color: rgb(255, 255, 255);
+    margin-top: 7%;
+}
+.form-group-mdp-p{
+    color: rgb(255, 255, 255);
+    margin-top: 7%;
+  }
+.form-group-mdp-p-inscription{
+    color: rgb(255, 255, 255);
+    margin-top: 7%;
+}
+
+.form-group-mdp-p-inscription-confirmation{
+    color: rgb(255, 255, 255);
+    margin-top: 7%;
+}
+
+.title_heureux{
+    margin-bottom: 2%;
+    width: 231px;
+    height: 19px;
+    left: 64px;
+    top: 271px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF; 
+}
+
+.phrase_heureux{
+    margin-bottom: 10%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+}
+
+.title_bienvenue{
+    margin-bottom: 2%;
+    width: 231px;
+    height: 19px;
+    left: 64px;
+    top: 271px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF; 
+}
+
+.phrase_bienvenue{
+    margin-bottom: 10%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.bouton_connection{
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(121, 93, 231);
+    width: 90%;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    color: rgb(255, 255, 255);
+}
+
+.bouton_inscription{
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(121, 93, 231);
+    width: 90%;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    color: rgb(255, 255, 255);
+}
+          
+.inputSubscribeHeader {
+    box-sizing: border-box;
+    width: 90%;
+    padding: 0.5rem 0.7rem;
+    background-color: rgb(20, 26, 43);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    }
+
+.phrase-redirection{
+    display: flex;
+    flex-direction: row;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: 20%;
+    margin-left: 1%;
+    margin-bottom: 10%;
+    }      
+
+.no-account{
+    height: 20px;
+    left: 64px;
+    top: 531px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    margin-right: 5%;
+    }
+
+.pas-compte{
+    
+    top: 531px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #795DE7;
+    }
+
+.deja-compte{
+    margin-top: 8%;
+    margin-left: 2%;
+    top: 531px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #795DE7;
+    }

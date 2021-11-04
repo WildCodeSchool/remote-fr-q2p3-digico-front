@@ -1,3 +1,32 @@
+# The project
+
+Project 3 Wild Code School Remote 
+Pep'Idea - A prototype of a social application for projects and ideas
+
+Sarah DUCHAUSSOY - Anne-Marie SERVETO - Mathieu MUSSANO - Rémi GUTIERREZ - Jean-Marie BERNARD
+
+## Presentation
+
+This open source project has been started by 5 students as part of the final project of their 5 month studies. 
+
+Feel free to keep coding on it. 
+
+## Dependencies to install
+
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.17.5",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.11",
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

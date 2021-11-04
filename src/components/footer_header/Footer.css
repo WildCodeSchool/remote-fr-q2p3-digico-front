@@ -1,0 +1,40 @@
+.Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(24, 29, 50);
+}
+
+.logoLink {
+    border: none;
+    border-radius:50px;
+    text-decoration : none;
+    margin-top: 3%;
+}
+
+.linkFooter {
+    width: 23%;
+    height: 27px;
+    left: 42px;
+    top: 763px;
+    border-radius: 2.49px;
+    background: rgb(121, 93, 231);
+    color: seashell;
+    text-decoration: none;
+    margin-top: 3%;
+    margin-bottom: 15%;
+    padding: 1%;
+}
+
+.footerBtnTxt{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    margin-left: 7%;
+}
